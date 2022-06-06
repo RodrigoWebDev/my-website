@@ -1,45 +1,22 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "gatsby": "^2.24.85",
-    "gatsby-plugin-manifest": "^2.2.27",
-    "gatsby-plugin-offline": "^3.0.19",
-    "gatsby-plugin-react-helmet": "^3.1.14",
-    "gatsby-plugin-sass": "^2.1.23",
-    "jquery": "^3.5.1",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "react-script-tag": "^1.1.2",
-    "slick": "^1.12.2"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "name": "my-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RodrigoWebDev/my-website.git",
+  "author": "Rodrigo Queiroz <rodrigo.queiroz.chagas@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start": "npx parcel src/index.html --open",
+    "build": "npx parcel build src/index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "parcel": "^2.6.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "dependencies": {
+    "htm": "^3.1.1",
+    "preact": "^10.7.3"
   }
 }
