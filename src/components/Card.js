@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import htm from 'htm'
-import imagePlaceholder from "../images/placeholder.jpg"
+import imagePlaceholder from "../assets/images/placeholder.jpg"
 
 const html = htm.bind(h)
 
@@ -10,7 +10,7 @@ const Card = ({title, description, link, image}) => {
   return html`
     <div id="card" class="flex justify-center px-6 mb-10">
       <div class="rounded-lg shadow-lg bg-white max-w-sm">
-        <a href="#!">
+        <a href="#">
           <img class="rounded-t-lg" src=${imageName} alt=${title}/>
         </a>
         <div class="p-6">

@@ -3,13 +3,13 @@ import htm from 'htm'
 import Card from "./Card"
 
 //Images
-import raia from "../images/drogaraia.jpg"
-import sil from "../images/drogasil.jpg"
-import me from "../images/me.jpg"
-import tunne from "../images/tunne.jpg"
-import sicredi from "../images/sicredi.jpg"
-import voltz from "../images/voltz.jpg"
-import wine from "../images/wine.jpg"
+import raia from "../assets/images/drogaraia.jpg"
+import sil from "../assets/images/drogasil.jpg"
+import me from "../assets/images/me.jpg"
+import tunne from "../assets/images/tunne.jpg"
+import sicredi from "../assets/images/sicredi.jpg"
+import voltz from "../assets/images/voltz.jpg"
+import wine from "../assets/images/wine.jpg"
 
 const html = htm.bind(h)
 
