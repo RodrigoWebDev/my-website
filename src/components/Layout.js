@@ -9,7 +9,9 @@ const html = htm.bind(h)
 const Layout = ({children, title}) => {
   return html`
     <${Navbar} />
-    <${Hero} title=${title} />
+    <${Hero} title=${title}>
+      <p>Bellow are my most relevant Front end commercial projects. You can see my open source projects <a href="https://github.com/RodrigoWebDev?tab=repositories" target="_blank">here</a></p>
+    <//>
     ${children}
     <${Footer} />
   `
