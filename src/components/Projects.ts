@@ -3,12 +3,19 @@ import htm from 'htm'
 import Card from "./Card"
 
 //Images
+//@ts-ignore
 import raia from "../assets/images/drogaraia.jpg"
+//@ts-ignore
 import sil from "../assets/images/drogasil.jpg"
+//@ts-ignore
 import me from "../assets/images/me.jpg"
+//@ts-ignore
 import tunne from "../assets/images/tunne.jpg"
+//@ts-ignore
 import sicredi from "../assets/images/sicredi.jpg"
+//@ts-ignore
 import voltz from "../assets/images/voltz.jpg"
+//@ts-ignore
 import wine from "../assets/images/wine.jpg"
 
 const html = htm.bind(h)
@@ -62,14 +69,14 @@ const projects = [
     description: "HTML, CSS, JavaScript, jQuery, Sass, Less, WordPress, OCC(Oracle Cloud Commerce), HandleBars",
     link: "https://www.wine.com.br/",
     image: wine
-  },
+  }
 ]
 
 const Projects = () => {
   return html`
-    <ul id="projects" class="flex justify-center flex-wrap">
+    <ul data-id="Projects" class="flex flex-wrap justify-evenly">
       ${projects.map(({id, title, description, link, image}) => html`
-        <li key=${id}>
+        <li key=${id} class="w-[90%] sm:w-[45%] lg:w-[32%]">
           <${Card} title=${title} description=${description} link=${link} image=${image}/>
         </li>
       `)}
