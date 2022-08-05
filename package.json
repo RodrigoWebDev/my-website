@@ -4,6 +4,7 @@
   "description": "My portfolio website",
   "scripts": {
     "start": "parcel ./src/index.html",
+    "start-no-cache": "parcel ./src/index.html --no-cache",
     "build": "parcel build ./src/index.html"
   },
   "keywords": [],
