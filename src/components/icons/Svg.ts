@@ -9,7 +9,6 @@ interface SvgPropTypes extends IconProTypes{
 }
 
 const Svg = ({children, customClass, title, description}: SvgPropTypes) => {
-  console.log({title, description})
   return html`
     <svg class=${customClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="${title}Title ${description}Desc" role="img">
       <title id="${title}Title">${title}</title>

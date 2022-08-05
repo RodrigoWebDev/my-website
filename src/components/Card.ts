@@ -23,7 +23,7 @@ const Card = ({title, description, link, image, stack}: CardsPropTypes) => {
       const htmlStackItems = stack.map(item => `<li>${item}</li>`)
       return htmlStackItems.join("")
     }
-    
+
     Swal.fire({
       html: `
       <h2 class="${heading} text-4xl mb-4 border-solid border-b-2 pb-2">${title}</h2>
@@ -40,8 +40,8 @@ const Card = ({title, description, link, image, stack}: CardsPropTypes) => {
         </div>
       </div>
       `,
-      confirmButtonText: "Close",
-      showCloseButton: true,
+      showConfirmButton: false,
+      showCloseButton: true
     })
   }
 
