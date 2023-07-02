@@ -1,7 +1,6 @@
 import { h } from 'preact'
 import htm from 'htm'
 import Swal from 'sweetalert2'
-import Link, { linkClasses } from "./Link"
 
 const html = htm.bind(h)
 
@@ -31,7 +30,7 @@ const Card = ({title, description, link, image, stack}: CardsPropTypes) => {
         <div class="mb-3">
           <h3 class="${h3} mb-2">Description</h3>
           <p class="mb-2">${description}</p>
-          <a href="${link}" target="_blank" class="${linkClasses} underline">Open ${upRightFromSquare}</a>
+          <a href="${link}" target="_blank" class="link" underline">Open ${upRightFromSquare}</a>
         </div>
 
         <div class="mb-3">
@@ -45,31 +44,20 @@ const Card = ({title, description, link, image, stack}: CardsPropTypes) => {
     })
   }
 
-
   return html`
-    <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md mt-6 mb-12">
-      <div class="h-[200px] overflow-hidden">
-        <img class="w-full" alt=${title} src=${image} />
-      </div>
-      <div class="p-6 text-center">
-        <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900 mb-2">
-          <span>${title}</span>
-        </h5>
-        <p class="block antialiased font-sans text-base font-light leading-relaxed text-inherit">
-          <p class="block antialiased font-sans text-base leading-relaxed text-inherit !mb-4 !font-normal !text-blue-gray-500">${description}</p>
-        </p>
-      </div>
-      <div class="p-6 border-t border-blue-gray-50 -mt-4 flex items-center justify-between py-3">
-        <${Link}
-          href="javascript:void(0)"
-          customClasses="font-semibold"
-          onClick=${() => openAlert()}
-        >Info<//>
-        <${Link}
-          href=${link}
-          target="_blank"
-          customClasses="font-semibold"
-        >Open<//>
+    <div class="card bg-base-100 shadow-xl">
+      <figure><img class="w-full" src="${image}" alt="${title}" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">${title}</h2>
+        <p>${description}</p>
+        <div class="card-actions justify-end">
+          <button 
+            class="btn btn-primary"
+            onClick=${() => openAlert()}
+          >
+            More info
+          </button>
+        </div>
       </div>
     </div>
   `

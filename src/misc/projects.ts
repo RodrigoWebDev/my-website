@@ -1,7 +1,3 @@
-import { h } from 'preact'
-import htm from 'htm'
-import Card from "./Card"
-
 //Images
 //@ts-ignore
 import raia from "../assets/images/drogaraia.jpg"
@@ -19,28 +15,44 @@ import voltz from "../assets/images/voltz.jpg"
 import wine from "../assets/images/wine.jpg"
 //@ts-ignore
 import sicrediComunidade from "../assets/images/sicredi-comunidde.jpg"
+//@ts-ignore
+import sicrediOuvidoria from "../assets/images/sicredi-ouvidoria.jpg"
+//@ts-ignore
+import sicrediApp from "../assets/images/sicredi-app.jpg"
 
-const html = htm.bind(h)
-
-const projects = [
+export const projects = [
+  {
+    title: "Sicredi portal da ouvidoria (Android/IOS)",
+    description: "Count on us to support you in finding effective solutions to problems involving our products, services or support.",
+    stack: ["HTML", "CSS", "Javascript", "React Native", "Typescript", "API Rest", "React Routers", "Jest/RTL"],
+    link: "https://play.google.com/store/apps/details?id=br.com.sicredimobi.smart",
+    image: sicrediApp
+  },
+  {
+    title: "Sicredi portal da ouvidoria (Web)",
+    description: "Count on us to support you in finding effective solutions to problems involving our products, services or support.",
+    stack: ["HTML", "CSS", "Javascript", "React", "MUI", "Typescript", "API Rest", "React Routers", "Jest/RTL", "Tailwind"],
+    link: "https://www.sicredi.com.br/site/ouvidoria",
+    image: sicrediOuvidoria
+  },
   {
     title: "Sicredi na Comunidade",
     description: "We are one and every day we are transforming the reality of many people to build a more prosperous society.",
-    stack: ["HTML", "CSS", "Javascript", "React(16.8 with hooks)", "MUI", "Typescript", "REST API", "React Routers", "Jest/RTL"],
+    stack: ["HTML", "CSS", "Javascript", "React", "MUI", "Typescript", "API Rest", "React Routers", "Jest/RTL"],
     link: "https://www.sicredi.com.br/nacomunidade/",
     image: sicrediComunidade
   },
   {
     title: "Drogaraia",
     description: "The Best Products for Health, Beauty and Wellness.",
-    stack: ["HTML", "CSS", "Javascript", "React(16.8 with hooks)", "Typescript", "GraphQL(Apollo Client)", "Next.js(SSR)", "Styled components", "Jest/RTL"],
+    stack: ["HTML", "CSS", "Javascript", "React", "Typescript", "GraphQL(Apollo Client)", "Next.js(SSR)", "Styled components", "Jest/RTL"],
     link: "https://www.drogaraia.com.br/",
     image: raia
   },
   {
     title: "Drogasil",
     description: "The Best Products for Health, Beauty and Wellness.",
-    stack: ["HTML", "CSS", "Javascript", "React(16.8 with hooks)", "Typescript", "GraphQL(Apollo Client)", "Next.js(SSR)", "Styled components", "Jest/RTL"],
+    stack: ["HTML", "CSS", "Javascript", "React", "Typescript", "GraphQL(Apollo Client)", "Next.js(SSR)", "Styled components", "Jest/RTL"],
     link: "https://www.drogasil.com.br/",
     image: sil
   },
@@ -54,7 +66,7 @@ const projects = [
   {
     title: "Tunne",
     description: "Access Tunne and find the Best Services for your car, near you",
-    stack: ["HTML", "CSS", "Sass", "Javascript", "React(16.8 with hooks)", "Typescript", "GraphQL(Apollo Client)"],
+    stack: ["HTML", "CSS", "Sass", "Javascript", "React", "Typescript", "GraphQL(Apollo Client)"],
     link: "https://tunne.com.br/",
     image: tunne
   },
@@ -75,28 +87,8 @@ const projects = [
   {
     title: "Wine",
     description: "With Brazil's largest importer you can guarantee renowned wines at exclusive prices",
-    stack: ["HTML", "CSS", "JavaScript", "jQuery", "Sass", "Less", "WordPress", "OCC(Oracle Cloud Commerce)", "HandleBars"],
+    stack: ["HTML", "CSS", "Javascript", "jQuery", "Sass", "Less", "WordPress", "OCC(Oracle Cloud Commerce)", "HandleBars"],
     link: "https://www.wine.com.br/",
     image: wine
   }
 ]
-
-const Projects = () => {
-  return html`
-    <ul data-id="Projects" class="flex flex-wrap justify-evenly">
-      ${projects.map(({title, description, link, image, stack}) => html`
-        <li key=${title} class="w-[90%] sm:w-[45%] lg:w-[32%]">
-          <${Card} 
-            title=${title} 
-            description=${description} 
-            link=${link} 
-            image=${image}
-            stack=${stack}
-          />
-        </li>
-      `)}
-    </ul>
-  `
-}
-
-export default Projects

@@ -7,7 +7,7 @@ const html = htm.bind(h)
 
 const Portfolio = () => {
   return html`
-    <${Layout} title="Commercial projects">
+    <${Layout}>
       <${Projects} />
     <//>
   `
