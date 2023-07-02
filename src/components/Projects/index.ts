@@ -2,7 +2,7 @@ import { h } from 'preact'
 import htm from 'htm'
 import Card from "../Card"
 import { projects } from "../../misc/projects"
-import { useProjects } from "./useProjects"
+import { useProjects } from "./hook"
 
 const html = htm.bind(h)
 
