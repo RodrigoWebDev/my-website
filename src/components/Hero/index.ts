@@ -9,7 +9,7 @@ const Hero = () => {
   }
 
   return html`
-    <div class="hero min-h-[200px] bg-base-200">
+    <div class="hero min-h-[350px] bg-base-200">
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Rodrigo Queiroz</h1>
