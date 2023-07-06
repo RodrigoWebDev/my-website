@@ -38,7 +38,7 @@ const App = () => {
           ${tabs.map(({ name, id }) => {
             return html`
               <a 
-                class="tab tab-lifted w-[33%] ${tab === id ? "tab-active" : ""}"
+                class="tab tab-lifted w-[33%] h-[60px] ${tab === id ? "tab-active" : ""}"
                 onClick=${() => {
                   setTab(id);
                 }}
