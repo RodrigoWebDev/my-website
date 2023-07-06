@@ -5,12 +5,14 @@ import Hero from "../Hero"
 import Footer from "../Footer"
 import Projects from "../Projects"
 import Certificates from "../Certificates"
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 
 const html = htm.bind(h)
 
 const App = () => {
-  const [tab, setTab] = useState(0);
+  const getTabParam = () => parseInt(window.location.search.split("=")[1])
+  const [tab, setTab] = useState(getTabParam() || 0);
+  
   const tabs = [
     {
       id: 0,
@@ -26,7 +28,9 @@ const App = () => {
     },
   ]
 
-  console.log({ tab })
+  useEffect(() => {
+    window.history.replaceState(null, "", `?tab=${tab}`);
+  }, [tab])
 
   return html`
     <div data-id="Layout">
