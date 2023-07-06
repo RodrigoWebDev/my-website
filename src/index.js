@@ -1,7 +1,7 @@
 import { h, render } from 'preact'
 import htm from 'htm'
-import Portfolio from './pages/Portfolio'
+import App from './components/App'
 
 const html = htm.bind(h)
 
-render(html`<${Portfolio}/>`, document.getElementById('app'))
+render(html`<${App}/>`, document.getElementById('app'))
