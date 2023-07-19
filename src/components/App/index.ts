@@ -5,6 +5,7 @@ import Hero from "../Hero"
 import Footer from "../Footer"
 import Projects from "../Projects"
 import Certificates from "../Certificates"
+import Achievements from "../Achievements"
 import { useState, useEffect } from 'preact/hooks'
 
 const html = htm.bind(h)
@@ -54,6 +55,7 @@ const App = () => {
         </div>
         ${tab == 0 && html`<${Projects} />`}
         ${tab == 1 && html`<${Certificates} />`}
+        ${tab == 2 && html`<${Achievements} />`}
       </main>
       <${Footer} />
     </div>
