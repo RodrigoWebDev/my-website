@@ -19,6 +19,8 @@ import sicrediComunidade from "../assets/images/sicredi-comunidde.jpg"
 import sicrediOuvidoria from "../assets/images/sicredi-ouvidoria.jpg"
 //@ts-ignore
 import sicrediApp from "../assets/images/sicredi-app.jpg"
+//@ts-ignore
+import propostasInstaviagem from "../assets/images/propostasIntaviagem.jpg"
 
 export const projects = [
   {
@@ -27,6 +29,13 @@ export const projects = [
     stack: ["HTML", "CSS", "Javascript", "React Native", "Typescript", "API Rest", "React Routers", "Jest/RTL"],
     link: "https://play.google.com/store/apps/details?id=br.com.sicredimobi.smart",
     image: sicrediApp
+  },
+  {
+    title: "Propostas Instaviagem",
+    description: "Internal system for creating, generating and maintaining travel proposals",
+    stack: ["Angular", "Rx.js", "HTML", "CSS", "Javascript", "Material Angular", "Typescript", "API Rest", "Akita", "Cypress", "Tailwind"],
+    link: undefined,
+    image: propostasInstaviagem
   },
   {
     title: "Sicredi portal da ouvidoria (Web)",

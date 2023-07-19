@@ -5,7 +5,6 @@ import DBC1 from "../assets/images/achievements/DBC1.jpg"
 //@ts-ignore
 import IV0 from "../assets/images/achievements/IV0.png"
 
-
 export const achievementsData = [
   {
     name: "Instaviagem",

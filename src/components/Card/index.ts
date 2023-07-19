@@ -30,7 +30,10 @@ const Card = ({title, description, link, image, stack}: CardsPropTypes) => {
         <div class="mb-3">
           <h3 class="${h3} mb-2">Description</h3>
           <p class="mb-2">${description}</p>
-          <a href="${link}" target="_blank" class="link" underline">Open ${upRightFromSquare}</a>
+          ${link
+            ? `<a href="${link}" target="_blank" class="link" underline">Open ${upRightFromSquare}</a>`
+            : ''
+          }
         </div>
 
         <div class="mb-3">

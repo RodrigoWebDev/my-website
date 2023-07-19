@@ -4,7 +4,7 @@ interface IProjects {
   title: string
   description: string
   stack: string[]
-  link: string,
+  link?: string,
   image: string
 }
 
