@@ -21,6 +21,10 @@ import sicrediOuvidoria from "../assets/images/sicredi-ouvidoria.jpg"
 import sicrediApp from "../assets/images/sicredi-app.jpg"
 //@ts-ignore
 import propostasInstaviagem from "../assets/images/propostasIntaviagem.jpg"
+//@ts-ignore
+import raiaNative from "../assets/images/drogaraiaNative.jpg"
+//@ts-ignore
+import silNative from "../assets/images/drogasilNative.jpg"
 
 export const projects = [
   {
@@ -50,6 +54,20 @@ export const projects = [
     stack: ["HTML", "CSS", "Javascript", "React", "MUI", "Typescript", "API Rest", "React Routers", "Jest/RTL"],
     link: "https://www.sicredi.com.br/nacomunidade/",
     image: sicrediComunidade
+  },
+  {
+    title: "Drogaraia (Android/IOS)",
+    description: "The Best Products for Health, Beauty and Wellness.",
+    stack: ["HTML", "CSS", "Javascript", "React Native", "Typescript", "GraphQL(Apollo Client)", "Jest/RNTL"],
+    link: "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR&gl=US&pli=1",
+    image: raiaNative
+  },
+  {
+    title: "Drogasil (Android/IOS)",
+    description: "The Best Products for Health, Beauty and Wellness.",
+    stack: ["HTML", "CSS", "Javascript", "React Native", "Typescript", "GraphQL(Apollo Client)", "Jest/RNTL"],
+    link: "https://play.google.com/store/apps/details?id=br.com.drogasil&hl=pt_BR&gl=US",
+    image: silNative
   },
   {
     title: "Drogaraia",
