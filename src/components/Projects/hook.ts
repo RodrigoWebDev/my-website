@@ -27,12 +27,20 @@ export const useProjects = (projects: IProjects[]) => {
     )
   }
 
+  const resetFilters = () => {
+    setFilters([]);
+  }
+
   const onChange = (e: any, name: string) => {
     if(e.target.checked){
       addFilter(name)
     }else{
       removeFilter(name)
     }
+  }
+  
+  const isChecked = (name: string) => {
+    return filters.some(item => item === name)
   }
 
   const doFilter = () => {
@@ -50,12 +58,15 @@ export const useProjects = (projects: IProjects[]) => {
   }
 
   useEffect(() => {
+    console.log({ filters })
     doFilter()
   }, [filters])
 
   return {
     getSkills,
     onChange,
-    myProjects
+    myProjects,
+    resetFilters,
+    isChecked
   }
 }
