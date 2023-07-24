@@ -25,6 +25,8 @@ import propostasInstaviagem from "../assets/images/propostasIntaviagem.jpg"
 import raiaNative from "../assets/images/drogaraiaNative.jpg"
 //@ts-ignore
 import silNative from "../assets/images/drogasilNative.jpg"
+//@ts-ignore
+import laModa from "../assets/images/lamoda.jpg"
 
 export const projects = [
   {
@@ -40,6 +42,13 @@ export const projects = [
     stack: ["Angular", "Rx.js", "HTML", "CSS", "Javascript", "Material Angular", "Typescript", "API Rest", "Akita", "Cypress", "Tailwind"],
     link: undefined,
     image: propostasInstaviagem
+  },
+  {
+    title: "La moda - Strapi CMS",
+    description: "Our purpose: Bring emotion to people's lives",
+    stack: ["Node", "Strapi", "HTML", "CSS", "Javascript", "React", "MUI", "Typescript", "API Rest", "React Routers"],
+    link: "https://lamoda.com.br/",
+    image: laModa
   },
   {
     title: "Sicredi portal da ouvidoria (Web)",
