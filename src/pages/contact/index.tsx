@@ -1,26 +1,15 @@
-import ptProfile from "../../data/pt/profile.json";
-import ptSkills from "../../data/pt/skills.json";
-import ptExperiences from "../../data/pt/experiences.json";
-import ptProjects from "../../data/pt/projects.json";
 import ptContact from "../../data/pt/contact.json";
-
-import enProfile from "../../data/en/profile.json";
-import enSkills from "../../data/en/skills.json";
-import enExperiences from "../../data/en/experiences.json";
-import enProjects from "../../data/en/projects.json";
 import enContact from "../../data/en/contact.json";
 
-import { route } from "preact-router";
-import Header from "../../components/Header";
+import Layout from "../../components/Layout";
+import Icon from "../../components/Icon";
 
 const Contact = (props: any) => {
   const isEnglish = window.location.search === "?locale=en_US";
   const contact = isEnglish ? enContact : ptContact;
 
   return (
-    <main>
-      <Header />
-
+    <Layout>
       <h2>{isEnglish ? "Contact" : "Contato"}</h2>
 
       <hr />
@@ -39,6 +28,10 @@ const Contact = (props: any) => {
         <li>
           <strong>{isEnglish ? "Phone" : "Telefone"}:</strong> +55
           {contact.phone}
+          &nbsp; &nbsp;
+          <a class="c-25d366" href={`https://wa.me/55${contact.phone}`} target="_blank">
+            <Icon name="whatsApp" size={16} color="#25d366" /> Chamar no what's app
+          </a>
         </li>
         <li>
           <strong>Website:</strong>{" "}
@@ -47,7 +40,7 @@ const Contact = (props: any) => {
           </a>
         </li>
       </ul>
-    </main>
+    </Layout>
   );
 };
 
