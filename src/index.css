@@ -73,7 +73,47 @@ blockquote{ border-left: .3rem solid #d1d1d1; padding: 1rem 1.5rem; font-style: 
 input { font-size: 1em; }
 p>cite:before { content: ' ('; } p>cite:after {content: ') '}
 
-/* grid */
-.row { display: flex; margin:  .5rem -.5rem; align-items: stretch; }
-.row [class*="col"] { padding: 0 .5rem; flex: 1 1 100%; }
-@media (max-width: 40em) { .row { flex-direction: column !important; } }
+
+/* utils */
+
+.d-f{
+	display: flex !important;
+}
+
+.jc-sb{
+	justify-content: space-between;
+}
+
+.ai-c{
+	align-items: center;
+}
+
+.fs-32px{
+	font-size: 32px;
+}
+
+.c-p{
+	cursor: pointer;
+}
+
+.p-f{
+	position: fixed;
+}
+
+.l-0{
+	left: 0;
+}
+
+.t-0{
+	top: 0;
+}
+
+.container {
+	max-width: 50rem;
+	margin: 0 auto;
+	display: block;
+}
+
+.bg-white {
+	background-color: white;
+}

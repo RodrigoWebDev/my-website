@@ -1,26 +1,40 @@
-import profile from "../../data/profile.json";
-import skills from "../../data/skills.json";
-import experiences from "../../data/experiences.json";
-import projects from "../../data/projects.json";
-import contact from "../../data/contact.json";
+import ptProfile from "../../data/pt/profile.json";
+import ptSkills from "../../data/pt/skills.json";
+import ptExperiences from "../../data/pt/experiences.json";
+import ptProjects from "../../data/pt/projects.json";
+import ptContact from "../../data/pt/contact.json";
+
+import enProfile from "../../data/en/profile.json";
+import enSkills from "../../data/en/skills.json";
+import enExperiences from "../../data/en/experiences.json";
+import enProjects from "../../data/en/projects.json";
+import enContact from "../../data/en/contact.json";
 
 const Resume = (props: any) => {
+  const isEnglish = window.location.search === "?locale=en_US"
+
+  const profile = isEnglish ? enProfile : ptProfile
+  const skills = isEnglish ? enSkills : ptSkills
+  const experiences = isEnglish ? enExperiences : ptExperiences
+  const projects = isEnglish ? enProjects : ptProjects
+  const contact = isEnglish ? enContact : ptContact
+
   return (
     <main>
       <h1>{profile.name}</h1>
-      <p>{profile.headling}</p>
+      <p>{profile.headline}</p>
       <br />
-      <h2>Contato</h2>
+      <h2>{isEnglish ? "Contact" : "Contato"}</h2>
       <hr />
 
       <ul>
         <li><strong>E-mail:</strong> <a href={`mailto:${contact.email}`}>{contact.email}</a></li>
         <li><strong>Linkedin:</strong> <a target="_blank" href={contact.linkedin}>{contact.linkedin}</a></li>
-        <li><strong>Telefone:</strong> +55{contact.phone}</li>
+        <li><strong>{isEnglish ? "Phone" : "Telefone"}:</strong> +55{contact.phone}</li>
         <li><strong>Website:</strong> <a target="_blank" href={contact.website}>{contact.website}</a></li>
       </ul>
 
-      <h2>Sobre</h2>
+      <h2>{isEnglish ? "About": "Sobre"}</h2>
       <hr />
       <p
         dangerouslySetInnerHTML={{
@@ -28,7 +42,8 @@ const Resume = (props: any) => {
         }}
       ></p>
 
-      <h2>Habilidades</h2>
+      <h2>{isEnglish ? "Skills": "Habilidades"}</h2>
+
       <hr />
       <ul>
         {skills.map((skill) => (
@@ -36,19 +51,20 @@ const Resume = (props: any) => {
         ))}
       </ul>
 
-      <h2>Experiência profissional</h2>
+      <h2>{isEnglish ? "Work experience": "Experiência profissional"}</h2>
+
       <hr />
       <ul>
         {experiences.map((exp) => (
           <li>
             <h3>
-              {exp.title} em{" "}
+              {exp.title} {isEnglish ? "at" : "em"}{" "}
               <a href={exp.companyLink} target="_blank">
                 {exp.company}
               </a>
             </h3>
             <p>
-              <strong>Período</strong>: {exp.date}
+              <strong>{isEnglish ? "Date" : "Período"}</strong>: {exp.date}
             </p>
             <p
               dangerouslySetInnerHTML={{
@@ -59,7 +75,8 @@ const Resume = (props: any) => {
         ))}
       </ul>
 
-      <h2>Projetos</h2>
+      <h2>{isEnglish ? "Projects": "Projetos"}</h2>
+
       <hr />
 
       <ul>
