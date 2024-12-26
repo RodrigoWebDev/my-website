@@ -10,7 +10,7 @@ const Contact = (props: any) => {
 
   return (
     <Layout>
-      <h2>{isEnglish() ? "Contact" : "Contato"}</h2>
+      <h2>📞 {isEnglish() ? "Contact" : "Contato"}</h2>
 
       <hr />
 

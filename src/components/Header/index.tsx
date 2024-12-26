@@ -91,8 +91,8 @@ const Header = () => {
                 }
               }}
             >
+              <option value="pt" selected>🇧🇷</option>
               <option value="en">🇺🇸</option>
-              <option value="pt">🇧🇷</option>
             </select>
           </div>
         </div>
@@ -119,7 +119,7 @@ const Header = () => {
         </div>
       )}
 
-      <h1>{profile.name}</h1>
+      <h1>🧑🏻‍💻 {profile.name}</h1>
       <p>
         <i>{profile.headline}</i>
       </p>
