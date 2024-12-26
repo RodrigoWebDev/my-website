@@ -33,8 +33,6 @@ const Resume = (props: any) => {
       <p><strong>{isEnglish() ? "Profession" : "Profissão"}:</strong> {profile.headline}</p>
       <p><strong>{isEnglish() ? "Age" : "Idade"}:</strong> {getAge()} {isEnglish() ? "years old" : "anos"}</p>
 
-      <br />
-
       <h2>💭 {isEnglish() ? "About" : "Sobre"}</h2>
       <hr />
 
@@ -113,7 +111,7 @@ const Resume = (props: any) => {
           </a>
         </li>
         <li>
-          <strong>{isEnglish() ? "Phone" : "Telefone"}:</strong> +55
+          <strong>{isEnglish() ? "Phone and What's app" : "Telefone e What's app"}:</strong> 55
           {contact.phone}
         </li>
         <li>
