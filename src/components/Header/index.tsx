@@ -2,8 +2,10 @@ import { route } from "preact-router";
 import { signal } from "@preact/signals";
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
+import { isEnglish } from "../../utils/locale";
 
 const isNavigationMenuOpen = signal(false);
+const _isEnglish = signal(false);
 
 const navLinks = [
   {
@@ -33,8 +35,7 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const isEnglish = window.location.search === "?locale=en_US";
-  const profile = isEnglish ? enProfile : ptProfile;
+  const profile = _isEnglish.value ? enProfile : ptProfile;
 
   return (
     <>
@@ -43,7 +44,7 @@ const Header = () => {
           <div
             class="fs-32px c-p"
             onClick={() => {
-              route("/about");
+              route("/about" + window.location.search);
             }}
           >
             🤖
@@ -65,15 +66,34 @@ const Header = () => {
                 <>
                   <button
                     onClick={() => {
-                      route("/" + navLink.name.toLocaleLowerCase());
+                      route(
+                        "/" +
+                          navLink.name.toLocaleLowerCase() +
+                          window.location.search
+                      );
                     }}
                   >
-                    {isEnglish ? navLink.name : navLink.ptName}
+                    {isEnglish() ? navLink.name : navLink.ptName}
                   </button>
                   &nbsp;&nbsp;
                 </>
               );
             })}
+            <select
+              onChange={(e: any) => {
+                const check = e.target.value === "en";
+                _isEnglish.value = check;
+
+                if (check) {
+                  route(window.location.pathname + "?locale=en_US");
+                } else {
+                  route(window.location.pathname);
+                }
+              }}
+            >
+              <option value="en">🇺🇸</option>
+              <option value="pt">🇧🇷</option>
+            </select>
           </div>
         </div>
       </header>
@@ -90,7 +110,7 @@ const Header = () => {
                     isNavigationMenuOpen.value = false;
                   }}
                 >
-                  {isEnglish ? navLink.name : navLink.ptName}
+                  {isEnglish() ? navLink.name : navLink.ptName}
                 </button>
                 <br />
               </>

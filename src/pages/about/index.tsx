@@ -8,7 +8,7 @@ const About = (props: any) => {
 
   return (
     <Layout>
-      <h2>Sobre</h2>
+      <h2>{isEnglish() ? "About" : "Sobre"}</h2>
       <hr />
 
       <p>{profile.about}</p>

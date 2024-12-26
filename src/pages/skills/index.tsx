@@ -8,7 +8,8 @@ const Skills = (props: any) => {
 
   return (
     <Layout>
-      <h2>Habilidades</h2>
+      <h2>{isEnglish() ? "Skills": "Habilidades"}</h2>
+
       <hr />
 
       <ul>

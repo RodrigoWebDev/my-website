@@ -64,7 +64,7 @@ select {
   cursor: pointer;
 }
 
-button{
+button, select{
 	padding: 8px;
 }
 

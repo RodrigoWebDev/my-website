@@ -8,7 +8,8 @@ const Works = (props: any) => {
 
   return (
     <Layout>
-      <h2>Trabalhos</h2>
+      <h2>{isEnglish() ? "Works": "Trabalhos"}</h2>
+
       <hr />
 
       <ul>
