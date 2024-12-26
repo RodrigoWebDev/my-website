@@ -18,14 +18,26 @@ const Resume = (props: any) => {
   const projects = isEnglish() ? enProjects : ptProjects;
   const contact = isEnglish() ? enContact : ptContact;
 
+  const getAge = () => {
+    const birthDate = new Date(1997, 2, 11)
+    const diff = Date.now() - birthDate.getTime();
+    const year = new Date(diff).getUTCFullYear()
+
+    return Math.abs(year - 1970)
+  }
+
   return (
     <main>
       <h1>{profile.name}</h1>
-      <p>{profile.headline}</p>
+
+      <p><strong>{isEnglish() ? "Profession" : "Profissão"}:</strong> {profile.headline}</p>
+      <p><strong>{isEnglish() ? "Age" : "Idade"}:</strong> {getAge()} {isEnglish() ? "years old" : "anos"}</p>
+
       <br />
 
       <h2>💭 {isEnglish() ? "About" : "Sobre"}</h2>
       <hr />
+
       <p
         dangerouslySetInnerHTML={{
           __html: profile.about,
