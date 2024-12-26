@@ -1,15 +1,13 @@
 import enProjects from "../../data/en/projects.json";
 import ptProjects from "../../data/pt/projects.json";
-import Header from "../../components/Header";
+import Layout from "../../components/Layout";
 
 const Projects = (props: any) => {
   const isEnglish = window.location.search === "?locale=en_US";
-  const projects = isEnglish ?  enProjects : ptProjects;
+  const projects = isEnglish ? enProjects : ptProjects;
 
   return (
-    <main>
-      <Header />
-      
+    <Layout>
       <h2>Projetos</h2>
       <hr />
 
@@ -29,7 +27,7 @@ const Projects = (props: any) => {
           </li>
         ))}
       </ul>
-    </main>
+    </Layout>
   );
 };
 

@@ -5,6 +5,33 @@ import enProfile from "../../data/en/profile.json";
 
 const isNavigationMenuOpen = signal(false);
 
+const navLinks = [
+  {
+    name: "About",
+    ptName: "Sobre",
+  },
+  {
+    name: "Contact",
+    ptName: "Contato",
+  },
+  {
+    name: "Projects",
+    ptName: "Projetos",
+  },
+  {
+    name: "Skills",
+    ptName: "Habilidades",
+  },
+  {
+    name: "Works",
+    ptName: "Trabalhos",
+  },
+  {
+    name: "Resume",
+    ptName: "Currículo",
+  },
+];
+
 const Header = () => {
   const isEnglish = window.location.search === "?locale=en_US";
   const profile = isEnglish ? enProfile : ptProfile;
@@ -16,7 +43,7 @@ const Header = () => {
           <div
             class="fs-32px c-p"
             onClick={() => {
-              route("/");
+              route("/about");
             }}
           >
             🤖
@@ -33,39 +60,20 @@ const Header = () => {
 
           {/* Desktop menu */}
           <div class="d-n md:d-b">
-            <button
-              onClick={() => {
-                route("/");
-              }}
-            >
-              Sobre
-            </button>
-            &nbsp;&nbsp;
-            <button
-              onClick={() => {
-                route("/contact");
-              }}
-            >
-              Contato
-            </button>
-            &nbsp;&nbsp;
-            <button
-              onClick={() => {
-                route("/projects");
-              }}
-            >
-              Projetos
-            </button>
-            &nbsp;&nbsp;
-            <button>Habilidades</button>&nbsp;&nbsp;
-            <button>Experiência profissional</button>&nbsp;&nbsp;
-            <button
-              onClick={() => {
-                route("/resume");
-              }}
-            >
-              CV
-            </button>
+            {navLinks.map((navLink) => {
+              return (
+                <>
+                  <button
+                    onClick={() => {
+                      route("/" + navLink.name.toLocaleLowerCase());
+                    }}
+                  >
+                    {isEnglish ? navLink.name : navLink.ptName}
+                  </button>
+                  &nbsp;&nbsp;
+                </>
+              );
+            })}
           </div>
         </div>
       </header>
@@ -73,43 +81,21 @@ const Header = () => {
       {/* Mobile menu */}
       {isNavigationMenuOpen.value && (
         <div class="d-f fd-c">
-          <button
-            onClick={() => {
-              route("/");
-              isNavigationMenuOpen.value = false;
-            }}
-          >
-            Sobre
-          </button>
-          &nbsp;&nbsp;
-          <button
-            onClick={() => {
-              route("/contact");
-              isNavigationMenuOpen.value = false;
-            }}
-          >
-            Contato
-          </button>
-          &nbsp;&nbsp;
-          <button
-            onClick={() => {
-              route("/projects");
-              isNavigationMenuOpen.value = false;
-            }}
-          >
-            Projetos
-          </button>
-          &nbsp;&nbsp;
-          <button>Habilidades</button>&nbsp;&nbsp;
-          <button>Experiência profissional</button>&nbsp;&nbsp;
-          <button
-            onClick={() => {
-              route("/resume");
-              isNavigationMenuOpen.value = false;
-            }}
-          >
-            CV
-          </button>
+          {navLinks.map((navLink) => {
+            return (
+              <>
+                <button
+                  onClick={() => {
+                    route("/" + navLink.name.toLocaleLowerCase());
+                    isNavigationMenuOpen.value = false;
+                  }}
+                >
+                  {isEnglish ? navLink.name : navLink.ptName}
+                </button>
+                <br />
+              </>
+            );
+          })}
         </div>
       )}
 
