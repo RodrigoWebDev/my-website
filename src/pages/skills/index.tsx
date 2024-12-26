@@ -1,11 +1,10 @@
 import enSkills from "../../data/en/skills.json";
 import ptSkills from "../../data/pt/skills.json";
-import Header from "../../components/Header";
 import Layout from "../../components/Layout";
+import { isEnglish } from "../../utils/locale";
 
 const Skills = (props: any) => {
-  const isEnglish = window.location.search === "?locale=en_US";
-  const skills = isEnglish ? enSkills : ptSkills;
+  const skills = isEnglish() ? enSkills : ptSkills;
 
   return (
     <Layout>

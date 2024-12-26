@@ -3,14 +3,14 @@ import enContact from "../../data/en/contact.json";
 
 import Layout from "../../components/Layout";
 import Icon from "../../components/Icon";
+import { isEnglish } from "../../utils/locale";
 
 const Contact = (props: any) => {
-  const isEnglish = window.location.search === "?locale=en_US";
-  const contact = isEnglish ? enContact : ptContact;
+  const contact = isEnglish() ? enContact : ptContact;
 
   return (
     <Layout>
-      <h2>{isEnglish ? "Contact" : "Contato"}</h2>
+      <h2>{isEnglish() ? "Contact" : "Contato"}</h2>
 
       <hr />
 
@@ -26,7 +26,7 @@ const Contact = (props: any) => {
           </a>
         </li>
         <li>
-          <strong>{isEnglish ? "Phone" : "Telefone"}:</strong> +55
+          <strong>{isEnglish() ? "Phone" : "Telefone"}:</strong> +55
           {contact.phone}
           &nbsp; &nbsp;
           <a class="c-25d366" href={`https://wa.me/55${contact.phone}`} target="_blank">

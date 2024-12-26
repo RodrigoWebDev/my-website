@@ -1,10 +1,10 @@
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import Layout from "../../components/Layout";
+import { isEnglish } from "../../utils/locale";
 
 const About = (props: any) => {
-  const isEnglish = window.location.search === "?locale=en_US";
-  const profile = isEnglish ? enProfile : ptProfile;
+  const profile = isEnglish() ? enProfile : ptProfile;
 
   return (
     <Layout>

@@ -1,10 +1,10 @@
 import enProjects from "../../data/en/projects.json";
 import ptProjects from "../../data/pt/projects.json";
 import Layout from "../../components/Layout";
+import { isEnglish } from "../../utils/locale";
 
 const Projects = (props: any) => {
-  const isEnglish = window.location.search === "?locale=en_US";
-  const projects = isEnglish ? enProjects : ptProjects;
+  const projects = isEnglish() ? enProjects : ptProjects;
 
   return (
     <Layout>
