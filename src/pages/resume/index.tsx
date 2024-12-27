@@ -12,6 +12,8 @@ import enContact from "../../data/en/contact.json";
 import { isEnglish } from "../../utils/locale";
 
 const Resume = (props: any) => {
+  console.log({ props })
+
   const profile = isEnglish() ? enProfile : ptProfile;
   const skills = isEnglish() ? enSkills : ptSkills;
   const experiences = isEnglish() ? enExperiences : ptExperiences;

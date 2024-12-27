@@ -6,6 +6,8 @@ import Icon from "../../components/Icon";
 import { isEnglish } from "../../utils/locale";
 
 const Contact = (props: any) => {
+  console.log({ props })
+
   const contact = isEnglish() ? enContact : ptContact;
 
   return (

@@ -4,6 +4,8 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 
 const Projects = (props: any) => {
+  console.log({ props })
+
   const projects = isEnglish() ? enProjects : ptProjects;
 
   return (

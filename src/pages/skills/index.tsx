@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 
 const Skills = (props: any) => {
+  console.log({ props })
   const skills = isEnglish() ? enSkills : ptSkills;
 
   return (

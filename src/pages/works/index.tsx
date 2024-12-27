@@ -4,6 +4,8 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 
 const Works = (props: any) => {
+  console.log({ props })
+
   const works = isEnglish() ? enWorks : ptWorks;
 
   return (

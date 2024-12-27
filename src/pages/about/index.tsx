@@ -4,6 +4,8 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 
 const About = (props: any) => {
+  console.log({ props })
+
   const profile = isEnglish() ? enProfile : ptProfile;
 
   return (
