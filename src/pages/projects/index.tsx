@@ -17,7 +17,7 @@ const Projects = (props: any) => {
           <li>
             <h3>
               <a href={project.link} target="_blank">
-                {project.title}
+              🔗 {project.title}
               </a>
             </h3>
             <p
