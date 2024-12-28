@@ -1,57 +1,57 @@
 [
-  {
-      "title": "Cotação Instaviagem",
-      "link": "https://instaviagem.com",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AngularJS · Angular Material · Tailwind · Tailwind CSS · RxJS · JavaScript · TypeScript · API REST · Cypress · Git<!---->"
-  },
-  {
-      "title": "Droga Raia",
-      "link": "https://www.drogaraia.com.br",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Desenvolvimento orientado a testes · Test-Driven Development · Behavior-Driven Development (BDD) · Git · Gitlab<!---->"
-  },
-  {
-      "title": "Drogasil",
-      "link": "https://www.drogasil.com.br",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Git · Gitlab<!---->"
-  },
-  {
-      "title": "La moda",
-      "link": "https://lamoda.com.br/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Node.js · Strapi · Strapi.js · HTML · HTML5 · CSS · JavaScript · TypeScript · React.js · ReactJs · MUI · API REST · Git · Gitlab<!---->"
-  },
-  {
-      "title": "Mercado Eletrônico",
-      "link": "https://www.me.com.br/supplier/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Vue · Vue.js · Vuex · CSS · HTML · HTML5 · JavaScript · API REST · Git · Bitbucket · Cypress<!---->"
-  },
-  {
-      "title": "Meu website",
-      "link": "https://rqueiroz.netlify.app/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Desenvolvimento de sites · React.js · Preact · ReactJs · Sistemas operacionais · Git · GitHub · JSON · Desenvolvimento de front-end · Desenvolvimento de interfaces · Npm · CSS · JavaScript · TypeScript<!---->"
-  },
-  {
-      "title": "Raia Android & IOS App",
-      "link": "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · React.js · ReactJs · Tailwind · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Desenvolvimento orientado a testes · Behavior-Driven Development (BDD) · Gitlab · Git<!---->"
-  },
-  {
-      "title": "Sicredi na Comunidade",
-      "link": "https://www.sicredi.com.br/nacomunidade/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · React.js · ReactJs · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab<!---->"
-  },
-  {
-      "title": "Sicredi portal da ouvidoria",
-      "link": "https://www.sicredi.com.br/home/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · TypeScript · React.js · ReactJs · API REST · Jest · Test-Driven Development · Git · Gitlab<!---->"
-  },
-  {
-      "title": "Voltz",
-      "link": "https://voltzmotors.com/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript<!---->"
-  },
-  {
-      "title": "Wine",
-      "link": "https://www.wine.com.br/",
-      "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS<!---->"
-  }
+    {
+        "title": "Cotação Instaviagem",
+        "link": "https://instaviagem.com",
+        "description": "Skills: AngularJS · Angular Material · Tailwind · Tailwind CSS · RxJS · JavaScript · TypeScript · API REST · Cypress · Git"
+    },
+    {
+        "title": "Droga Raia",
+        "link": "https://www.drogaraia.com.br",
+        "description": "Skills: HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Desenvolvimento orientado a testes · Test-Driven Development · Behavior-Driven Development (BDD) · Git · Gitlab"
+    },
+    {
+        "title": "Drogasil",
+        "link": "https://www.drogasil.com.br",
+        "description": "Skills: HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Git · Gitlab"
+    },
+    {
+        "title": "La moda",
+        "link": "https://lamoda.com.br/",
+        "description": "Skills: Node.js · Strapi · Strapi.js · HTML · HTML5 · CSS · JavaScript · TypeScript · React.js · ReactJs · MUI · API REST · Git · Gitlab"
+    },
+    {
+        "title": "Mercado Eletrônico",
+        "link": "https://www.me.com.br/supplier/",
+        "description": "Skills: Vue · Vue.js · Vuex · CSS · HTML · HTML5 · JavaScript · API REST · Git · Bitbucket · Cypress"
+    },
+    {
+        "title": "Meu website",
+        "link": "https://rqueiroz.netlify.app/",
+        "description": "Skills: Desenvolvimento de sites · React.js · Preact · ReactJs · Sistemas operacionais · Git · GitHub · JSON · Desenvolvimento de front-end · Desenvolvimento de interfaces · Npm · CSS · JavaScript · TypeScript"
+    },
+    {
+        "title": "Raia Android & IOS App",
+        "link": "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR",
+        "description": "Skills: React Native · React.js · ReactJs · Tailwind · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Desenvolvimento orientado a testes · Behavior-Driven Development (BDD) · Gitlab · Git"
+    },
+    {
+        "title": "Sicredi na Comunidade",
+        "link": "https://www.sicredi.com.br/nacomunidade/",
+        "description": "Skills: HTML · HTML5 · React.js · ReactJs · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab"
+    },
+    {
+        "title": "Sicredi portal da ouvidoria",
+        "link": "https://www.sicredi.com.br/home/",
+        "description": "Skills: HTML · HTML5 · JavaScript · TypeScript · React.js · ReactJs · API REST · Jest · Test-Driven Development · Git · Gitlab"
+    },
+    {
+        "title": "Voltz",
+        "link": "https://voltzmotors.com/",
+        "description": "Skills: React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript"
+    },
+    {
+        "title": "Wine",
+        "link": "https://www.wine.com.br/",
+        "description": "Skills: HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS"
+    }
 ]
