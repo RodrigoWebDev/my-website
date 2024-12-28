@@ -427,6 +427,11 @@ p > cite:after {
   animation-duration: 11s;
 }
 
+select {
+  text-align: center;
+  font-size: 15px;
+}
+
 @keyframes animate {
   0% {
     transform: translateY(0) rotate(0deg);

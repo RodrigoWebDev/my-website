@@ -37,6 +37,28 @@ const navLinks = [
 const Header = () => {
   const profile = _isEnglish.value ? enProfile : ptProfile;
 
+  const localeSelect = () => {
+    return (
+      <select
+        onChange={(e: any) => {
+          const check = e.target.value === "en";
+          _isEnglish.value = check;
+
+          if (check) {
+            route(window.location.pathname + "?locale=en_US");
+          } else {
+            route(window.location.pathname);
+          }
+        }}
+      >
+        <option value="pt" selected>
+          🇧🇷
+        </option>
+        <option value="en">🇺🇸</option>
+      </select>
+    );
+  };
+
   return (
     <>
       <header class="p-s l-0 t-0 bg-white bb px-1">
@@ -79,21 +101,7 @@ const Header = () => {
                 </>
               );
             })}
-            <select
-              onChange={(e: any) => {
-                const check = e.target.value === "en";
-                _isEnglish.value = check;
-
-                if (check) {
-                  route(window.location.pathname + "?locale=en_US");
-                } else {
-                  route(window.location.pathname);
-                }
-              }}
-            >
-              <option value="pt" selected>🇧🇷</option>
-              <option value="en">🇺🇸</option>
-            </select>
+            {localeSelect()}
           </div>
         </div>
       </header>
@@ -116,6 +124,7 @@ const Header = () => {
               </>
             );
           })}
+          {localeSelect()}
         </div>
       )}
 
