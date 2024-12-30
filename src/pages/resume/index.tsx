@@ -1,7 +1,6 @@
 import ptProfile from "../../data/pt/profile.json";
 import ptSkills from "../../data/pt/skills.json";
 import ptExperiences from "../../data/pt/experiences.json";
-import ptProjects from "../../data/pt/projects.json";
 import ptContact from "../../data/pt/contact.json";
 
 import enProfile from "../../data/en/profile.json";
@@ -9,14 +8,6 @@ import enSkills from "../../data/en/skills.json";
 import enExperiences from "../../data/en/experiences.json";
 import enContact from "../../data/en/contact.json";
 import { isEnglish } from "../../utils/locale";
-
-const skillsToHighlight = [
-  "ReactJs",
-  "React Native",
-  "React.js",
-  "TypeScript",
-  "Next.js",
-];
 
 const Resume = (props: any) => {
   console.log({ props });

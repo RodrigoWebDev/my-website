@@ -243,6 +243,27 @@ p > cite:after {
   content: ") ";
 }
 
+dialog {
+  overflow: hidden;
+  border-radius: 7px;
+  border: none;
+}
+
+dialog > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+dialog > div {
+  max-height: 300px;
+  overflow: auto;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.47);
+}
+
 /* utils */
 
 .d-f {
@@ -291,6 +312,14 @@ p > cite:after {
 
 .t-0 {
   top: 0;
+}
+
+.b-n{
+  border: none;
+}
+
+.br-7px {
+  border-radius: 7px;
 }
 
 .container {

@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 import { signal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
+import { isOpenModal, modalContent } from "../../main";
 
 const filters = signal<
   {
@@ -13,14 +14,15 @@ const filters = signal<
 >([]);
 
 const filteredProjects = signal<
-{
-  title: string;
-  link: string;
-  description: string;
-}[]
->([])
+  {
+    title: string;
+    link: string;
+    description: string;
+  }[]
+>([]);
 
 const Projects = (props: any) => {
+  console.log({ props });
   const projects = isEnglish() ? enProjects : ptProjects;
 
   const onChange = (index: number) => {
@@ -31,8 +33,8 @@ const Projects = (props: any) => {
   };
 
   const getSkills = (str: string) => {
-    return str.replace("Skills: ", "").split(" · ")
-  }
+    return str.replace("Skills: ", "").split(" · ");
+  };
 
   const getFilters = () => {
     let _filters: any[] = [];
@@ -54,18 +56,20 @@ const Projects = (props: any) => {
   }, []);
 
   useEffect(() => {
-    const selectedFilters = filters.value.filter((item) => item.checked).map((item) => item.name)
+    const selectedFilters = filters.value
+      .filter((item) => item.checked)
+      .map((item) => item.name);
 
     if (selectedFilters.length) {
       filteredProjects.value = projects.filter((project) => {
-        return getSkills(project.description).some(item => selectedFilters.includes(item))
-      })
-    }else{
-      filteredProjects.value = [...projects]
+        return getSkills(project.description).some((item) =>
+          selectedFilters.includes(item)
+        );
+      });
+    } else {
+      filteredProjects.value = [...projects];
     }
-    console.log({ selectedFilters })
-    console.log({ filteredProjects })
-  }, [filters.value])
+  }, [filters.value]);
 
   return (
     <Layout>
@@ -74,27 +78,34 @@ const Projects = (props: any) => {
       <hr />
 
       <br />
-      <details>
-        <summary>{isEnglish() ? "Filters" : "Filtros"}</summary>
-        <ul>
-          {filters.value.map((item, index) => {
-            return (
-              <li>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={item.checked}
-                    onChange={() => {
-                      onChange(index);
-                    }}
-                  />
-                  {item.name}
-                </label>
-              </li>
-            );
-          })}
-        </ul>
-      </details>
+
+      <button
+        onClick={() => {
+          modalContent.value = (
+            <ul>
+              {filters.value.map((item, index) => {
+                return (
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={item.checked}
+                        onChange={() => {
+                          onChange(index);
+                        }}
+                      />
+                      {item.name}
+                    </label>
+                  </li>
+                );
+              })}
+            </ul>
+          );
+          isOpenModal.value = true;
+        }}
+      >
+        🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
+      </button>
 
       <ul>
         {filteredProjects.value.map((project) => (
