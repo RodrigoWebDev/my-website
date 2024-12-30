@@ -1,3 +1,4 @@
+import { route } from "preact-router";
 import enProjects from "../../data/en/projects.json";
 import ptProjects from "../../data/pt/projects.json";
 import Layout from "../../components/Layout";
@@ -52,6 +53,21 @@ const Projects = (props: any) => {
   };
 
   useEffect(() => {
+    modalMiddle.value = (
+      <button
+        onClick={() => {
+          route("projects?showFilters", true);
+          window.location.reload()
+        }}
+      >
+        🧹 Limpar filtros
+      </button>
+    );
+
+    if (window.location.search === "?showFilters") {
+      isOpenModal.value = true;
+    }
+
     getFilters();
   }, []);
 
@@ -69,9 +85,28 @@ const Projects = (props: any) => {
     } else {
       filteredProjects.value = [...projects];
     }
-  }, [filters.value]);
 
-  console.log("filters.value", filters.value)
+    modalContent.value = (
+      <ul>
+        {filters.value.map((item, index) => {
+          return (
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={item.checked}
+                  onChange={() => {
+                    onChange(index);
+                  }}
+                />
+                {item.name}
+              </label>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }, [filters.value]);
 
   return (
     <Layout>
@@ -83,32 +118,6 @@ const Projects = (props: any) => {
 
       <button
         onClick={() => {
-          modalMiddle.value = (
-            <button onClick={() => {
-              window.location.reload()
-            }}>Limpar filtros</button>
-          );
-
-          modalContent.value = (
-            <ul>
-              {filters.value.map((item, index) => {
-                return (
-                  <li>
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={item.checked}
-                        onChange={() => {
-                          onChange(index);
-                        }}
-                      />
-                      {item.name}
-                    </label>
-                  </li>
-                );
-              })}
-            </ul>
-          );
           isOpenModal.value = true;
         }}
       >
