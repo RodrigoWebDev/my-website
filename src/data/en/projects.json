@@ -98,5 +98,55 @@
         "title": "Raia Android & IOS App",
         "link": "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR",
         "description": "Skills: React Native · React.js · ReactJs · Tailwind · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Desenvolvimento orientado a testes · Behavior-Driven Development (BDD) · Gitlab · Git"
+    },
+    {
+        "title": "Recriando raízes",
+        "link": "https://recriandoraizes.org.br/site/",
+        "description": "Skills: HTML · HTML5 · PSD para html · PSD para Wordpress · Wordpress · CSS · JavaScript · Git · GitHub · Npm"
+    },
+    {
+        "title": "Shopping Mega Polo Moda",
+        "link": "https://www.megapolomoda.com.br/",
+        "description": "Skills: HTML · HTML5 · PSD para html · CSS · JavaScript · Bootstrap · Git · Npm"
+    },
+    {
+        "title": "Sicredi na Comunidade",
+        "link": "https://www.sicredi.com.br/nacomunidade/",
+        "description": "Skills: HTML · HTML5 · React.js · ReactJs · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab"
+    },
+    {
+        "title": "Sicredi portal da ouvidoria",
+        "link": "https://www.sicredi.com.br/home/",
+        "description": "Skills: HTML · HTML5 · JavaScript · TypeScript · React.js · ReactJs · API REST · Jest · Test-Driven Development · Git · Gitlab"
+    },
+    {
+        "title": "Site Kikosori",
+        "link": "https://lnk.bio/u65i",
+        "description": "Skills: AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack"
+    },
+    {
+        "title": "Tarjab",
+        "link": "https://www.tarjab.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · SASS"
+    },
+    {
+        "title": "Tunne",
+        "link": "https://tunne.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Desenvolvimento de front-end · Desenvolvimento de sites · Desenvolvimento de interfaces · Docker · Front-End Development · GitHub · Git · HTML · HTML5 · JSON · JavaScript · Jest · Next.js · Npm · React.js · ReactJs · Test-Driven Development · TypeScript · MUI · styled-components · Webpack"
+    },
+    {
+        "title": "Voltz",
+        "link": "https://voltzmotors.com/",
+        "description": "Skills: React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript"
+    },
+    {
+        "title": "Wine",
+        "link": "https://www.wine.com.br/",
+        "description": "Skills: HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS"
+    },
+    {
+        "title": "You Go Girls",
+        "link": "https://yougogirls.com.br/",
+        "description": "Skills: HTML · HTML5 · PSD para html · PSD para Wordpress · Wordpress · CSS · Git · GitHub · JavaScript · Npm · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · JSON · Less"
     }
 ]
