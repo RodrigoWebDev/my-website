@@ -7,33 +7,45 @@ import ptContact from "../../data/pt/contact.json";
 import enProfile from "../../data/en/profile.json";
 import enSkills from "../../data/en/skills.json";
 import enExperiences from "../../data/en/experiences.json";
-import enProjects from "../../data/en/projects.json";
 import enContact from "../../data/en/contact.json";
 import { isEnglish } from "../../utils/locale";
 
+const skillsToHighlight = [
+  "ReactJs",
+  "React Native",
+  "React.js",
+  "TypeScript",
+  "Next.js",
+];
+
 const Resume = (props: any) => {
-  console.log({ props })
+  console.log({ props });
 
   const profile = isEnglish() ? enProfile : ptProfile;
   const skills = isEnglish() ? enSkills : ptSkills;
   const experiences = isEnglish() ? enExperiences : ptExperiences;
-  const projects = isEnglish() ? enProjects : ptProjects;
   const contact = isEnglish() ? enContact : ptContact;
 
   const getAge = () => {
-    const birthDate = new Date(1997, 2, 11)
+    const birthDate = new Date(1997, 2, 11);
     const diff = Date.now() - birthDate.getTime();
-    const year = new Date(diff).getUTCFullYear()
+    const year = new Date(diff).getUTCFullYear();
 
-    return Math.abs(year - 1970)
-  }
+    return Math.abs(year - 1970);
+  };
 
   return (
     <main>
       <h1>{profile.name}</h1>
 
-      <p><strong>{isEnglish() ? "Profession" : "Profissão"}:</strong> {profile.headline}</p>
-      <p><strong>{isEnglish() ? "Age" : "Idade"}:</strong> {getAge()} {isEnglish() ? "years old" : "anos"}</p>
+      <p>
+        <strong>{isEnglish() ? "Profession" : "Profissão"}:</strong>{" "}
+        {profile.headline}
+      </p>
+      <p>
+        <strong>{isEnglish() ? "Age" : "Idade"}:</strong> {getAge()}{" "}
+        {isEnglish() ? "years old" : "anos"}
+      </p>
 
       <h2>💭 {isEnglish() ? "About" : "Sobre"}</h2>
       <hr />
@@ -47,10 +59,14 @@ const Resume = (props: any) => {
       <h2>🤹🏻 {isEnglish() ? "Skills" : "Habilidades"}</h2>
 
       <hr />
-      <ul>
-        {skills.map((skill) => (
-          <li>{skill}</li>
-        ))}
+      <ul class="d-f f-w">
+        {skills.map((skill) => {
+          if (skill.isHighLight) {
+            return <li class="mr-3"><strong>{skill.name}</strong></li>;
+          } else {
+            return <li class="mr-3">{skill.name}</li>;
+          }
+        })}
       </ul>
 
       <h2>🛠️ {isEnglish() ? "Work experience" : "Experiência profissional"}</h2>
@@ -81,22 +97,14 @@ const Resume = (props: any) => {
 
       <hr />
 
-      <ul>
-        {projects.map((project) => (
-          <li>
-            <h3>
-              <a href={project.link} target="_blank">
-                {project.title}
-              </a>
-            </h3>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: project.description,
-              }}
-            ></p>
-          </li>
-        ))}
-      </ul>
+      <br />
+
+      <a href="https://rqueiroz.netlify.app/projects" target="_blank">
+        🔗{" "}
+        {isEnglish()
+          ? "See all the projects I have developed"
+          : "Ver todos os projetos que desenvolvi"}
+      </a>
 
       <h2>📞 {isEnglish() ? "Contact" : "Contato"}</h2>
       <hr />
@@ -113,7 +121,10 @@ const Resume = (props: any) => {
           </a>
         </li>
         <li>
-          <strong>{isEnglish() ? "Phone and What's app" : "Telefone e What's app"}:</strong> 55
+          <strong>
+            {isEnglish() ? "Phone and What's app" : "Telefone e What's app"}:
+          </strong>{" "}
+          55
           {contact.phone}
         </li>
         <li>

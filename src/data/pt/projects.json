@@ -1,8 +1,33 @@
 [
     {
+        "title": "ArtCoco Jóias",
+        "link": "https://www.artcocojoias.com.br",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn"
+    },
+    {
+        "title": "Artesana",
+        "link": "https://www.artesana.com.br",
+        "description": "Skills: AJAX · API REST · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack"
+    },
+    {
+        "title": "Biotwo",
+        "link": "https://www.biotwo.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn"
+    },
+    {
+        "title": "Brascol",
+        "link": "https://brascol.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · SASS"
+    },
+    {
         "title": "Cotação Instaviagem",
         "link": "https://instaviagem.com",
         "description": "Skills: AngularJS · Angular Material · Tailwind · Tailwind CSS · RxJS · JavaScript · TypeScript · API REST · Cypress · Git"
+    },
+    {
+        "title": "Dialogo Jeans",
+        "link": "https://www.dialogojeans.com.br",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · Webpack"
     },
     {
         "title": "Droga Raia",
@@ -10,14 +35,49 @@
         "description": "Skills: HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Desenvolvimento orientado a testes · Test-Driven Development · Behavior-Driven Development (BDD) · Git · Gitlab"
     },
     {
+        "title": "Drogaria São Paulo",
+        "link": "https://www.drogariasaopaulo.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Docker · Front-End Development · Git · Gitlab · GraphQL · HTML · HTML5 · JSON · JavaScript · Jest · MUI · Npm · React.js · Redux · Test-Driven Development · TypeScript · Webpack · styled-components"
+    },
+    {
         "title": "Drogasil",
         "link": "https://www.drogasil.com.br",
         "description": "Skills: HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Git · Gitlab"
     },
     {
+        "title": "IZZAT",
+        "link": "https://www.izzat.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn"
+    },
+    {
+        "title": "Instaviagem - Roteiro",
+        "link": "https://roteiro.instaviagem.com/",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Cypress · Front-End Development · Git · Bitbucket · HTML · HTML5 · JSON · JavaScript · Test-Driven Development · Flutter"
+    },
+    {
+        "title": "K2b Fashion",
+        "link": "https://www.k2bloja.com.br",
+        "description": "Skills: AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · Webpack"
+    },
+    {
+        "title": "Keita",
+        "link": "https://www.keita.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · PSD para html · SASS · Yarn"
+    },
+    {
         "title": "La moda",
         "link": "https://lamoda.com.br/",
         "description": "Skills: Node.js · Strapi · Strapi.js · HTML · HTML5 · CSS · JavaScript · TypeScript · React.js · ReactJs · MUI · API REST · Git · Gitlab"
+    },
+    {
+        "title": "Loja La Femme",
+        "link": "https://www.lafemmecalcados.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · GitHub · Git · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Yarn"
+    },
+    {
+        "title": "Mais Vaidosa",
+        "link": "https://www.maisvaidosa.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack"
     },
     {
         "title": "Mercado Eletrônico",
@@ -30,28 +90,13 @@
         "description": "Skills: Desenvolvimento de sites · React.js · Preact · ReactJs · Sistemas operacionais · Git · GitHub · JSON · Desenvolvimento de front-end · Desenvolvimento de interfaces · Npm · CSS · JavaScript · TypeScript"
     },
     {
+        "title": "Passagens promo",
+        "link": "https://www.passagenspromo.com.br/",
+        "description": "Skills: AJAX · API REST · Axios · Behavior-Driven Development (BDD) · Bitbucket · CSS · Cypress · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · HTML · HTML5 · JSON · JavaScript · Jest · Npm · React.js · ReactJs · Tailwind · Tailwind CSS · Test-Driven Development · TypeScript · Webpack"
+    },
+    {
         "title": "Raia Android & IOS App",
         "link": "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR",
         "description": "Skills: React Native · React.js · ReactJs · Tailwind · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Desenvolvimento orientado a testes · Behavior-Driven Development (BDD) · Gitlab · Git"
-    },
-    {
-        "title": "Sicredi na Comunidade",
-        "link": "https://www.sicredi.com.br/nacomunidade/",
-        "description": "Skills: HTML · HTML5 · React.js · ReactJs · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab"
-    },
-    {
-        "title": "Sicredi portal da ouvidoria",
-        "link": "https://www.sicredi.com.br/home/",
-        "description": "Skills: HTML · HTML5 · JavaScript · TypeScript · React.js · ReactJs · API REST · Jest · Test-Driven Development · Git · Gitlab"
-    },
-    {
-        "title": "Voltz",
-        "link": "https://voltzmotors.com/",
-        "description": "Skills: React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript"
-    },
-    {
-        "title": "Wine",
-        "link": "https://www.wine.com.br/",
-        "description": "Skills: HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS"
     }
 ]

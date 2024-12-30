@@ -257,6 +257,10 @@ p > cite:after {
   display: block;
 }
 
+.f-w{
+  flex-wrap: wrap;
+}
+
 .jc-sb {
   justify-content: space-between;
 }
@@ -312,6 +316,10 @@ p > cite:after {
   padding-right: 16px;
 }
 
+.mr-3 {
+  margin-right: 24px;
+}
+
 @media (min-width: 720px) {
   .md\:d-b {
     display: block;
@@ -347,7 +355,7 @@ p > cite:after {
   list-style: none;
   width: 20px;
   height: 20px;
-  background: silver;
+  background: rgb(206, 206, 206);
   animation: animate 25s linear infinite;
   bottom: -150px;
 }
