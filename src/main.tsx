@@ -13,6 +13,7 @@ import { signal } from "@preact/signals";
 
 export const isOpenModal = signal(false);
 export const modalContent = signal(<></>);
+export const modalMiddle = signal(<></>);
 
 const Main = () => {
   return (
@@ -26,7 +27,7 @@ const Main = () => {
         <Works path="/works" />
         <Redirect path="/" to="/about" />
       </Router>
-      <Modal isOpen={isOpenModal.value}>{modalContent.value}</Modal>
+      <Modal isOpen={isOpenModal.value} content={modalContent.value} middle={modalMiddle.value} />
     </>
   );
 };

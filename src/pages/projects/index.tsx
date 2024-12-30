@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 import { signal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
-import { isOpenModal, modalContent } from "../../main";
+import { isOpenModal, modalContent, modalMiddle } from "../../main";
 
 const filters = signal<
   {
@@ -71,6 +71,8 @@ const Projects = (props: any) => {
     }
   }, [filters.value]);
 
+  console.log("filters.value", filters.value)
+
   return (
     <Layout>
       <h2>🚧 {isEnglish() ? "Projects" : "Projetos"}</h2>
@@ -81,6 +83,12 @@ const Projects = (props: any) => {
 
       <button
         onClick={() => {
+          modalMiddle.value = (
+            <button onClick={() => {
+              window.location.reload()
+            }}>Limpar filtros</button>
+          );
+
           modalContent.value = (
             <ul>
               {filters.value.map((item, index) => {

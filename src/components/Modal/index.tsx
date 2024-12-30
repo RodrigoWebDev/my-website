@@ -1,7 +1,7 @@
 import { useEffect } from "preact/hooks";
 import { isOpenModal } from "../../main";
 
-const Modal = ({ isOpen = false, children }: any) => {
+const Modal = ({ isOpen = false, content = <></>, middle = <></> }: any) => {
   useEffect(() => {
     const dialog = document.getElementById("dialog");
 
@@ -23,8 +23,10 @@ const Modal = ({ isOpen = false, children }: any) => {
         }}>❌</div>
       </header>
       <hr />
+
+      {middle}
       <br />
-      <div>{children}</div>
+      <div>{content}</div>
     </dialog>
   );
 };
