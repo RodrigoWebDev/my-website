@@ -349,6 +349,10 @@ dialog::backdrop {
   margin-right: 24px;
 }
 
+.zi-1px {
+  z-index: 1;
+}
+
 @media (min-width: 720px) {
   .md\:d-b {
     display: block;

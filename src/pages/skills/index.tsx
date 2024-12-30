@@ -9,11 +9,11 @@ const Skills = (props: any) => {
 
   return (
     <Layout>
-      <h2>🤹🏻 {isEnglish() ? "Skills" : "Habilidades"}</h2>
+      <h2 class="animate__animated animate__wobble">🤹🏻 {isEnglish() ? "Skills" : "Habilidades"}</h2>
 
       <hr />
 
-      <ul>
+      <ul class="animate__animated animate__shakeX">
         {skills.map((skill) => {
           if (skill.isHighLight) {
             return (

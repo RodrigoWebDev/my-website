@@ -1,3 +1,4 @@
+import "animate.css";
 import { route } from "preact-router";
 import enProjects from "../../data/en/projects.json";
 import ptProjects from "../../data/pt/projects.json";
@@ -57,7 +58,7 @@ const Projects = (props: any) => {
       <button
         onClick={() => {
           route("projects?showFilters", true);
-          window.location.reload()
+          window.location.reload();
         }}
       >
         🧹 Limpar filtros
@@ -110,7 +111,7 @@ const Projects = (props: any) => {
 
   return (
     <Layout>
-      <h2>🚧 {isEnglish() ? "Projects" : "Projetos"}</h2>
+      <h2 class="animate__animated animate__backInLeft">🚧 {isEnglish() ? "Projects" : "Projetos"}</h2>
 
       <hr />
 
@@ -120,11 +121,12 @@ const Projects = (props: any) => {
         onClick={() => {
           isOpenModal.value = true;
         }}
+        class="animate__animated animate__heartBeat"
       >
         🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
       </button>
 
-      <ul>
+      <ul class="animate__animated animate__bounceIn">
         {filteredProjects.value.map((project) => (
           <li>
             <h3>

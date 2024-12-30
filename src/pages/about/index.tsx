@@ -10,10 +10,10 @@ const About = (props: any) => {
 
   return (
     <Layout>
-      <h2>💭 {isEnglish() ? "About" : "Sobre"}</h2>
+      <h2 class="animate__animated animate__backInRight">💭 {isEnglish() ? "About" : "Sobre"}</h2>
       <hr />
 
-      <p>{profile.about}</p>
+      <p class="animate__animated animate__backInLeft">{profile.about}</p>
     </Layout>
   );
 };

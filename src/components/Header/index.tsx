@@ -61,7 +61,7 @@ const Header = () => {
 
   return (
     <>
-      <header class="p-s l-0 t-0 bg-white bb px-1">
+      <header class="p-s l-0 t-0 bg-white bb px-1 animate__animated animate__backInDown zi-1px">
         <div class="container d-f ai-c jc-sb">
           <div
             class="fs-32px c-p"
@@ -128,8 +128,8 @@ const Header = () => {
         </div>
       )}
 
-      <h1>🧑🏻‍💻 {profile.name}</h1>
-      <p>
+      <h1 class="animate__animated animate__backInUp">🧑🏻‍💻 {profile.name}</h1>
+      <p class="animate__animated animate__backInRight">
         <i>{profile.headline}</i>
       </p>
     </>

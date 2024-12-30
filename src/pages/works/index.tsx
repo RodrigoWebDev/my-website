@@ -10,11 +10,11 @@ const Works = (props: any) => {
 
   return (
     <Layout>
-      <h2>🛠️ {isEnglish() ? "Works": "Experiência profissional"}</h2>
+      <h2 class="animate__animated animate__tada">🛠️ {isEnglish() ? "Works": "Experiência profissional"}</h2>
 
       <hr />
 
-      <ul>
+      <ul class="animate__animated animate__flash">
         {works.map((work) => (
           <li>
             <h3>

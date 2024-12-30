@@ -2,7 +2,7 @@ import { isEnglish } from "../../utils/locale";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer class="animate__animated animate__rubberBand">
       <hr />
 
       {isEnglish() ? (

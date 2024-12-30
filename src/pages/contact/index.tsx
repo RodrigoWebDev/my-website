@@ -12,11 +12,11 @@ const Contact = (props: any) => {
 
   return (
     <Layout>
-      <h2>📞 {isEnglish() ? "Contact" : "Contato"}</h2>
+      <h2 class="animate__animated animate__jello">📞 {isEnglish() ? "Contact" : "Contato"}</h2>
 
       <hr />
 
-      <ul>
+      <ul class="animate__animated animate__swing">
         <li>
           <strong>E-mail:</strong>{" "}
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
