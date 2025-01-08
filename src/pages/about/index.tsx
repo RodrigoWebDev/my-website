@@ -18,10 +18,10 @@ const About = (props: any) => {
 
       <br />
 
-      <div class="d-f ai-c">
+      <div class="md:d-f ai-c">
         <img
           src={avatar}
-          class="round mr-2"
+          class="round m-0-auto d-b md:mr-2"
           width="150"
           alt="Rodrigo Queiroz | Frontend developer"
         />

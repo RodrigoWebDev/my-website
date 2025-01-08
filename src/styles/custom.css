@@ -69,8 +69,8 @@
   padding-right: 16px;
 }
 
-.mr-2 {
-  margin-right: calc(var(--spacing)  * 2);
+.mr-0 {
+  margin-right: 0;
 }
 
 .mr-3 {
@@ -85,13 +85,21 @@
   border-radius: 100%;
 }
 
+.m-0-auto {
+  margin: 0 auto;
+}
+
 @media (min-width: 720px) {
-  .md\:d-b {
-    display: block;
+  .md\:d-f{
+    display: flex;
   }
 
   .md\:d-n {
     display: none;
+  }
+
+  .md\:mr-2 {
+    margin-right: calc(var(--spacing)  * 2);
   }
 }
 

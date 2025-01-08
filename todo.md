@@ -1,0 +1,4 @@
+- [] Ajustar o botão "Limpar filtros"
+- [] No mobile, na pagina "Sobre" fica um espaçamento enorme no final, e o causador é a animação de fundo
+- [] Ao trocar o idioma para US e recarregar a pagina, o select volta como BR apesar de estar aplicado o US e não consigo voltar para o BR sem clicar de novo no US
+- [] Headline não esta vindo traduzido quando entra na versão US

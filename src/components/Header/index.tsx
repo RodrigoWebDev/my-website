@@ -82,7 +82,7 @@ const Header = () => {
           </div>
 
           {/* Desktop menu */}
-          <div class="d-f ai-c jc-sb d-n md:d-b">
+          <div class="d-n md:d-f ai-c jc-sb">
             {navLinks.map((navLink) => {
               return (
                 <>
