@@ -61,8 +61,8 @@ const Header = () => {
 
   return (
     <>
-      <header class="p-s l-0 t-0 bg-white bb px-1 animate__animated animate__backInDown zi-1px">
-        <div class="container d-f ai-c jc-sb">
+      <nav class="animate__animated animate__backInDown zi-1 p-s l-0 t-0">
+        <div class="d-f ai-c jc-sb">
           <div
             class="fs-32px c-p"
             onClick={() => {
@@ -82,11 +82,11 @@ const Header = () => {
           </div>
 
           {/* Desktop menu */}
-          <div class="d-n md:d-b">
+          <div class="d-f ai-c jc-sb d-n md:d-b">
             {navLinks.map((navLink) => {
               return (
                 <>
-                  <button
+                  <div
                     onClick={() => {
                       route(
                         "/" +
@@ -95,16 +95,20 @@ const Header = () => {
                       );
                     }}
                   >
-                    {isEnglish() ? navLink.name : navLink.ptName}
-                  </button>
-                  &nbsp;&nbsp;
+                    <a class="c-p">
+                      {isEnglish() ? navLink.name : navLink.ptName}
+                    </a>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
                 </>
               );
             })}
             {localeSelect()}
           </div>
         </div>
-      </header>
+
+        <hr />
+      </nav>
 
       {/* Mobile menu */}
       {isNavigationMenuOpen.value && (
@@ -128,10 +132,12 @@ const Header = () => {
         </div>
       )}
 
-      <h1 class="animate__animated animate__backInUp">🧑🏻‍💻 {profile.name}</h1>
-      <p class="animate__animated animate__backInRight">
-        <i>{profile.headline}</i>
-      </p>
+      <div>
+        <h1 class="animate__animated animate__backInUp">🧑🏻‍💻 {profile.name}</h1>
+        <code class="animate__animated animate__backInRight">
+          <i>{profile.headline}</i>
+        </code>
+      </div>
     </>
   );
 };

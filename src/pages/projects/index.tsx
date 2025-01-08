@@ -126,6 +126,11 @@ const Projects = (props: any) => {
         🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
       </button>
 
+      <br />
+      <br />
+      <br />
+
+
       <ul class="animate__animated animate__bounceIn">
         {filteredProjects.value.map((project) => (
           <li>

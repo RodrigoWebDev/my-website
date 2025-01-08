@@ -31,8 +31,8 @@ const Contact = (props: any) => {
           <strong>{isEnglish() ? "Phone" : "Telefone"}:</strong> +55
           {contact.phone}
           &nbsp; &nbsp;
-          <a class="c-25d366" href={`https://wa.me/55${contact.phone}`} target="_blank">
-            <Icon name="whatsApp" size={16} color="#25d366" /> Chamar no what's app
+          <a class="c-success" href={`https://wa.me/55${contact.phone}`} target="_blank">
+            <Icon name="whatsApp" size={16} color="greenyellow" /> Chamar no what's app
           </a>
         </li>
         <li>

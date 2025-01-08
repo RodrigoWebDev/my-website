@@ -7,6 +7,21 @@ const Layout = (props: any) => {
       <Header />
       <main>{props.children}</main>
       <Footer />
+
+      <div class="area">
+        <ul class="circles">
+          <li>☕</li>
+          <li>🎎</li>
+          <li>🚕</li>
+          <li>🎠</li>
+          <li>📱</li>
+          <li>⌚️</li>
+          <li>🧚‍♀️</li>
+          <li>🪬</li>
+          <li>👽</li>
+          <li>👾</li>
+        </ul>
+      </div>
     </>
   );
 };

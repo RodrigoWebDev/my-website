@@ -16,13 +16,12 @@ const Modal = ({ isOpen = false, content = <></>, middle = <></> }: any) => {
 
   return (
     <dialog id="dialog">
-      <header>
+      <header class="d-f ai-c jc-sb">
         <div>🌪️ Filtros</div>
         <div class="c-p" onClick={() => {
           isOpenModal.value = false
         }}>❌</div>
       </header>
-      <hr />
 
       {middle}
       <br />

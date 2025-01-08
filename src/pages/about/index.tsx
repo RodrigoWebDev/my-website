@@ -2,18 +2,32 @@ import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
+import avatar from "../../images/avatar.jpg";
 
 const About = (props: any) => {
-  console.log({ props })
+  console.log({ props });
 
   const profile = isEnglish() ? enProfile : ptProfile;
 
   return (
     <Layout>
-      <h2 class="animate__animated animate__backInRight">💭 {isEnglish() ? "About" : "Sobre"}</h2>
+      <h2 class="animate__animated animate__backInRight">
+        💭 {isEnglish() ? "About" : "Sobre"}
+      </h2>
       <hr />
 
-      <p class="animate__animated animate__backInLeft">{profile.about}</p>
+      <br />
+
+      <div class="d-f ai-c">
+        <img
+          src={avatar}
+          class="round mr-2"
+          width="150"
+          alt="Rodrigo Queiroz | Frontend developer"
+        />
+
+        <p class="animate__animated animate__backInLeft">{profile.about}</p>
+      </div>
     </Layout>
   );
 };
