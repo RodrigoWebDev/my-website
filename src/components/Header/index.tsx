@@ -3,6 +3,9 @@ import { signal } from "@preact/signals";
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import { isEnglish } from "../../utils/locale";
+import React from "preact/compat";
+
+interface SelectEvent extends React.ChangeEvent<HTMLInputElement> {}
 
 const isNavigationMenuOpen = signal(false);
 const _isEnglish = signal(false);
@@ -41,7 +44,8 @@ const Header = () => {
     return (
       <select
         onChange={(e: any) => {
-          const check = e.target.value === "en";
+          console.log("🚀 ~ localeSelect ~ e:", e);
+          const check = e.target?.value === "en";
           _isEnglish.value = check;
 
           if (check) {

@@ -6,7 +6,7 @@ const Footer = () => {
       <hr />
 
       <br />
-      
+
       <div>
         {isEnglish() ? (
           <>
@@ -14,7 +14,7 @@ const Footer = () => {
               href="https://github.com/RodrigoWebDev/my-website"
               target="_blank"
             >
-              ☕ Open source website
+              &#60;/&#62; Open source website
             </a>{" "}
             developed by{" "}
             <a href="https://github.com/RodrigoWebDev" target="_blank">
@@ -28,7 +28,7 @@ const Footer = () => {
               href="https://github.com/RodrigoWebDev/my-website"
               target="_blank"
             >
-              ☕ código aberto
+              &#60;/&#62; código aberto
             </a>{" "}
             desenvolvido por{" "}
             <a href="https://github.com/RodrigoWebDev" target="_blank">

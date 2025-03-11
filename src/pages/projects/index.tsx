@@ -20,11 +20,11 @@ const filteredProjects = signal<
     title: string;
     link: string;
     description: string;
+    img?: string;
   }[]
 >([]);
 
-const Projects = (props: any) => {
-  console.log({ props });
+const Projects = () => {
   const projects = isEnglish() ? enProjects : ptProjects;
 
   const onChange = (index: number) => {
@@ -111,38 +111,41 @@ const Projects = (props: any) => {
 
   return (
     <Layout>
-      <h2 class="animate__animated animate__backInLeft">🚧 {isEnglish() ? "Projects" : "Projetos"}</h2>
+      <>
+        <h2 class="animate__animated animate__backInLeft">
+          🚧 {isEnglish() ? "Projects" : "Projetos"}
+        </h2>
 
-      <hr />
+        <hr />
 
-      <br />
+        <br />
 
-      <button
-        onClick={() => {
-          isOpenModal.value = true;
-        }}
-        class="animate__animated animate__heartBeat"
-      >
-        🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
-      </button>
+        <button
+          onClick={() => {
+            isOpenModal.value = true;
+          }}
+          class="animate__animated animate__heartBeat"
+        >
+          🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
+        </button>
 
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
 
-
-      <ul class="animate__animated animate__bounceIn">
-        {filteredProjects.value.map((project) => (
-          <li>
-            <h3>
-              <a href={project.link} target="_blank">
-                🔗 {project.title}
-              </a>
-            </h3>
-            <p>{project.description}</p>
-          </li>
-        ))}
-      </ul>
+        <ul class="animate__animated animate__bounceIn">
+          {filteredProjects.value.map((project) => (
+            <li>
+              <h3>
+                <a href={project.link} target="_blank">
+                  🔗 {project.title}
+                </a>
+              </h3>
+              <p dangerouslySetInnerHTML={{ __html: project.description }} />
+            </li>
+          ))}
+        </ul>
+      </>
     </Layout>
   );
 };

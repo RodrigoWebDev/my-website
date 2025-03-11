@@ -3,29 +3,39 @@ import ptSkills from "../../data/pt/skills.json";
 import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 
-const Skills = (props: any) => {
-  console.log({ props });
+const Skills = () => {
   const skills = isEnglish() ? enSkills : ptSkills;
+  const mainSkills = skills.filter((item) => item.isHighLight);
+  const complementarySkills = skills.filter((item) => !item.isHighLight);
 
   return (
     <Layout>
-      <h2 class="animate__animated animate__wobble">🤹🏻 {isEnglish() ? "Skills" : "Habilidades"}</h2>
+      <>
+        <h2 class="animate__animated animate__wobble">
+          🎯 {isEnglish() ? "Main skills" : "Principais habilidades"}
+        </h2>
 
-      <hr />
+        <hr />
 
-      <ul class="animate__animated animate__shakeX">
-        {skills.map((skill) => {
-          if (skill.isHighLight) {
-            return (
-              <li class="mr-3">
-                <strong>{skill.name}</strong>
-              </li>
-            );
-          } else {
+        <ul class="animate__animated animate__shakeX">
+          {mainSkills.map((skill) => {
             return <li class="mr-3">{skill.name}</li>;
-          }
-        })}
-      </ul>
+          })}
+        </ul>
+
+        <h2 class="animate__animated animate__wobble">
+          🤹🏻{" "}
+          {isEnglish() ? "Complementary skills" : "Habilidades complementares"}
+        </h2>
+
+        <hr />
+
+        <ul class="animate__animated animate__shakeX">
+          {complementarySkills.map((skill) => {
+            return <li class="mr-3">{skill.name}</li>;
+          })}
+        </ul>
+      </>
     </Layout>
   );
 };

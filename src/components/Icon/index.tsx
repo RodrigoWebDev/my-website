@@ -1,11 +1,19 @@
-const Icon = (props: any) => {
+interface IIcon {
+  name: string;
+  color?: string;
+  size?: number;
+  class?: string;
+}
+
+const Icon = (props: IIcon) => {
   switch (props.name) {
     case "whatsApp":
       return (
         <svg
-          fill={props.color}
-          height={props.size}
-          width={props.size}
+          {...props}
+          fill={props.color || "inherit"}
+          height={props.size || 16}
+          width={props.size || 16}
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 308 308"

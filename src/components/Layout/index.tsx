@@ -1,7 +1,12 @@
+import { ReactElement } from "preact/compat";
 import Footer from "../Footer";
 import Header from "../Header";
 
-const Layout = (props: any) => {
+interface ILayout {
+  children: ReactElement
+}
+
+const Layout = (props: ILayout) => {
   return (
     <>
       <Header />

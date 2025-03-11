@@ -1,7 +1,7 @@
 /* utils */
 
 :root {
-  --spacing: 8px
+  --spacing: 8px;
 }
 
 .d-f {
@@ -16,7 +16,7 @@
   display: block;
 }
 
-.f-w{
+.f-w {
   flex-wrap: wrap;
 }
 
@@ -52,7 +52,7 @@
   top: 0;
 }
 
-.b-n{
+.b-n {
   border: none;
 }
 
@@ -89,8 +89,12 @@
   margin: 0 auto;
 }
 
+.mr-1 {
+  margin-right: 8px;
+}
+
 @media (min-width: 720px) {
-  .md\:d-f{
+  .md\:d-f {
     display: flex;
   }
 
@@ -99,12 +103,12 @@
   }
 
   .md\:mr-2 {
-    margin-right: calc(var(--spacing)  * 2);
+    margin-right: calc(var(--spacing) * 2);
   }
 }
 
- /* Bakckground animation */
- .area {
+/* Bakckground animation */
+.area {
   background: transparent;
   width: 100%;
   height: 100vh;
@@ -121,7 +125,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 .circles li {

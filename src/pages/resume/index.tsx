@@ -9,11 +9,11 @@ import enExperiences from "../../data/en/experiences.json";
 import enContact from "../../data/en/contact.json";
 import { isEnglish } from "../../utils/locale";
 
-const Resume = (props: any) => {
-  console.log({ props });
-
+const Resume = () => {
   const profile = isEnglish() ? enProfile : ptProfile;
   const skills = isEnglish() ? enSkills : ptSkills;
+  const mainSkills = skills.filter((item) => item.isHighLight);
+  const complementarySkills = skills.filter((item) => !item.isHighLight);
   const experiences = isEnglish() ? enExperiences : ptExperiences;
   const contact = isEnglish() ? enContact : ptContact;
 
@@ -47,18 +47,47 @@ const Resume = (props: any) => {
         }}
       ></p>
 
-      <h2>🤹🏻 {isEnglish() ? "Skills" : "Habilidades"}</h2>
+      <br />
+
+      <h2>🎯 {isEnglish() ? "Main skills" : "Habilidades principais"}</h2>
 
       <hr />
       <ul class="d-f f-w">
-        {skills.map((skill) => {
+        {mainSkills.map((skill) => {
           if (skill.isHighLight) {
-            return <li class="mr-3"><strong>{skill.name}</strong></li>;
+            return (
+              <li class="mr-3">
+                <strong>{skill.name}</strong>
+              </li>
+            );
           } else {
             return <li class="mr-3">{skill.name}</li>;
           }
         })}
       </ul>
+
+      <br />
+
+      <h2>
+        🤹🏻 {isEnglish() ? "Complementary skills" : "Habilidades complementares"}
+      </h2>
+
+      <hr />
+      <ul class="d-f f-w">
+        {complementarySkills.map((skill) => {
+          if (skill.isHighLight) {
+            return (
+              <li class="mr-3">
+                <strong>{skill.name}</strong>
+              </li>
+            );
+          } else {
+            return <li class="mr-3">{skill.name}</li>;
+          }
+        })}
+      </ul>
+
+      <br />
 
       <h2>🛠️ {isEnglish() ? "Work experience" : "Experiência profissional"}</h2>
 
@@ -83,6 +112,8 @@ const Resume = (props: any) => {
           </li>
         ))}
       </ul>
+
+      <br />
 
       <h2>🚧 {isEnglish() ? "Projects" : "Projetos"}</h2>
 
@@ -115,13 +146,15 @@ const Resume = (props: any) => {
           <strong>
             {isEnglish() ? "Phone and What's app" : "Telefone e What's app"}:
           </strong>{" "}
-          55
-          {contact.phone}
+          <a href={`https://wa.me/55${contact.phone}`} target="_blank">
+            💬 55
+            {contact.phone}
+          </a>
         </li>
         <li>
           <strong>Website:</strong>{" "}
           <a target="_blank" href={contact.website}>
-            {contact.website}
+            🌐 {contact.website}
           </a>
         </li>
       </ul>
