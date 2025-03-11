@@ -2,8 +2,10 @@ import enWorks from "../../data/en/experiences.json";
 import ptWorks from "../../data/pt/experiences.json";
 import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
+import { IPage } from "../../model";
 
-const Works = () => {
+const Works = (props: IPage) => {
+  console.log({ props });
   const works = isEnglish() ? enWorks : ptWorks;
 
   return (

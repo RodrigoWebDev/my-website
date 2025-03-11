@@ -1,17 +1,17 @@
-import { route } from 'preact-router';
-import { useEffect } from 'preact/hooks';
+import { route } from "preact-router";
+import { useEffect } from "preact/hooks";
+import { IPage } from "../../model";
 
-interface IRedirect {
-  to: string
+interface IRedirect extends IPage {
+  to: string;
 }
 
 const Redirect = (props: IRedirect) => {
   useEffect(() => {
-    route(props.to, true)
-  }, [])
+    route(props.to, true);
+  }, []);
 
-  return <></>
-  
-}
+  return <></>;
+};
 
-export default Redirect
+export default Redirect;

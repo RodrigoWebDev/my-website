@@ -4,8 +4,10 @@ import enContact from "../../data/en/contact.json";
 import Layout from "../../components/Layout";
 import Icon from "../../components/Icon";
 import { isEnglish } from "../../utils/locale";
+import { IPage } from "../../model";
 
-const Contact = () => {
+const Contact = (props: IPage) => {
+  console.log({ props });
   const contact = isEnglish() ? enContact : ptContact;
 
   return (

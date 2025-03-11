@@ -3,9 +3,6 @@ import { signal } from "@preact/signals";
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import { isEnglish } from "../../utils/locale";
-import React from "preact/compat";
-
-interface SelectEvent extends React.ChangeEvent<HTMLInputElement> {}
 
 const isNavigationMenuOpen = signal(false);
 const _isEnglish = signal(false);

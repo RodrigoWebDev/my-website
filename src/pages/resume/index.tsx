@@ -8,8 +8,10 @@ import enSkills from "../../data/en/skills.json";
 import enExperiences from "../../data/en/experiences.json";
 import enContact from "../../data/en/contact.json";
 import { isEnglish } from "../../utils/locale";
+import { IPage } from "../../model";
 
-const Resume = () => {
+const Resume = (props: IPage) => {
+  console.log({ props });
   const profile = isEnglish() ? enProfile : ptProfile;
   const skills = isEnglish() ? enSkills : ptSkills;
   const mainSkills = skills.filter((item) => item.isHighLight);

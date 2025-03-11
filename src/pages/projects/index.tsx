@@ -7,6 +7,7 @@ import { isEnglish } from "../../utils/locale";
 import { signal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
 import { isOpenModal, modalContent, modalMiddle } from "../../main";
+import { IPage } from "../../model";
 
 const filters = signal<
   {
@@ -24,7 +25,8 @@ const filteredProjects = signal<
   }[]
 >([]);
 
-const Projects = () => {
+const Projects = (props: IPage) => {
+  console.log({ props });
   const projects = isEnglish() ? enProjects : ptProjects;
 
   const onChange = (index: number) => {

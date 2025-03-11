@@ -6,8 +6,10 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 import avatar from "../../images/avatar.jpg";
 import Icon from "../../components/Icon";
+import { IPage } from "../../model";
 
-const About = () => {
+const About = (props: IPage) => {
+  console.log({ props });
   const profile = isEnglish() ? enProfile : ptProfile;
   const contact = isEnglish() ? enContact : ptContact;
 
