@@ -42,7 +42,7 @@ const About = (props: IPage) => {
             }}
           >
             <Icon class="mr-1" name="whatsApp" size={16} color="greenyellow" />
-            Mandar uma mensagem
+            {isEnglish() ? "Send a message" : "Mandar uma mensagem"}
           </button>
         </div>
       </>
