@@ -37,7 +37,13 @@ const Projects = (props: IPage) => {
   };
 
   const getSkills = (str: string) => {
-    return str.replace("Skills: ", "").split(" · ");
+    const text = str
+      .replace(
+        `<strong><!---->Skills:<!----></strong><span class="white-space-pre"> </span>`,
+        ""
+      )
+      .replace("<!---->", "");
+    return text.split(" · ");
   };
 
   const getFilters = () => {
@@ -130,6 +136,21 @@ const Projects = (props: IPage) => {
         >
           🌪️ {isEnglish() ? "Open filters" : "Abrir filtros"}
         </button>
+
+        <br />
+        <br />
+
+        {isEnglish() ? (
+          <span>
+            Showing <strong>{filteredProjects.value.length}</strong> of{" "}
+            <strong>{projects.length}</strong> projects
+          </span>
+        ) : (
+          <span>
+            Mostrando <strong>{filteredProjects.value.length}</strong> de{" "}
+            <strong>{projects.length}</strong> projetos
+          </span>
+        )}
 
         <br />
         <br />
