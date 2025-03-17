@@ -49,7 +49,7 @@
   },
   {
     "name": "English",
-    "isHighLight": false
+    "isHighLight": true
   },
   {
     "name": "Gitlab",
