@@ -1,7 +1,22 @@
 import { useEffect } from "preact/hooks";
-import { isOpenModal } from "../../main";
+import { setModalState } from "../../main";
+import { ReactElement } from "preact/compat";
 
-const Modal = ({ isOpen = false, content = <></>, middle = <></> }: any) => {
+export interface IModal {
+  title?: string | ReactElement;
+  isOpen?: boolean;
+  content?: ReactElement;
+  middle?: ReactElement;
+  footer?: ReactElement;
+}
+
+const Modal = ({
+  title = "",
+  isOpen = false,
+  content = <></>,
+  middle = <></>,
+  footer = <></>,
+}: IModal) => {
   useEffect(() => {
     const dialog = document.getElementById("dialog");
 
@@ -17,15 +32,24 @@ const Modal = ({ isOpen = false, content = <></>, middle = <></> }: any) => {
   return (
     <dialog id="dialog">
       <header class="d-f ai-c jc-sb">
-        <div>🌪️ Filtros</div>
-        <div class="c-p" onClick={() => {
-          isOpenModal.value = false
-        }}>❌</div>
+        <div>{title}</div>
+        <div
+          class="c-p"
+          onClick={() => {
+            setModalState({
+              isOpen: false,
+            });
+          }}
+        >
+          ❌
+        </div>
       </header>
 
       {middle}
       <br />
-      <div>{content}</div>
+      <div class="h-270px o-a">{content}</div>
+
+      <footer>{footer}</footer>
     </dialog>
   );
 };

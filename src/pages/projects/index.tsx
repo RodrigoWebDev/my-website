@@ -6,7 +6,7 @@ import Layout from "../../components/Layout";
 import { isEnglish } from "../../utils/locale";
 import { signal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
-import { isOpenModal, modalContent, modalMiddle } from "../../main";
+import { setModalState } from "../../main";
 import { IPage } from "../../model";
 
 const filters = signal<
@@ -62,19 +62,10 @@ const Projects = (props: IPage) => {
   };
 
   useEffect(() => {
-    modalMiddle.value = (
-      <button
-        onClick={() => {
-          route("projects?showFilters", true);
-          window.location.reload();
-        }}
-      >
-        🧹 Limpar filtros
-      </button>
-    );
-
     if (window.location.search === "?showFilters") {
-      isOpenModal.value = true;
+      setModalState({
+        isOpen: true,
+      });
     }
 
     getFilters();
@@ -95,26 +86,52 @@ const Projects = (props: IPage) => {
       filteredProjects.value = [...projects];
     }
 
-    modalContent.value = (
-      <ul>
-        {filters.value.map((item, index) => {
-          return (
-            <li>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={item.checked}
-                  onChange={() => {
-                    onChange(index);
-                  }}
-                />
-                {item.name}
-              </label>
-            </li>
-          );
-        })}
-      </ul>
-    );
+    setModalState({
+      title: isEnglish() ? "🌪️ Filters" : "🌪️ Filtros",
+      content: (
+        <ul class="pl-0">
+          {filters.value.map((item, index) => {
+            return (
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={item.checked}
+                    onChange={() => {
+                      onChange(index);
+                    }}
+                  />
+                  {item.name}
+                </label>
+              </li>
+            );
+          })}
+        </ul>
+      ),
+      footer: (
+        <div class="d-f">
+          <button
+            class="w-50%"
+            onClick={() => {
+              route("projects?showFilters", true);
+              window.location.reload();
+            }}
+          >
+            🔄 {isEnglish() ? "Reset" : "Resetar"}
+          </button>
+          <button
+            onClick={() => {
+              setModalState({
+                isOpen: false,
+              });
+            }}
+            class="w-50%"
+          >
+            ✅ {isEnglish() ? "Aplly" : "Aplicar"}
+          </button>
+        </div>
+      ),
+    });
   }, [filters.value]);
 
   return (
@@ -130,7 +147,9 @@ const Projects = (props: IPage) => {
 
         <button
           onClick={() => {
-            isOpenModal.value = true;
+            setModalState({
+              isOpen: true,
+            });
           }}
           class="animate__animated animate__heartBeat"
         >

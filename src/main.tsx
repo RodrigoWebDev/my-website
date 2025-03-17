@@ -7,14 +7,25 @@ import Projects from "./pages/projects";
 import Skills from "./pages/skills";
 import Works from "./pages/works";
 import Redirect from "./components/Redirect";
-import Modal from "./components/Modal";
+import Modal, { IModal } from "./components/Modal";
 import { signal } from "@preact/signals";
 import "./styles/base.css";
 import "./styles/custom.css";
 
-export const isOpenModal = signal(false);
-export const modalContent = signal(<></>);
-export const modalMiddle = signal(<></>);
+export const modalState = signal<IModal>({
+  isOpen: false,
+  title: "",
+  content: <></>,
+  middle: <></>,
+  footer: <></>,
+});
+
+export const setModalState = (params: IModal) => {
+  modalState.value = {
+    ...modalState.value,
+    ...params,
+  };
+};
 
 const Main = () => {
   return (
@@ -28,7 +39,7 @@ const Main = () => {
         <Works path="/works" />
         <Redirect path="/" to="/about" />
       </Router>
-      <Modal isOpen={isOpenModal.value} content={modalContent.value} middle={modalMiddle.value} />
+      <Modal {...modalState.value} />
     </>
   );
 };

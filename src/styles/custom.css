@@ -69,6 +69,10 @@
   padding-right: 16px;
 }
 
+.pl-0 {
+  padding-left: 0;
+}
+
 .mr-0 {
   margin-right: 0;
 }
@@ -91,6 +95,18 @@
 
 .mr-1 {
   margin-right: 8px;
+}
+
+.h-270px {
+  height: 270px;
+}
+
+.o-a {
+  overflow: auto;
+}
+
+.w-50\% {
+  width: 50%;
 }
 
 @media (min-width: 720px) {
