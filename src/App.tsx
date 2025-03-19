@@ -1,14 +1,67 @@
+import { useEffect, useState } from "react";
 import { Bg3d } from "./components/Bg3d";
+import { getLocale, getUrlSearch } from "./utils/getLocale";
+import { TLocale } from "./locales";
 
 function App() {
+  const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
+
+  const handleLocaleUpdateFromUrl = () => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("language", language);
+    history.pushState({}, "", url);
+  };
+
+  useEffect(() => {
+    handleLocaleUpdateFromUrl();
+  }, [language]);
+
+  const handleLocale = (key: keyof TLocale["pt"] | keyof TLocale["en"]) => {
+    return getLocale(language, key);
+  };
+
   return (
     <div>
       <Bg3d />
 
       <main>
-        <div className="mb-3">
+        <div className="mb-2">
           <h1>Rodrigo Queiroz</h1>
           <i>Frontend developer</i>
+        </div>
+
+        <div className="mb-3">
+          <span className="mr-2">{handleLocale("chooseYourLanguage")}: </span>
+
+          <label className="mr-2">
+            <input
+              className="mr-1"
+              type="radio"
+              name="language"
+              value="en"
+              checked={language === "en"}
+              onChange={(e) => {
+                setLanguage(e.target.value as "en");
+              }}
+            />
+            <span>EN</span>
+            <span className="checkmark"></span>
+          </label>
+
+          <label>
+            <input
+              className="mr-1"
+              type="radio"
+              name="language"
+              value="pt"
+              checked={language === "pt"}
+              onChange={(e) => {
+                setLanguage(e.target.value as "pt");
+              }}
+            />
+            <span>PT</span>
+            <span className="checkmark"></span>
+          </label>
         </div>
 
         <section>
