@@ -11,6 +11,7 @@ function App() {
   const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
   const [currentProjectPage, setCurrentProjectPage] = useState(0);
   const [currentExperiencePage, setCurrentExperiencePage] = useState(0);
+  const [overlayerColor, setOverlayerColor] = useState(0);
 
   const handleLocaleUpdateFromUrl = () => {
     const url = new URL(window.location.href);
@@ -18,15 +19,9 @@ function App() {
     history.pushState({}, "", url);
   };
 
-  useEffect(() => {
-    handleLocaleUpdateFromUrl();
-  }, [language]);
-
   const handleLocale = (key: keyof TLocale["pt"] | keyof TLocale["en"]) => {
     return getLocale(language, key);
   };
-
-  console.log("🚀 ~ App ~ language:", language);
 
   const getDataLocale = (locale: "pt" | "en", key: string) => data[locale][key];
 
@@ -48,15 +43,24 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
-      console.log("SCROLL");
+      setOverlayerColor((ovl) => ovl + 0.5);
     });
   }, []);
+
+  useEffect(() => {
+    handleLocaleUpdateFromUrl();
+  }, [language]);
 
   return (
     <div>
       <Bg3d />
 
-      <div className="overlayer" style={{}}></div>
+      <div
+        className="overlayer"
+        style={{
+          backgroundColor: `hsl(${overlayerColor}deg 100% 30%)`,
+        }}
+      ></div>
 
       <main>
         <div className="mb-2">
