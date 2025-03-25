@@ -4,7 +4,7 @@ import { getLocale, getUrlSearch } from "./utils/getLocale";
 import { TLocale } from "./locales";
 import Icon from "./components/Icon";
 import data from "./data";
-import { exp } from "three/tsl";
+import "animate.css";
 import { getPagination } from "./utils/getPagination";
 
 function App() {
@@ -65,17 +65,24 @@ function App() {
       <main>
         <div className="mb-2">
           <div className="d-f ai-c">
-            <Icon name="me" className="mr-1" color="white" size={30} />
-            <h1>{profile.name}</h1>
+            <Icon
+              name="me"
+              className="mr-1 animate__animated animate__lightSpeedInLeft"
+              color="white"
+              size={30}
+            />
+            <h1 className="animate__animated animate__lightSpeedInRight">
+              {profile.name}
+            </h1>
           </div>
 
           <div className="d-f ai-c">
-            <div className="d-f ai-c mr-2">
+            <div className="d-f ai-c mr-2 animate__animated animate__jackInTheBox">
               <Icon name="dev" className="mr-1" color="white" />
               <i>{handleLocale("frontEndDeveloper")}</i>
             </div>
 
-            <div className="d-f ai-c">
+            <div className="d-f ai-c animate__animated animate__zoomIn">
               <Icon name="mapPoint" className="mr-1" color="white" />
               <i>{handleLocale("country")}</i>
             </div>
@@ -84,7 +91,7 @@ function App() {
 
         <hr className="mb-3" />
 
-        <div className="mb-3">
+        <div className="mb-3 animate__animated animate__slideInRight">
           <span className="mr-2">{handleLocale("chooseYourLanguage")}: </span>
 
           <label className="mr-2">
@@ -118,7 +125,7 @@ function App() {
           </label>
         </div>
 
-        <section>
+        <section className="animate__animated animate__rollIn">
           <div className="d-f ai-c mb-3">
             <Icon name="question" className="mr-1" color="white" size={24} />
             <h2>About</h2>
@@ -127,7 +134,7 @@ function App() {
           <p>{profile.about}</p>
         </section>
 
-        <section>
+        <section className="animate__animated animate__rotateIn">
           <div className="d-f ai-c mb-3">
             <Icon name="company" className="mr-1" color="white" size={24} />
             <h2>Work experience</h2>
@@ -181,7 +188,7 @@ function App() {
           </div>
         </section>
 
-        <section>
+        <section className="animate__animated animate__flipInY">
           <div className="d-f ai-c mb-3">
             <Icon name="work" className="mr-1" color="white" size={24} />
             <h2>Projects</h2>
@@ -228,7 +235,7 @@ function App() {
           </div>
         </section>
 
-        <section>
+        <section className="animate__animated animate__flipInX">
           <div className="d-f ai-c mb-3">
             <Icon name="code" className="mr-1" color="white" size={24} />
             <h2>Skills</h2>
@@ -241,7 +248,7 @@ function App() {
           </ul>
         </section>
 
-        <section>
+        <section className="animate__animated animate__flip">
           <div className="d-f ai-c mb-3">
             <Icon name="contact" className="mr-1" color="white" size={24} />
             <h2>Contact and links</h2>
@@ -274,7 +281,7 @@ function App() {
           </ul>
         </section>
 
-        <section>
+        <section className="animate__animated  animate__fadeIn">
           <div className="d-f ai-c mb-3">
             <Icon name="heart" className="mr-1" color="white" size={24} />
             <h2>Credits</h2>
