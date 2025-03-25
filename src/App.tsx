@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Bg3d } from "./components/Bg3d";
 import { getLocale, getUrlSearch } from "./utils/getLocale";
 import { TLocale } from "./locales";
+import Icon from "./components/Icon";
 
 function App() {
   const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
@@ -26,9 +27,25 @@ function App() {
 
       <main>
         <div className="mb-2">
-          <h1>Rodrigo Queiroz</h1>
-          <i>Frontend developer</i>
+          <div className="d-f ai-c">
+            <Icon name="me" className="mr-1" color="white" size={30} />
+            <h1>Rodrigo Queiroz</h1>
+          </div>
+
+          <div className="d-f ai-c">
+            <div className="d-f ai-c mr-2">
+              <Icon name="dev" className="mr-1" color="white" />
+              <i>{handleLocale("frontEndDeveloper")}</i>
+            </div>
+
+            <div className="d-f ai-c">
+              <Icon name="mapPoint" className="mr-1" color="white" />
+              <i>Brazil</i>
+            </div>
+          </div>
         </div>
+
+        <hr className="mb-3" />
 
         <div className="mb-3">
           <span className="mr-2">{handleLocale("chooseYourLanguage")}: </span>
@@ -65,7 +82,10 @@ function App() {
         </div>
 
         <section>
-          <h2 className="mb-3">About</h2>
+          <div className="d-f ai-c mb-3">
+            <Icon name="question" className="mr-1" color="white" size={24} />
+            <h2>About</h2>
+          </div>
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quod
@@ -76,7 +96,10 @@ function App() {
         </section>
 
         <section>
-          <h2 className="mb-3">Work experience</h2>
+          <div className="d-f ai-c mb-3">
+            <Icon name="company" className="mr-1" color="white" size={24} />
+            <h2>Work experience</h2>
+          </div>
 
           {Array.apply(null, Array(3)).map(() => (
             <div className="card mb-3">
@@ -96,7 +119,10 @@ function App() {
         </section>
 
         <section>
-          <h2 className="mb-3">Projects</h2>
+          <div className="d-f ai-c mb-3">
+            <Icon name="work" className="mr-1" color="white" size={24} />
+            <h2>Projects</h2>
+          </div>
 
           {Array.apply(null, Array(3)).map(() => (
             <div className="card mb-3">
@@ -116,7 +142,10 @@ function App() {
         </section>
 
         <section>
-          <h2 className="mb-3">Skills</h2>
+          <div className="d-f ai-c mb-3">
+            <Icon name="code" className="mr-1" color="white" size={24} />
+            <h2>Skills</h2>
+          </div>
 
           <ul>
             <li>Item 0</li>
@@ -126,7 +155,10 @@ function App() {
         </section>
 
         <section>
-          <h2 className="mb-3">Contact and links</h2>
+          <div className="d-f ai-c mb-3">
+            <Icon name="contact" className="mr-1" color="white" size={24} />
+            <h2>Contact and links</h2>
+          </div>
 
           <ul>
             <li>Item 0</li>
@@ -136,18 +168,33 @@ function App() {
         </section>
 
         <section>
-          <h2 className="mb-3">Credits</h2>
-          <a href="https://skfb.ly/oyXLG" target="_blank">
-            "space boi" by silvercrow101
-          </a>{" "}
-          is licensed under{" "}
-          <a
-            href="http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank"
-          >
-            Creative Commons Attribution-NonCommercial
-          </a>
-          .
+          <div className="d-f ai-c mb-3">
+            <Icon name="heart" className="mr-1" color="white" size={24} />
+            <h2>Credits</h2>
+          </div>
+          <ul>
+            <li>
+              3D model by{" "}
+              <a href="https://skfb.ly/oyXLG" target="_blank">
+                silvercrow101
+              </a>
+            </li>
+            <li>
+              Icons by{" "}
+              <a
+                href="https://www.figma.com/community/file/1166831539721848736/solar-icons-set"
+                target="_blank"
+              >
+                480 Design
+              </a>
+            </li>
+            <li>
+              Code by{" "}
+              <a href="https://github.com/RodrigoWebDev/" target="_blank">
+                me
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
     </div>

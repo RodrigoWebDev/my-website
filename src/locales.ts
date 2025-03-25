@@ -1,9 +1,11 @@
 const locales = {
   pt: {
     chooseYourLanguage: "Escolha seu idioma",
+    frontEndDeveloper: "Desenvolvedor Frontend",
   },
   en: {
     chooseYourLanguage: "Choose your language",
+    frontEndDeveloper: "Frontend Developer",
   },
 } as const;
 

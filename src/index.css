@@ -181,6 +181,18 @@ label .checkmark:after {
 
 /* utils */
 
+.d-f {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.ai-c {
+  align-items: center;
+}
+
 .mr-1 {
   margin-right: var(--spacing);
 }
