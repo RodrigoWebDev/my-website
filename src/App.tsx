@@ -11,6 +11,7 @@ function App() {
   const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
   const [currentProjectPage, setCurrentProjectPage] = useState(0);
   const [currentExperiencePage, setCurrentExperiencePage] = useState(0);
+  const [currentSkillsPage, setCurrentSkillsPage] = useState(0);
   const [overlayerColor, setOverlayerColor] = useState(0);
 
   const handleLocaleUpdateFromUrl = () => {
@@ -40,6 +41,11 @@ function App() {
   });
   const profile = getDataLocale(language, "profile");
   const skills = getDataLocale(language, "skills");
+  const paginatedSkills = getPagination({
+    arr: skills,
+    itemsPerPage: 6,
+    page: currentSkillsPage,
+  });
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -241,11 +247,42 @@ function App() {
             <h2>Skills</h2>
           </div>
 
-          <ul>
-            {skills.map((item: any) => (
+          <ul className="mb-3">
+            {paginatedSkills.map((item: any) => (
               <li className="">{item.name}</li>
             ))}
           </ul>
+
+          <div className="d-f ai-c">
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                if (currentSkillsPage > 0) {
+                  setCurrentSkillsPage((curr) => curr - 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} className="mirror" />
+            </button>
+            <div className="ml-2 mr-2">Page: {currentSkillsPage + 1}</div>
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                const hasNextPage =
+                  getPagination({
+                    arr: skills,
+                    itemsPerPage: 6,
+                    page: currentSkillsPage + 1,
+                  }).length > 0;
+
+                if (hasNextPage) {
+                  setCurrentSkillsPage((curr) => curr + 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} />
+            </button>
+          </div>
         </section>
 
         <section className="animate__animated animate__flip">
