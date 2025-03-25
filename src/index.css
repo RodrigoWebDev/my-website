@@ -113,6 +113,7 @@ button {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  border-radius: 3px;
 }
 
 button:hover {
@@ -179,6 +180,14 @@ label .checkmark:after {
   background: white;
 }
 
+.overlayer {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  position: fixed;
+  z-index: -1;
+}
+
 /* utils */
 
 .d-f {
@@ -213,6 +222,10 @@ label .checkmark:after {
   margin-right: calc(var(--spacing) * 3);
 }
 
+.ml-2 {
+  margin-left: calc(var(--spacing) * 2);
+}
+
 .mb-2 {
   margin-bottom: calc(var(--spacing) * 2);
 }
@@ -229,12 +242,26 @@ label .checkmark:after {
   list-style: none;
 }
 
+.h-180px {
+  height: 180px;
+}
+
+.h-350px {
+  height: 350px;
+}
+
 .card {
   border-bottom: 2px solid white;
   padding: 10px 0;
   background: #ffffffcf;
   color: black;
   padding: 16px;
+  border-radius: 3px;
+}
+
+.mirror {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .card a {

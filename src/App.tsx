@@ -5,9 +5,12 @@ import { TLocale } from "./locales";
 import Icon from "./components/Icon";
 import data from "./data";
 import { exp } from "three/tsl";
+import { getPagination } from "./utils/getPagination";
 
 function App() {
   const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
+  const [currentProjectPage, setCurrentProjectPage] = useState(0);
+  const [currentExperiencePage, setCurrentExperiencePage] = useState(0);
 
   const handleLocaleUpdateFromUrl = () => {
     const url = new URL(window.location.href);
@@ -28,14 +31,32 @@ function App() {
   const getDataLocale = (locale: "pt" | "en", key: string) => data[locale][key];
 
   const projects = getDataLocale(language, "projects");
+  const paginatedProjects = getPagination({
+    arr: projects,
+    itemsPerPage: 3,
+    page: currentProjectPage,
+  });
   const contact = getDataLocale(language, "contact");
   const experiences = getDataLocale(language, "experiences");
+  const paginatedExperiences = getPagination({
+    arr: experiences,
+    itemsPerPage: 3,
+    page: currentExperiencePage,
+  });
   const profile = getDataLocale(language, "profile");
   const skills = getDataLocale(language, "skills");
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      console.log("SCROLL");
+    });
+  }, []);
 
   return (
     <div>
       <Bg3d />
+
+      <div className="overlayer" style={{}}></div>
 
       <main>
         <div className="mb-2">
@@ -108,8 +129,8 @@ function App() {
             <h2>Work experience</h2>
           </div>
 
-          {experiences.map((item: any) => (
-            <div className="card mb-3">
+          {paginatedExperiences.map((item: any) => (
+            <div className="card mb-3 h-350px">
               <h2>{item.title}</h2>
               <div className="d-f ai-c mb-2">
                 <strong className="mr-1 fs-20px">
@@ -124,7 +145,36 @@ function App() {
             </div>
           ))}
 
-          <button className="hvr-bounce-in">Load more</button>
+          <div className="d-f ai-c">
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                if (currentExperiencePage > 0) {
+                  setCurrentExperiencePage((curr) => curr - 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} className="mirror" />
+            </button>
+            <div className="ml-2 mr-2">Page: {currentExperiencePage + 1}</div>
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                const hasNextPage =
+                  getPagination({
+                    arr: experiences,
+                    itemsPerPage: 3,
+                    page: currentExperiencePage + 1,
+                  }).length > 0;
+
+                if (hasNextPage) {
+                  setCurrentExperiencePage((curr) => curr + 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} />
+            </button>
+          </div>
         </section>
 
         <section>
@@ -133,8 +183,8 @@ function App() {
             <h2>Projects</h2>
           </div>
 
-          {projects.map((item: any) => (
-            <div className="card mb-3">
+          {paginatedProjects.map((item: any) => (
+            <div className="card mb-3 h-180px">
               <a href={item.link} target="_blank">
                 {item.title}
               </a>
@@ -142,7 +192,36 @@ function App() {
             </div>
           ))}
 
-          <button className="hvr-bounce-in">Load more</button>
+          <div className="d-f ai-c">
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                if (currentProjectPage > 0) {
+                  setCurrentProjectPage((curr) => curr - 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} className="mirror" />
+            </button>
+            <div className="ml-2 mr-2">Page: {currentProjectPage + 1}</div>
+            <button
+              className="hvr-bounce-in"
+              onClick={() => {
+                const hasNextPage =
+                  getPagination({
+                    arr: projects,
+                    itemsPerPage: 3,
+                    page: currentProjectPage + 1,
+                  }).length > 0;
+
+                if (hasNextPage) {
+                  setCurrentProjectPage((curr) => curr + 1);
+                }
+              }}
+            >
+              <Icon name="arrow" size={20} />
+            </button>
+          </div>
         </section>
 
         <section>

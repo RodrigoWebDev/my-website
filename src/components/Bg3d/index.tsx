@@ -22,7 +22,7 @@ export const Bg3d = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: -1,
+        zIndex: -2,
       }}
       camera={{
         position: [5, 5, 10],
