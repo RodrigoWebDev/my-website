@@ -3,6 +3,8 @@ import { Bg3d } from "./components/Bg3d";
 import { getLocale, getUrlSearch } from "./utils/getLocale";
 import { TLocale } from "./locales";
 import Icon from "./components/Icon";
+import data from "./data";
+import { exp } from "three/tsl";
 
 function App() {
   const [language, setLanguage] = useState(getUrlSearch() as "pt" | "en");
@@ -21,6 +23,16 @@ function App() {
     return getLocale(language, key);
   };
 
+  console.log("🚀 ~ App ~ language:", language);
+
+  const getDataLocale = (locale: "pt" | "en", key: string) => data[locale][key];
+
+  const projects = getDataLocale(language, "projects");
+  const contact = getDataLocale(language, "contact");
+  const experiences = getDataLocale(language, "experiences");
+  const profile = getDataLocale(language, "profile");
+  const skills = getDataLocale(language, "skills");
+
   return (
     <div>
       <Bg3d />
@@ -29,7 +41,7 @@ function App() {
         <div className="mb-2">
           <div className="d-f ai-c">
             <Icon name="me" className="mr-1" color="white" size={30} />
-            <h1>Rodrigo Queiroz</h1>
+            <h1>{profile.name}</h1>
           </div>
 
           <div className="d-f ai-c">
@@ -40,7 +52,7 @@ function App() {
 
             <div className="d-f ai-c">
               <Icon name="mapPoint" className="mr-1" color="white" />
-              <i>Brazil</i>
+              <i>{handleLocale("country")}</i>
             </div>
           </div>
         </div>
@@ -87,12 +99,7 @@ function App() {
             <h2>About</h2>
           </div>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quod
-            tempora consequatur corrupti provident, voluptas dignissimos illo
-            excepturi perferendis saepe unde suscipit assumenda id quasi laborum
-            exercitationem necessitatibus eum voluptatem.
-          </p>
+          <p>{profile.about}</p>
         </section>
 
         <section>
@@ -101,17 +108,19 @@ function App() {
             <h2>Work experience</h2>
           </div>
 
-          {Array.apply(null, Array(3)).map(() => (
+          {experiences.map((item: any) => (
             <div className="card mb-3">
-              <a href="https://skfb.ly/oyXLG" target="_blank">
-                Work 0
-              </a>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Maiores, ut necessitatibus eum error, explicabo eos neque
-                repellat, temporibus iste mollitia voluptates velit impedit
-                voluptas cumque voluptatum obcaecati nulla. Cupiditate, ratione.
-              </p>
+              <h2>{item.title}</h2>
+              <div className="d-f ai-c mb-2">
+                <strong className="mr-1 fs-20px">
+                  {handleLocale("company")}:
+                </strong>
+                <a href={item.companyLink} target="_blank">
+                  {item.company}
+                </a>
+              </div>
+
+              <p>{item.description}</p>
             </div>
           ))}
 
@@ -124,17 +133,12 @@ function App() {
             <h2>Projects</h2>
           </div>
 
-          {Array.apply(null, Array(3)).map(() => (
+          {projects.map((item: any) => (
             <div className="card mb-3">
-              <a href="https://skfb.ly/oyXLG" target="_blank">
-                Project 0
+              <a href={item.link} target="_blank">
+                {item.title}
               </a>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Maiores, ut necessitatibus eum error, explicabo eos neque
-                repellat, temporibus iste mollitia voluptates velit impedit
-                voluptas cumque voluptatum obcaecati nulla. Cupiditate, ratione.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>
           ))}
 
@@ -148,9 +152,9 @@ function App() {
           </div>
 
           <ul>
-            <li>Item 0</li>
-            <li>Item 1</li>
-            <li>Item 2</li>
+            {skills.map((item: any) => (
+              <li className="">{item.name}</li>
+            ))}
           </ul>
         </section>
 
@@ -160,10 +164,30 @@ function App() {
             <h2>Contact and links</h2>
           </div>
 
-          <ul>
-            <li>Item 0</li>
-            <li>Item 1</li>
-            <li>Item 2</li>
+          <ul className="animate__animated animate__swing d-f ai-c ls-n p-0">
+            <li className="mr-3">
+              <a
+                href={`https://wa.me/55${contact.phone}`}
+                title={contact.phone}
+                target="_blank"
+              >
+                <Icon name="whatsApp" color="white" size={32} />
+              </a>
+            </li>
+            <li className="mr-3">
+              <a
+                href={contact.linkedin}
+                title={contact.linkedin}
+                target="_blank"
+              >
+                <Icon name="linkedin" color="white" size={32} />
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href={`mailto:${contact.email}`} title={contact.email}>
+                <Icon name="email" color="white" size={32} />
+              </a>
+            </li>
           </ul>
         </section>
 
@@ -174,13 +198,13 @@ function App() {
           </div>
           <ul>
             <li>
-              3D model by{" "}
+              {handleLocale("model3Dby")}{" "}
               <a href="https://skfb.ly/oyXLG" target="_blank">
                 silvercrow101
               </a>
             </li>
             <li>
-              Icons by{" "}
+              {handleLocale("iconsBy")}{" "}
               <a
                 href="https://www.figma.com/community/file/1166831539721848736/solar-icons-set"
                 target="_blank"
@@ -189,9 +213,9 @@ function App() {
               </a>
             </li>
             <li>
-              Code by{" "}
+              {handleLocale("codeBy")}{" "}
               <a href="https://github.com/RodrigoWebDev/" target="_blank">
-                me
+                {handleLocale("me")}
               </a>
             </li>
           </ul>
