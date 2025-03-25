@@ -1,8 +1,4 @@
 - Adicionar animções com animate.css
 - Colocar uma fonte do google fonts
-- Alternar entre EN e PT
-- Alimentar com os dados do linkedin
 - Funcionalidade de "Carregar mais"
-- Adicionar ícones SVG, pode ser da biblioteca do google
 - Favicon
-- Incluir código fonte na seção de créditos
