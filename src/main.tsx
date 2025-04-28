@@ -9,8 +9,7 @@ import Works from "./pages/works";
 import Redirect from "./components/Redirect";
 import Modal, { IModal } from "./components/Modal";
 import { signal } from "@preact/signals";
-import "./styles/base.css";
-import "./styles/custom.css";
+import "./main.css";
 
 export const modalState = signal<IModal>({
   isOpen: false,

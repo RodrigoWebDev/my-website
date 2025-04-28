@@ -3,6 +3,7 @@ import { signal } from "@preact/signals";
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import { isEnglish } from "../../utils/locale";
+import Icon from "../Icon";
 
 const isNavigationMenuOpen = signal(false);
 const _isEnglish = signal(false);
@@ -62,82 +63,113 @@ const Header = () => {
 
   return (
     <>
-      <nav class="animate__animated animate__backInDown zi-1 p-s l-0 t-0">
-        <div class="d-f ai-c jc-sb">
-          <div
-            class="fs-32px c-p"
+      <div class="navbar bg-base-100/90 shadow-sm sticky top-0 left-0 backdrop-blur z-10">
+        <div class="navbar-start">
+          <a
+            class="btn btn-ghost text-xl"
             onClick={() => {
-              route("/about" + window.location.search);
+              route("/about");
             }}
           >
-            🤖
-          </div>
-
-          <div
-            class="d-b c-p md:d-n fs-32px"
-            onClick={() => {
-              isNavigationMenuOpen.value = !isNavigationMenuOpen.value;
-            }}
-          >
-            ☰
-          </div>
-
-          {/* Desktop menu */}
-          <div class="d-n md:d-f ai-c jc-sb">
-            {navLinks.map((navLink) => {
-              return (
-                <>
-                  <div
-                    onClick={() => {
-                      route(
-                        "/" +
-                          navLink.name.toLocaleLowerCase() +
-                          window.location.search
-                      );
-                    }}
-                  >
-                    <a class="c-p">
-                      {isEnglish() ? navLink.name : navLink.ptName}
+            <Icon name="technologist-light" size={40} />
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              {navLinks.map((item) => {
+                return (
+                  <li>
+                    <a
+                      onClick={() => {
+                        route(
+                          "/" +
+                            item.name.toLocaleLowerCase() +
+                            window.location.search
+                        );
+                      }}
+                    >
+                      {item.name}
                     </a>
-                  </div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                </>
-              );
-            })}
-            {localeSelect()}
+                  </li>
+                );
+              })}
+              {/* <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul class="p-2">
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li> */}
+            </ul>
           </div>
+
+          <label
+            htmlFor="my-drawer"
+            class="drawer-button btn btn-ghost flex lg:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {" "}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />{" "}
+            </svg>
+          </label>
         </div>
+      </div>
 
-        <hr />
-      </nav>
-
-      {/* Mobile menu */}
-      {isNavigationMenuOpen.value && (
-        <div class="d-f fd-c">
-          {navLinks.map((navLink) => {
-            return (
-              <>
-                <button
-                  onClick={() => {
-                    route("/" + navLink.name.toLocaleLowerCase());
-                    isNavigationMenuOpen.value = false;
-                  }}
-                >
-                  {isEnglish() ? navLink.name : navLink.ptName}
-                </button>
-                <br />
-              </>
-            );
-          })}
-          {localeSelect()}
+      <div class="drawer z-20">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-side">
+          <label
+            htmlFor="my-drawer"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+            {/* Sidebar content here */}
+            <ul class="menu bg-base-200 rounded-box">
+              {navLinks.map((item) => {
+                return (
+                  <li>
+                    <a
+                      onClick={() => {
+                        route(
+                          "/" +
+                            item.name.toLocaleLowerCase() +
+                            window.location.search
+                        );
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </ul>
         </div>
-      )}
-
-      <div>
-        <h1 class="animate__animated animate__backInUp">🧑🏻‍💻 {profile.name}</h1>
-        <code class="animate__animated animate__backInRight">
-          <i>{profile.headline}</i>
-        </code>
       </div>
     </>
   );
