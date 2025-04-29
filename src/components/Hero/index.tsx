@@ -1,4 +1,5 @@
 import avatar from "../../images/avatar.jpg";
+import Icon from "../Icon";
 
 export const Hero = () => {
   return (
@@ -24,16 +25,18 @@ export const Hero = () => {
           <div class="flex flex-wrap">
             <a
               href="https://www.linkedin.com/in/rodrigo-queiroz-chagas"
-              class="btn btn-primary mr-2"
+              class="btn btn-primary mr-2 mb-2"
               target="_blank"
             >
+              <Icon name="mdi:linkedin" size={24} />
               Linkedin
             </a>
             <a
               href="https://wa.me/5561998102827"
-              class="btn btn-success mr-2"
+              class="btn btn-success mr-2 mb-2"
               target="_blank"
             >
+              <Icon name="mdi:whatsapp" size={24} />
               Whats app
             </a>
             <a
@@ -41,6 +44,7 @@ export const Hero = () => {
               class="btn btn-secondary"
               target="_blank"
             >
+              <Icon name="mdi:github" size={24} />
               Github
             </a>
           </div>

@@ -1,0 +1,17 @@
+{
+  "pt-BR": {
+    "home": "Início",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "works": "Trabalhos",
+    "resume": "Currículo",
+    "profileHeadline": "Desenvolvedor Frontend React, React Native, Javascript, Typescript",
+    "profileDesc": "Estou no mercado de desenvolvimento de software desde 2017, autodidata, especializado em Frontend Web e mobile com React e React Native, e com conhecimentos em backend com Node.js. Tenho foco em criar soluções de alta performance e experiências de usuário excepcionais, integrando eficientemente as diferentes camadas de um projeto. Estou sempre em busca de inovação e pronto para agregar valor a equipes com soluções modernas e escaláveis. Aqui você encontra informações como minhas experiências profissionais, projetos, contato e entre outros.",
+    "footerDescOne": "Desenvolvendo software confiável desde 2017",
+    "footerNo": "Sem",
+    "footerCopyright": "Direitos de cópia",
+    "footerRightsReserved": "Direitos reservados",
+    "seeSourceCode": "Ver código fonte"
+  },
+  "en": {}
+}

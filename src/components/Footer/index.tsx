@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer class="footer footer-horizontal footer-center bg-neutral text-primary-content p-10">
       <aside>
-        <Icon name="technologist-light" size={40} />
+        <Icon name="fluent-emoji-flat:technologist-light" size={40} />
 
         <p class="font-bold">
           Rodrigo Queiroz
@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
         <p>
           <strong>NO</strong> Copyright © {new Date().getFullYear()} -{" "}
-          <strong>NOT</strong> all right reserved
+          <strong>NO</strong> rights reserved
         </p>
       </aside>
       <div class="flex">
@@ -23,11 +23,11 @@ const Footer = () => {
           <div class="status status-success"></div>
         </div>{" "}
         <a
-          class="link"
+          class="link flex items-center"
           href="https://github.com/RodrigoWebDev/my-website"
           target="_blank"
         >
-          &#60;/&#62; Check the code
+          <Icon name="mdi:github" class="mr-2" /> Ver código fonte
         </a>
       </div>
     </footer>

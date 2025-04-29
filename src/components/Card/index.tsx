@@ -12,7 +12,7 @@ export const Card = ({ title, description, link, btnText }: Card) => {
     <div class="card card-border bg-base-100">
       <div class="card-body">
         <h2 class="card-title">{title}</h2>
-        <p>{description}</p>
+        <div>{description}</div>
         <div class="card-actions justify-end">
           <a class="btn btn-primary" href={link} target="_blank">
             {btnText}

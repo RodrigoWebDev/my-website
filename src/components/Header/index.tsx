@@ -3,35 +3,35 @@ import { signal } from "@preact/signals";
 import ptProfile from "../../data/pt/profile.json";
 import enProfile from "../../data/en/profile.json";
 import { isEnglish } from "../../utils/locale";
-import Icon from "../Icon";
+import Icon, { TIconName } from "../Icon";
+import { modalState, setModalState } from "../../main";
+
+interface INavLink {
+  name: string;
+  icon: string;
+  route?: string;
+}
 
 const isNavigationMenuOpen = signal(false);
 const _isEnglish = signal(false);
 
 const navLinks = [
   {
-    name: "About",
-    ptName: "Sobre",
+    name: "home",
+    route: "",
+    icon: "mdi:house-variant",
   },
   {
-    name: "Contact",
-    ptName: "Contato",
+    name: "projects",
+    icon: "mdi:computer",
   },
   {
-    name: "Projects",
-    ptName: "Projetos",
+    name: "works",
+    icon: "mdi:company",
   },
   {
-    name: "Skills",
-    ptName: "Habilidades",
-  },
-  {
-    name: "Works",
-    ptName: "Trabalhos",
-  },
-  {
-    name: "Resume",
-    ptName: "Currículo",
+    name: "resume",
+    icon: "mdi:paper-text",
   },
 ];
 
@@ -42,7 +42,6 @@ const Header = () => {
     return (
       <select
         onChange={(e: any) => {
-          console.log("🚀 ~ localeSelect ~ e:", e);
           const check = e.target?.value === "en";
           _isEnglish.value = check;
 
@@ -61,6 +60,43 @@ const Header = () => {
     );
   };
 
+  const getNavLink = (item: INavLink) => {
+    if (item.route !== undefined) {
+      return item.route + window.location.search;
+    }
+
+    return item.name + window.location.search;
+  };
+
+  const renderMobileNav = () => {
+    setModalState({
+      content: (
+        <ul class="menu bg-base-200 rounded-box">
+          {navLinks.map((item) => {
+            const iconName = item.icon as TIconName;
+
+            return (
+              <li>
+                <a
+                  onClick={() => {
+                    route(
+                      "/" +
+                        item.name.toLocaleLowerCase() +
+                        window.location.search
+                    );
+                  }}
+                >
+                  <Icon name={iconName} />
+                  {item.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      ),
+    });
+  };
+
   return (
     <>
       <div class="navbar bg-base-100/90 shadow-sm sticky top-0 left-0 backdrop-blur z-10">
@@ -68,57 +104,39 @@ const Header = () => {
           <a
             class="btn btn-ghost text-xl"
             onClick={() => {
-              route("/about");
+              route("/");
             }}
           >
-            <Icon name="technologist-light" size={40} />
+            <Icon name="fluent-emoji-flat:technologist-light" size={40} />
           </a>
         </div>
         <div class="navbar-end">
           <div class="hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
               {navLinks.map((item) => {
+                const iconName = item.icon as TIconName;
                 return (
                   <li>
                     <a
                       onClick={() => {
-                        route(
-                          "/" +
-                            item.name.toLocaleLowerCase() +
-                            window.location.search
-                        );
+                        route("/" + getNavLink(item));
                       }}
                     >
+                      <Icon name={iconName} />
                       {item.name}
                     </a>
                   </li>
                 );
               })}
-              {/* <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul class="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li> */}
             </ul>
           </div>
 
           <label
             htmlFor="my-drawer"
             class="drawer-button btn btn-ghost flex lg:hidden"
+            onClick={() => {
+              renderMobileNav();
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -136,39 +154,6 @@ const Header = () => {
               />{" "}
             </svg>
           </label>
-        </div>
-      </div>
-
-      <div class="drawer z-20">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-side">
-          <label
-            htmlFor="my-drawer"
-            aria-label="close sidebar"
-            class="drawer-overlay"
-          ></label>
-          <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-            {/* Sidebar content here */}
-            <ul class="menu bg-base-200 rounded-box">
-              {navLinks.map((item) => {
-                return (
-                  <li>
-                    <a
-                      onClick={() => {
-                        route(
-                          "/" +
-                            item.name.toLocaleLowerCase() +
-                            window.location.search
-                        );
-                      }}
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </ul>
         </div>
       </div>
     </>

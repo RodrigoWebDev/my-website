@@ -9,7 +9,7 @@ import Icon from "../../components/Icon";
 import { IPage } from "../../model";
 import { Hero } from "../../components/Hero";
 
-const About = (props: IPage) => {
+const Home = (props: IPage) => {
   console.log({ props });
   const profile = isEnglish() ? enProfile : ptProfile;
   const contact = isEnglish() ? enContact : ptContact;
@@ -21,4 +21,4 @@ const About = (props: IPage) => {
   );
 };
 
-export default About;
+export default Home;
