@@ -11,7 +11,6 @@ import { IPage } from "../../model";
 import { Card } from "../../components/Card";
 import Icon from "../../components/Icon";
 import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
-import { render } from "preact";
 
 const filters = signal<
   {

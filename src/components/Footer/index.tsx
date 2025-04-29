@@ -1,4 +1,4 @@
-import { isEnglish } from "../../utils/locale";
+//import { isEnglish } from "../../utils/locale";
 import Icon from "../Icon";
 
 const Footer = () => {

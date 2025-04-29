@@ -1,10 +1,10 @@
 import { route } from "preact-router";
-import { signal } from "@preact/signals";
-import ptProfile from "../../data/pt/profile.json";
-import enProfile from "../../data/en/profile.json";
-import { isEnglish } from "../../utils/locale";
+//import { signal } from "@preact/signals";
+//import ptProfile from "../../data/pt/profile.json";
+//import enProfile from "../../data/en/profile.json";
+//import { isEnglish } from "../../utils/locale";
 import Icon, { TIconName } from "../Icon";
-import { modalState, setModalState } from "../../main";
+import { setModalState } from "../../main";
 
 interface INavLink {
   name: string;
@@ -12,8 +12,8 @@ interface INavLink {
   route?: string;
 }
 
-const isNavigationMenuOpen = signal(false);
-const _isEnglish = signal(false);
+//const isNavigationMenuOpen = signal(false);
+//const _isEnglish = signal(false);
 
 const navLinks = [
   {
@@ -38,9 +38,9 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const profile = _isEnglish.value ? enProfile : ptProfile;
+  //const profile = _isEnglish.value ? enProfile : ptProfile;
 
-  const localeSelect = () => {
+  /* const localeSelect = () => {
     return (
       <select
         onChange={(e: any) => {
@@ -60,7 +60,7 @@ const Header = () => {
         <option value="en">🇺🇸</option>
       </select>
     );
-  };
+  }; */
 
   const getNavLink = (item: INavLink) => {
     if (item.route !== undefined) {
