@@ -8,7 +8,8 @@ export type TIconName =
   | "mdi:house-variant"
   | "mdi:computer"
   | "mdi:react"
-  | "mdi:paper-text";
+  | "mdi:paper-text"
+  | "mdi:language";
 
 interface IIcon {
   name: TIconName;
@@ -185,6 +186,15 @@ const Icon = (props: IIcon) => {
           <path
             fill="currentColor"
             d="M14 10h5.5L14 4.5zM5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2zm0 4v2h9v-2z"
+          ></path>
+        </svg>
+      );
+    case "mdi:language":
+      return (
+        <svg {...attrs} viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="m12.87 15.07l-2.54-2.51l.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7l1.62-4.33L19.12 17z"
           ></path>
         </svg>
       );

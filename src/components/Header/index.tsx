@@ -131,6 +131,11 @@ const Header = () => {
             </ul>
           </div>
 
+          <select class="select w-auto select-ghost cursor-pointer">
+            <option selected>🇧🇷</option>
+            <option>🇺🇸</option>
+          </select>
+
           <label
             htmlFor="my-drawer"
             class="drawer-button btn btn-ghost flex lg:hidden"
