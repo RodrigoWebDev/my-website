@@ -53,7 +53,7 @@ export const ExperienceInfo = () => {
               >
                 <time class="font-mono italic">{work.date}</time>
                 <div class="text-lg font-black">
-                  {work.title} at{" "}
+                  {work.title} em{" "}
                   <a class="link" href={work.companyLink} target="_balnk">
                     {work.company}
                   </a>

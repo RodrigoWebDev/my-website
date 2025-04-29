@@ -10,11 +10,11 @@ const Footer = () => {
         <p class="font-bold">
           Rodrigo Queiroz
           <br />
-          Providing reliable software since 2017
+          Desenvolvendo software confiável desde 2017
         </p>
         <p>
-          <strong>NO</strong> Copyright © {new Date().getFullYear()} -{" "}
-          <strong>NO</strong> rights reserved
+          <strong>Sem</strong> direitos de cópia © {new Date().getFullYear()} -{" "}
+          <strong>Sem</strong> direitos reservados
         </p>
       </aside>
       <div class="flex">

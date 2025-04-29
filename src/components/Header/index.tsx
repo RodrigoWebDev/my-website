@@ -17,22 +17,24 @@ const _isEnglish = signal(false);
 
 const navLinks = [
   {
-    name: "home",
+    name: "Início",
     route: "",
     icon: "mdi:house-variant",
   },
   {
-    name: "projects",
+    name: "Projetos",
+    route: "projects",
     icon: "mdi:computer",
   },
   {
-    name: "works",
+    name: "Experiência",
+    route: "works",
     icon: "mdi:company",
   },
-  {
+  /* {
     name: "resume",
     icon: "mdi:paper-text",
-  },
+  }, */
 ];
 
 const Header = () => {
@@ -131,10 +133,10 @@ const Header = () => {
             </ul>
           </div>
 
-          <select class="select w-auto select-ghost cursor-pointer">
+          {/* <select class="select w-auto select-ghost cursor-pointer">
             <option selected>🇧🇷</option>
             <option>🇺🇸</option>
-          </select>
+          </select> */}
 
           <label
             htmlFor="my-drawer"
