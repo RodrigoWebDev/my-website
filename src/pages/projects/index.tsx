@@ -1,16 +1,14 @@
-import "animate.css";
-import { route } from "preact-router";
-import enProjects from "../../data/en/projects.json";
-import ptProjects from "../../data/pt/projects.json";
-import Layout from "../../components/Layout";
-import { isEnglish } from "../../utils/locale";
 import { signal } from "@preact/signals";
+import "animate.css";
 import { useEffect } from "preact/hooks";
-import { setModalState } from "../../main";
-import { IPage } from "../../model";
 import { Card } from "../../components/Card";
 import Icon from "../../components/Icon";
+import Layout from "../../components/Layout";
+import projects from "../../data/projects.json";
 import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
+import { setModalState } from "../../main";
+import { IPage } from "../../model";
+import { i18n } from "../../utils";
 
 const filters = signal<
   {
@@ -30,7 +28,6 @@ const filteredProjects = signal<
 
 const Projects = (props: IPage) => {
   console.log({ props });
-  const projects = isEnglish() ? enProjects : ptProjects;
 
   const onChange = (index: number) => {
     const _filters = [...filters.value];
@@ -67,7 +64,7 @@ const Projects = (props: IPage) => {
   const Filters = () => {
     return (
       <fieldset class="fieldset bg-base-100 border-base-300 rounded-box border p-4 mr-4">
-        <legend class="fieldset-legend">Filtros</legend>
+        <legend class="fieldset-legend">{i18n("filters")}</legend>
 
         {filters.value.map((item, index) => {
           return (
@@ -90,31 +87,7 @@ const Projects = (props: IPage) => {
 
   const renderFilters = () => {
     setModalState({
-      title: isEnglish() ? "🌪️ Filters" : "🌪️ Filtros",
       content: <Filters />,
-      footer: (
-        <div class="d-f">
-          <button
-            class="w-50%"
-            onClick={() => {
-              route("projects?showFilters", true);
-              window.location.reload();
-            }}
-          >
-            🔄 {isEnglish() ? "Reset" : "Resetar"}
-          </button>
-          <button
-            onClick={() => {
-              setModalState({
-                isOpen: false,
-              });
-            }}
-            class="w-50%"
-          >
-            ✅ {isEnglish() ? "Aplly" : "Aplicar"}
-          </button>
-        </div>
-      ),
     });
   };
 
@@ -159,11 +132,7 @@ const Projects = (props: IPage) => {
           <div class="hero-content text-neutral-content text-center">
             <div class="max-w-md flex flex-col items-center">
               <Icon name="mdi:computer" size={100} />
-              <h1 class="mb-5 text-5xl font-bold">Projetos</h1>
-              <p class="mb-5">
-                Aqui você encontra projetos e sistemas que desenvolvi, bem como
-                as tecnologias e habilidades usadas neles.
-              </p>
+              <h1 class="mb-5 text-5xl font-bold">{i18n("projects")}</h1>
             </div>
           </div>
         </div>
@@ -184,19 +153,10 @@ const Projects = (props: IPage) => {
               Abrir filtros
             </label>
             <div class="mb-8 text-left md:text-right">
-              Mostrando <strong>{filteredProjects.value.length}</strong> de{" "}
-              <strong>{projects.length}</strong> projetos
+              {i18n("showing")} <strong>{filteredProjects.value.length}</strong>{" "}
+              {i18n("of")} <strong>{projects.length}</strong>{" "}
+              {i18n("projects").toLowerCase()}
             </div>
-            {/* {filteredProjects.value.map((project) => (
-            <li>
-              <h3>
-                <a href={project.link} target="_blank">
-                  🔗 {project.title}
-                </a>
-              </h3>
-              <p dangerouslySetInnerHTML={{ __html: project.description }} />
-            </li>
-          ))} */}
 
             {filteredProjects.value.map((project) => (
               <div class="mb-4">
@@ -210,7 +170,7 @@ const Projects = (props: IPage) => {
                       }}
                     ></div>
                   }
-                  btnText="Acessar"
+                  btnText={i18n("access")}
                 />
               </div>
             ))}

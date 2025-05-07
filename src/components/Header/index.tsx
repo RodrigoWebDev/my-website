@@ -4,7 +4,8 @@ import { route } from "preact-router";
 //import enProfile from "../../data/en/profile.json";
 //import { isEnglish } from "../../utils/locale";
 import Icon, { TIconName } from "../Icon";
-import { setModalState } from "../../main";
+import { TLocale, locale, setModalState } from "../../main";
+import { i18n } from "../../utils";
 
 interface INavLink {
   name: string;
@@ -15,29 +16,28 @@ interface INavLink {
 //const isNavigationMenuOpen = signal(false);
 //const _isEnglish = signal(false);
 
-const navLinks = [
-  {
-    name: "Início",
-    route: "",
-    icon: "mdi:house-variant",
-  },
-  {
-    name: "Projetos",
-    route: "projects",
-    icon: "mdi:computer",
-  },
-  {
-    name: "Experiência",
-    route: "works",
-    icon: "mdi:company",
-  },
-  /* {
-    name: "resume",
-    icon: "mdi:paper-text",
-  }, */
-];
-
 const Header = () => {
+  const navLinks = [
+    {
+      name: i18n("home"),
+      route: "",
+      icon: "mdi:house-variant",
+    },
+    {
+      name: i18n("projects"),
+      route: "projects",
+      icon: "mdi:computer",
+    },
+    {
+      name: i18n("works"),
+      route: "works",
+      icon: "mdi:company",
+    },
+    /* {
+      name: "resume",
+      icon: "mdi:paper-text",
+    }, */
+  ];
   //const profile = _isEnglish.value ? enProfile : ptProfile;
 
   /* const localeSelect = () => {
@@ -70,10 +70,10 @@ const Header = () => {
     return item.name + window.location.search;
   };
 
-  const renderMobileNav = () => {
-    setModalState({
-      content: (
-        <ul class="menu bg-base-200 rounded-box">
+  const Navigation = ({ ulClass }: { ulClass: string }) => {
+    return (
+      <>
+        <ul class={ulClass}>
           {navLinks.map((item) => {
             const iconName = item.icon as TIconName;
 
@@ -90,8 +90,28 @@ const Header = () => {
               </li>
             );
           })}
+          <li>
+            <select
+              className="focus:bg-base-100! focus-visible:bg-base-100!"
+              onChange={(e) => {
+                //@ts-ignore
+                const value = e?.target?.value as TLocale;
+                route(window.location.pathname + `?locale=${value}`);
+              }}
+              value={locale.value}
+            >
+              <option value="pt">Português</option>
+              <option value="en">English</option>
+            </select>
+          </li>
         </ul>
-      ),
+      </>
+    );
+  };
+
+  const renderMobileNav = () => {
+    setModalState({
+      content: <Navigation ulClass="menu bg-base-200 rounded-box w-full" />,
     });
   };
 
@@ -110,29 +130,8 @@ const Header = () => {
         </div>
         <div class="navbar-end">
           <div class="hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              {navLinks.map((item) => {
-                const iconName = item.icon as TIconName;
-                return (
-                  <li>
-                    <a
-                      onClick={() => {
-                        route("/" + getNavLink(item));
-                      }}
-                    >
-                      <Icon name={iconName} />
-                      {item.name}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <Navigation ulClass="menu menu-horizontal px-1" />
           </div>
-
-          {/* <select class="select w-auto select-ghost cursor-pointer">
-            <option selected>🇧🇷</option>
-            <option>🇺🇸</option>
-          </select> */}
 
           <label
             htmlFor="my-drawer"

@@ -1,13 +1,8 @@
-import enWorks from "../../data/en/experiences.json";
-import ptWorks from "../../data/pt/experiences.json";
 import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
-import { isOddNumber } from "../../utils";
-import { isEnglish } from "../../utils/locale";
+import { i18n, i18nExperiences, isOddNumber } from "../../utils";
 import Icon from "../Icon";
 
 export const ExperienceInfo = () => {
-  const works = isEnglish() ? enWorks : ptWorks;
-
   return (
     <div>
       <div
@@ -20,13 +15,15 @@ export const ExperienceInfo = () => {
         <div class="hero-content text-neutral-content text-center">
           <div class="flex flex-col items-center">
             <Icon name="mdi:company" size={100} />
-            <h1 class="mb-5 text-5xl font-bold">Experiência profissional</h1>
+            <h1 class="mb-5 text-5xl font-bold">
+              {i18n("professionalExperience")}
+            </h1>
           </div>
         </div>
       </div>
 
       <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical mx-auto max-w-[700px] px-4">
-        {works.map((work, index) => {
+        {i18nExperiences().map((work, index) => {
           const isOdd = isOddNumber(index);
           console.log("🚀 ~ {works.map ~ isOdd:", isOdd);
 
@@ -66,36 +63,5 @@ export const ExperienceInfo = () => {
         })}
       </ul>
     </div>
-  );
-
-  return (
-    <>
-      <h2 class="animate__animated animate__tada">
-        🛠️ {isEnglish() ? "Works" : "Experiência profissional"}
-      </h2>
-
-      <hr />
-
-      <ul class="animate__animated animate__flash">
-        {works.map((work) => (
-          <li>
-            <h3>
-              {work.title} {isEnglish() ? "at" : "em"}{" "}
-              <a href={work.companyLink} target="_blank">
-                {work.company}
-              </a>
-            </h3>
-            <p>
-              <strong>{isEnglish() ? "Date" : "Período"}</strong>: {work.date}
-            </p>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: work.description,
-              }}
-            ></p>
-          </li>
-        ))}
-      </ul>
-    </>
   );
 };

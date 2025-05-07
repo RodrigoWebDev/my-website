@@ -1,14 +1,8 @@
-import ptProfile from "../../data/pt/profile.json";
-import enProfile from "../../data/en/profile.json";
-import { isEnglish } from "../../utils/locale";
 import { IPage } from "../../model";
-import { ContactInfo } from "../../components/ContactInfo";
-import { ExperienceInfo } from "../../components/ExperienceInfo";
-import { SkillsInfo } from "../../components/SkillsInfo";
 
 const Resume = (props: IPage) => {
   console.log({ props });
-  const profile = isEnglish() ? enProfile : ptProfile;
+  /* const profile = isEnglish() ? enProfile : ptProfile;
 
   const getAge = () => {
     const birthDate = new Date(1997, 2, 11);
@@ -16,10 +10,10 @@ const Resume = (props: IPage) => {
     const year = new Date(diff).getUTCFullYear();
 
     return Math.abs(year - 1970);
-  };
+  }; */
 
-  return (
-    <main>
+  return {
+    /* <main>
       <h1>{profile.name}</h1>
       <div>
         <strong>{isEnglish() ? "Profession" : "Profissão"}:</strong>{" "}
@@ -55,8 +49,8 @@ const Resume = (props: IPage) => {
           : "Ver todos os projetos que desenvolvi"}
       </a>
       <ContactInfo />
-    </main>
-  );
+    </main> */
+  };
 };
 
 export default Resume;

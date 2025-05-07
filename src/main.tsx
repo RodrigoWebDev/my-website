@@ -9,6 +9,9 @@ import Redirect from "./components/Redirect";
 import Modal, { IModal } from "./components/Modal";
 import { signal } from "@preact/signals";
 import "./main.css";
+import { getSearchParam } from "./utils";
+
+export type TLocale = "pt" | "en";
 
 export const modalState = signal<IModal>({
   isOpen: false,
@@ -18,7 +21,7 @@ export const modalState = signal<IModal>({
   footer: <></>,
 });
 
-export const locale = signal<"pt-BR" | "en">("pt-BR");
+export const locale = signal<TLocale>("pt");
 
 export const setModalState = (params: IModal) => {
   modalState.value = {
@@ -34,11 +37,19 @@ export const showDrawer = (show: boolean) => {
   }
 };
 
+const setLocale = () => {
+  const localeParam = getSearchParam("locale") as TLocale;
+  console.log("🚀 ~ Main ~ localeParam:", localeParam);
+
+  locale.value = localeParam || "pt";
+};
+
 const Main = () => {
   return (
     <>
       <Router
         onChange={() => {
+          setLocale();
           showDrawer(false);
         }}
       >

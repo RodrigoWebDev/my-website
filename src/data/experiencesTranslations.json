@@ -1,0 +1,118 @@
+{
+  "pt": [
+    {
+      "title": "React Native Developer",
+      "company": "Platform Builders · Full-time",
+      "companyLink": "https://www.linkedin.com/company/5082784/",
+      "description": "Trabalhei como desenvolvedor Front-end React, React Native e no Back-end com Node.js para correções mais pontuais no BFF. \n\nDesenvolvi funcionalidades e correções no app da RD (https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR) e Grupo DPSP (https://www.grupodpsp.com.br/) e desenvolvendo o sistema de frente de caixa das farmácias RD.\n\nUsei as seguintes tecnologias e bibliotecas no meu dia a dia: HTML, CSS, Javascript, Typescript, React, React native, Node.js, GraphQL(Apollo Client), Next.js(SSR), Styled components, Tailwind e Testes unitários(Jest/RTL) e Micro frontend.\n\nTambém trabalhei com metodologias ágeis dentro do time. A que foi usada nessa experiência foi o Scrum com auxílio da ferramenta Jira.",
+      "date": "Aug 2023 - Feb 2025"
+    },
+    {
+      "title": "React Developer",
+      "company": "DBC Company · Full-time",
+      "companyLink": "https://www.linkedin.com/company/398921/",
+      "description": "Trabalhei como desenvolvedor Front-end usando React como principal biblioteca.\n\nDesenvolvi e mantive o sistema da ouvidoria da coperativa financeira Sicredi (https://www.sicredi.com.br/home/) usando as seguintes tecnologias e bibliotecas: HTML5, CSS3, Javascript, Typescript, React, Zustand, Testes unitários(Jest), Styled Components, Tailwind, Strapi.\n\nTambém trabalhei com metodologias ágeis dentro da squad. A que foi usada nessa experiência foi uma junção de Kanban com Scrum, mais conhecido com SrumBan.",
+      "date": "Jun 2022 - Aug 2023"
+    },
+    {
+      "title": "React Developer",
+      "company": "Grupo FCamara · Full-time",
+      "companyLink": "https://www.linkedin.com/company/738478/",
+      "description": "Fui desenvolvedor Front-end usando o React como biblioteca principal.\n\nTrabalhei desenvolvendo, mantendo, corrigido e propondo soluções nos sitemas de e-commerce da drogaraia (https://www.drogaraia.com.br/) e drogasil (https://www.drogasil.com.br/), usando as seguintes tecnologias e bibliotecas: HTML, CSS, Javascript, Typescript, React, React Native, GraphQL(Apollo\nClient), Next.js(SSR), Styled components e Testes unitários(Jest/RTL).\n\nTambém foi muito usado por mim e pela minha squad a metodologia Kanban para gerenciamento de tarefas e prazos.",
+      "date": "Jan 2021 - May 2022"
+    },
+    {
+      "title": "Desenvolvedor de front-end",
+      "company": "Diebold Nixdorf Software",
+      "companyLink": "https://www.linkedin.com/company/4458/",
+      "description": "Trabalhei como desenvolvedor Front end usando o React no sistema interno de caixa da coperativa financeira Sicredi(https://www.sicredi.com.br/home/).\n\nPara entregar o trabalho, eu fiz o uso das tecnologias HTML, CSS, Bootstrap, Javascript, Typescript, React, Web components e jQuery(no legado), fora as metodologias ágeis que usava um misto de Kanban com Scrum, prevalecendo a maioria dos aspectos do Kanban.",
+      "date": "Mar 2020 - Jan 2021"
+    },
+    {
+      "title": "Desenvolvedor de front-end",
+      "company": "TOTVS IBIRAPUERA / 2bdigital · Full-time",
+      "companyLink": "https://www.linkedin.com/company/9217499/",
+      "description": "Trabalhei como desenvolvedor Front-end React focando em sistemas de e-commerce.\n\nEm um dos projetos(https://voltzmotors.com/), eu fiz uso de HTML, CSS, JavaScript, React, jQuery(para o legado), Sass, Less, Vtex(pra o e-commerce). Para outros projetos, foi usado uma stack de tecnologias parecida.\n\nDentre as metodologias ágeis aplicadas na empresa, a mais predominante era o Kanban, mas isso dependia do projeto em questão.",
+      "date": "Oct 2018 - Jan 2020"
+    },
+    {
+      "title": "Freelancer Desenvolvedor web front end",
+      "company": "Upwork",
+      "companyLink": "https://www.linkedin.com/company/4827017/",
+      "description": "Trabalhei como desenvolvedor Frontend React freelancer mas também com foco em outras tecnologias.\n\nTrabalhei em diversos projetos pequenos dentro da plataforma Upwork. Foi onde comecei a obter experiência de mercado. Usei diversas tecnologias e skills, entre elas: HTML5, CSS3, Javascript, Typescript, React, Gatsby, Next.js Redux, TDD, Jest, jQuery, Sass, Less, Wordpress, Woocommerce, Strapi, Vtex, Node.js.\n\nUm dos projetos desenvolvidos: https://www.sharktankhub.com/",
+      "date": "May 2016 - Oct 2019"
+    },
+    {
+      "title": "Desenvolvedor web front end",
+      "company": "NSH Technologies",
+      "companyLink": "https://www.linkedin.com/company/11312394/",
+      "description": "Trabalhei como desenvolvedor Front end no projeto https://www.wine.com.br/, integrando a plataforma de e-commerce Oracle Cloud\nCommerce. Nesse projeto usei as seguintes tecnologias: HTML, CSS, JavaScript, jQuery, Sass, Less, WordPress, OCC(Oracle Cloud\nCommerce), HandleBars.",
+      "date": "Jun 2017 - Oct 2018"
+    },
+    {
+      "title": "Desenvolvedor web front end",
+      "company": "Double",
+      "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Double",
+      "description": "Trabalhei como desenvolvedor web com foco em Wordpress. Das tecnologias usadas incluem: HTML5, CSS3, Javascript, jQuery, Sass, Less, Wordpress. Um dos projetos desenvolvidos foi http://leisecasalvavidas.com.br/",
+      "date": "Mar 2017 - Jan 2018"
+    }
+  ],
+  "en": [
+    {
+      "title": "React Native Developer",
+      "company": "Platform Builders · Full-time",
+      "companyLink": "https://www.linkedin.com/company/5082784/",
+      "description": "I worked as a Front-end React, React Native developer and on the Back-end with Node.js for more specific corrections in BFF.\n\nI developed features and corrections in the RD app (https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR) and Grupo DPSP (https://www.grupodpsp.com.br/) and developed the cash register system for RD pharmacies.\n\nI used the following technologies and libraries in my day-to-day work: HTML, CSS, Javascript, Typescript, React, React native, Node.js, GraphQL (Apollo Client), Next.js (SSR), Styled components, Tailwind and Unit tests (Jest/RTL) and Micro frontend.\n\nI also worked with agile methodologies within the team. The one used in this experience was Scrum with the help of the Jira tool.",
+      "date": "Aug 2023 - Feb 2025"
+    },
+    {
+      "title": "React Developer",
+      "company": "DBC Company · Full-time",
+      "companyLink": "https://www.linkedin.com/company/398921/",
+      "description": "I worked as a Front-end developer using React as the main library.\n\nI developed and maintained the ombudsman system for the financial cooperative Sicredi (https://www.sicredi.com.br/home/) using the following technologies and libraries: HTML5, CSS3, Javascript, Typescript, React, Zustand, Unit Tests (Jest), Styled Components, Tailwind, Strapi.\n\nI also worked with agile methodologies within the squad. The one used in this experience was a combination of Kanban and Scrum, better known as SrumBan.",
+      "date": "Jun 2022 - Aug 2023"
+    },
+    {
+      "title": "React Developer",
+      "company": "Grupo FCamara · Full-time",
+      "companyLink": "https://www.linkedin.com/company/738478/",
+      "description": "I was a Front-end developer using React as the main library.\n\nI worked developing, maintaining, correcting and proposing solutions in the e-commerce systems of drogaraia (https://www.drogaraia.com.br/) and drogasil (https://www.drogasil.com.br/), using the following technologies and libraries: HTML, CSS, Javascript, Typescript, React, React Native, GraphQL (Apollo Client), Next.js (SSR), Styled components and Unit tests (Jest/RTL).\n\nI and my squad also used the Kanban methodology to manage tasks and deadlines.",
+      "date": "Jan 2021 - May 2022"
+    },
+    {
+      "title": "Front-end developer",
+      "company": "Diebold Nixdorf Software",
+      "companyLink": "https://www.linkedin.com/company/4458/",
+      "description": "I worked as a Front-end developer using React in the internal cash register system of the Sicredi financial cooperative (https://www.sicredi.com.br/home/).\n\nTo deliver the work, I used HTML, CSS, Bootstrap, Javascript, Typescript, React, Web components and jQuery (in the legacy version), in addition to the agile methodologies that used a mix of Kanban and Scrum, with most aspects of Kanban prevailing.",
+      "date": "Mar 2020 - Jan 2021"
+    },
+    {
+      "title": "Front End Developer",
+      "company": "TOTVS IBIRAPUERA / 2bdigital · Full-time",
+      "companyLink": "https://www.linkedin.com/company/9217499/",
+      "description": "I worked as a Front-end React developer focusing on e-commerce systems.\n\nIn one of the projects (https://voltzmotors.com/), I used HTML, CSS, JavaScript, React, jQuery (for legacy), Sass, Less, Vtex (for e-commerce). For other projects, a similar technology stack was used.\n\nAmong the agile methodologies applied in the company, the most predominant was Kanban, but this depended on the project in question.",
+      "date": "Oct 2018 - Jan 2020"
+    },
+    {
+      "title": "Freelancer Front end Developer",
+      "company": "Upwork",
+      "companyLink": "https://www.linkedin.com/company/4827017/",
+      "description": "I worked as a freelance Frontend React developer but also focused on other technologies.\n\nI worked on several small projects within the Upwork platform. That's where I started to gain market experience. I used several technologies and skills, including: HTML5, CSS3, Javascript, Typescript, React, Gatsby, Next.js Redux, TDD, Jest, jQuery, Sass, Less, Wordpress, Woocommerce, Strapi, Vtex, Node.js.\n\nOne of the projects developed: https://www.sharktankhub.com/",
+      "date": "May 2016 - Oct 2019"
+    },
+    {
+      "title": "Front end Developer",
+      "company": "NSH Technologies",
+      "companyLink": "https://www.linkedin.com/company/11312394/",
+      "description": "I worked as a Front-end developer on the project https://www.wine.com.br/, integrating the Oracle Cloud\nCommerce e-commerce platform. In this project I used the following technologies: HTML, CSS, JavaScript, jQuery, Sass, Less, WordPress, OCC(Oracle Cloud\nCommerce), HandleBars.",
+      "date": "Jun 2017 - Oct 2018"
+    },
+    {
+      "title": "Front end Developer",
+      "company": "Double",
+      "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Double",
+      "description": "I worked as a web developer with a focus on Wordpress. The technologies used include: HTML5, CSS3, Javascript, jQuery, Sass, Less, Wordpress. One of the projects developed was http://leisecasalvavidas.com.br/",
+      "date": "Mar 2017 - Jan 2018"
+    }
+  ]
+}

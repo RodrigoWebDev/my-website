@@ -1,4 +1,5 @@
 //import { isEnglish } from "../../utils/locale";
+import { i18n } from "../../utils";
 import Icon from "../Icon";
 
 const Footer = () => {
@@ -10,11 +11,12 @@ const Footer = () => {
         <p class="font-bold">
           Rodrigo Queiroz
           <br />
-          Desenvolvendo software confiável desde 2017
+          {i18n("footerDescOne")}
         </p>
         <p>
-          <strong>Sem</strong> direitos de cópia © {new Date().getFullYear()} -{" "}
-          <strong>Sem</strong> direitos reservados
+          <strong>{i18n("footerNo")}</strong> {i18n("footerCopyright")} ©{" "}
+          {new Date().getFullYear()} - <strong>{i18n("footerNo")}</strong>{" "}
+          {i18n("footerRightsReserved")}
         </p>
       </aside>
       <div class="flex">
@@ -27,7 +29,7 @@ const Footer = () => {
           href="https://github.com/RodrigoWebDev/my-website"
           target="_blank"
         >
-          <Icon name="mdi:github" class="mr-2" /> Ver código fonte
+          <Icon name="mdi:github" class="mr-2" /> {i18n("seeSourceCode")}
         </a>
       </div>
     </footer>
