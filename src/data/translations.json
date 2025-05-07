@@ -16,7 +16,8 @@
     "professionalExperience": "Experiência profissional",
     "filters": "Filtros",
     "showing": "Mostrando",
-    "of": "de"
+    "of": "de",
+    "clearFilters": "Limpar filtros"
   },
   "en": {
     "home": "Home",
@@ -35,6 +36,7 @@
     "professionalExperience": "Professional experience",
     "filters": "Filters",
     "showing": "Showing",
-    "of": "of"
+    "of": "of",
+    "clearFilters": "Clear filters"
   }
 }

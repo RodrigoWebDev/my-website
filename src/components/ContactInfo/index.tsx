@@ -1,15 +1,11 @@
-import ptContact from "../../data/pt/contact.json";
-import enContact from "../../data/en/contact.json";
-
-import Icon from "../../components/Icon";
-import { isEnglish } from "../../utils/locale";
+//import Icon from "../../components/Icon";
 
 export const ContactInfo = () => {
-  const contact = isEnglish() ? enContact : ptContact;
+  //const contact = isEnglish() ? enContact : ptContact;
 
   return (
     <>
-      <h2 class="animate__animated animate__jello">
+      {/* <h2 class="animate__animated animate__jello">
         📞 {isEnglish() ? "Contact" : "Contato"}
       </h2>
 
@@ -45,7 +41,7 @@ export const ContactInfo = () => {
             {contact.website}
           </a>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 };

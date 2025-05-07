@@ -66,6 +66,20 @@ const Projects = (props: IPage) => {
       <fieldset class="fieldset bg-base-100 border-base-300 rounded-box border p-4 mr-4">
         <legend class="fieldset-legend">{i18n("filters")}</legend>
 
+        <button
+          class="btn btn-secondary mb-8"
+          onClick={() => {
+            filters.value = filters.value.map((item) => {
+              return {
+                ...item,
+                checked: false,
+              };
+            });
+          }}
+        >
+          {i18n("clearFilters")}
+        </button>
+
         {filters.value.map((item, index) => {
           return (
             <label class="label mb-2">

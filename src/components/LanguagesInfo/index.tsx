@@ -1,9 +1,7 @@
-import { isEnglish } from "../../utils/locale";
-
 export const LanguagesInfo = () => {
   return (
     <>
-      <h2 class="animate__animated animate__jello">
+      {/* <h2 class="animate__animated animate__jello">
         🗣️ {isEnglish() ? "Languages" : "Idiomas"}
       </h2>
 
@@ -20,7 +18,7 @@ export const LanguagesInfo = () => {
             📃 {isEnglish() ? "Certificate" : "Certificado"}
           </a>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 };
