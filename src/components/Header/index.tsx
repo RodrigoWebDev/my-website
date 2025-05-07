@@ -81,11 +81,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={() => {
-                    route(
-                      "/" +
-                        item.name.toLocaleLowerCase() +
-                        window.location.search
-                    );
+                    route("/" + getNavLink(item));
                   }}
                 >
                   <Icon name={iconName} />
