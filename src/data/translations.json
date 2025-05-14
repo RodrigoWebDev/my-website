@@ -17,7 +17,20 @@
     "filters": "Filtros",
     "showing": "Mostrando",
     "of": "de",
-    "clearFilters": "Limpar filtros"
+    "clearFilters": "Limpar filtros",
+    "profession": "Profissão",
+    "age": "Idade",
+    "yearsOld": "Anos",
+    "nationality": "Nacionalidade",
+    "brazilian": "Brasileiro",
+    "about": "Sobre",
+    "clickHereAndSeeAllMyProjects": "Clique aqui e veja todos os meus projetos",
+    "mainSkills": "Principais habilidades",
+    "complementarySkills": "Habilidades complementares",
+    "at": "em",
+    "getInTouch": "Entre em contato",
+    "phone": "Telefone",
+    "sendMessageOnWhatsApp": "Chamar no WhatsApp"
   },
   "en": {
     "home": "Home",
@@ -37,6 +50,19 @@
     "filters": "Filters",
     "showing": "Showing",
     "of": "of",
-    "clearFilters": "Clear filters"
+    "clearFilters": "Clear filters",
+    "profession": "Profession",
+    "age": "Age",
+    "yearsOld": "Years old",
+    "nationality": "Nationality",
+    "brazilian": "Brazilian",
+    "about": "About",
+    "clickHereAndSeeAllMyProjects": "Click here and see all my projects",
+    "mainSkills": "Main skills",
+    "complementarySkills": "Complementary skills",
+    "at": "at",
+    "getInTouch": "Get in touch",
+    "phone": "Phone",
+    "sendMessageOnWhatsApp": "Send message on WhatsApp"
   }
 }

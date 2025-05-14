@@ -17,7 +17,34 @@ export const i18n = (key: string) => {
   return translations[_locale][key];
 };
 
+const translateMonths = (locale: TLocale, text: string) => {
+  let newText = text;
+
+  if (locale === "pt") {
+    newText = text
+      .replace("Jan", "Janeiro")
+      .replace("Feb", "Fevereiro")
+      .replace("Mar", "Março")
+      .replace("Apr", "Abril")
+      .replace("May", "Maio")
+      .replace("Jun", "Junho")
+      .replace("Jul", "Julho")
+      .replace("Aug", "Agosto")
+      .replace("Sep", "Setembro")
+      .replace("Oct", "Outubro")
+      .replace("Nov", "Novembro")
+      .replace("Dec", "Dezembro");
+  }
+
+  return newText;
+};
+
 export const i18nExperiences = () => {
   const _locale = locale.value as TLocale;
-  return experiencesTranslations[_locale];
+  return experiencesTranslations[_locale].map((item) => {
+    return {
+      ...item,
+      date: translateMonths(_locale, item.date),
+    };
+  });
 };
