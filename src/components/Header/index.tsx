@@ -4,7 +4,7 @@ import { route } from "preact-router";
 //import enProfile from "../../data/en/profile.json";
 //import { isEnglish } from "../../utils/locale";
 import Icon, { TIconName } from "../Icon";
-import { TLocale, locale, setModalState } from "../../main";
+import { TLocale, locale, setModalState, showDrawer } from "../../main";
 import { i18n } from "../../utils";
 
 interface INavLink {
@@ -91,6 +91,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={() => {
+                    showDrawer(false);
                     route("/" + getNavLink(item));
                   }}
                 >
