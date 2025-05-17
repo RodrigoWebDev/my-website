@@ -33,10 +33,11 @@ const Header = () => {
       route: "works",
       icon: "mdi:company",
     },
-    /* {
-      name: "resume",
+    {
+      name: i18n("resume"),
+      route: "resume",
       icon: "mdi:paper-text",
-    }, */
+    },
   ];
   //const profile = _isEnglish.value ? enProfile : ptProfile;
 

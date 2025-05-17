@@ -2,6 +2,7 @@ import { IPage } from "../../model";
 import { i18n, i18nExperiences } from "../../utils";
 import skills from "../../data/skills.json";
 import contact from "../../data/contact.json";
+import Icon from "../../components/Icon";
 
 const Resume = (props: IPage) => {
   const mainSkills = skills.filter((item) => item.isHighLight);
@@ -27,11 +28,15 @@ const Resume = (props: IPage) => {
       <div>
         <strong>{i18n("nationality")}:</strong> {i18n("brazilian")}
       </div>
-      <h2>💭 {i18n("about")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:about" class="mr-2" size={32} /> {i18n("about")}
+      </h2>
       <hr />
       <p>{i18n("profileDesc")}</p>
 
-      <h2>🎯 {i18n("mainSkills")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:computer" class="mr-2" size={32} /> {i18n("mainSkills")}
+      </h2>
       <hr />
 
       <ul class="flex flex-wrap">
@@ -44,7 +49,10 @@ const Resume = (props: IPage) => {
         })}
       </ul>
 
-      <h2>🤹🏻 {i18n("complementarySkills")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:clipboard-list" class="mr-2" size={32} />{" "}
+        {i18n("complementarySkills")}
+      </h2>
       <hr />
 
       <ul class="flex flex-wrap">
@@ -53,7 +61,10 @@ const Resume = (props: IPage) => {
         })}
       </ul>
 
-      <h2>💼 {i18n("professionalExperience")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:company" class="mr-2" size={32} />{" "}
+        {i18n("professionalExperience")}
+      </h2>
       <hr />
 
       <ul>
@@ -66,10 +77,18 @@ const Resume = (props: IPage) => {
                 </strong>{" "}
                 {i18n("at")}{" "}
                 <a href={item.companyLink} target="_blank">
-                  🏢 {item.company}
+                  <Icon
+                    name="mdi:company"
+                    class="ml-2 mr-1 mt-[-5px] inline"
+                    size={20}
+                  />{" "}
+                  {item.company}
                 </a>
               </h4>
-              <p>📅 {item.date}</p>
+              <p>
+                <Icon name="mdi:calendar" class="inline mt-[-5px]" size={20} />{" "}
+                {item.date}
+              </p>
 
               <p>{item.description}</p>
             </li>
@@ -77,46 +96,63 @@ const Resume = (props: IPage) => {
         })}
       </ul>
 
-      <h2>🛠️ {i18n("projects")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:format-list-bulleted" class="mr-2" size={32} />{" "}
+        {i18n("projects")}
+      </h2>
       <hr />
       <a href="https://rqueiroz.netlify.app/projects" target="_blank">
-        🔗 {i18n("clickHereAndSeeAllMyProjects")}
+        {i18n("viewAllMyProjectsIn")} https://rqueiroz.netlify.app/projects
       </a>
 
-      <h2>📞 {i18n("getInTouch")}</h2>
+      <h2 className="flex items-center flex-wrap">
+        <Icon name="mdi:phone" class="mr-2" size={32} /> {i18n("getInTouch")}
+      </h2>
       <hr />
 
       <ul class="animate__animated animate__swing">
         <li>
-          <strong>📧 E-mail:</strong>{" "}
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <div class="flex items-center flex-wrap">
+            <Icon name="mdi:email" class="mr-2 inline" size={20} />
+            <strong>E-mail:</strong>
+            &nbsp;
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </div>
         </li>
+
         <li>
-          🔗 <strong>Linkedin:</strong>{" "}
-          <a target="_blank" href={contact.linkedin}>
-            {contact.linkedin}
-          </a>
+          <div class="flex items-center flex-wrap">
+            <Icon name="mdi:linkedin" class="mr-2 inline" size={20} />
+            <strong>Linkedin:</strong>
+            &nbsp;
+            <a target="_blank" href={contact.linkedin}>
+              {contact.linkedin}
+            </a>
+          </div>
         </li>
-        <li class="flex">
-          📱 <strong class="mr-2">{i18n("phone")}:</strong> +55
-          {contact.phone}
-          <a
-            class="c-success flex items-center"
-            href={`https://wa.me/55${contact.phone}`}
-            target="_blank"
-          >
-            💬 {i18n("sendMessageOnWhatsApp")}
-          </a>
-        </li>
+
         <li>
-          🌐 <strong>Website:</strong>{" "}
-          <a target="_blank" href={contact.website}>
-            {contact.website}
-          </a>
+          <div class="flex items-center flex-wrap">
+            <Icon name="mdi:whatsapp" class="mr-2 inline" size={20} />
+            <strong>Whatsapp:</strong>
+            &nbsp;
+            <a target="_blank" href={`https://wa.me/55${contact.phone}`}>
+              +55{contact.phone}
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="flex items-center flex-wrap">
+            <Icon name="mdi:web" class="mr-2 inline" size={20} />
+            <strong>Website:</strong>
+            &nbsp;
+            <a target="_blank" href={contact.website}>
+              {contact.website}
+            </a>
+          </div>
         </li>
       </ul>
-
-      {/* <ContactInfo /> */}
     </main>
   );
 };
