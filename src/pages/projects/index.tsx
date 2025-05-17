@@ -9,6 +9,7 @@ import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
 import { setModalState } from "../../main";
 import { IPage } from "../../model";
 import { i18n } from "../../utils";
+import { route } from "preact-router";
 
 const filters = signal<
   {
@@ -105,14 +106,48 @@ const Projects = (props: IPage) => {
     });
   };
 
+  const addSelectedFiltersToSearchParam = (selectedFilters: string[]) => {
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.delete("filters");
+    searchParams.append("filters", selectedFilters.join(","));
+
+    route(window.location.pathname + "?" + searchParams.toString());
+  };
+
+  const applyFilters = (selectedFilters: string[]) => {
+    filteredProjects.value = projects.filter((project) => {
+      return getSkills(project.description).some((item) =>
+        selectedFilters.includes(item)
+      );
+    });
+  };
+
   useEffect(() => {
+    getFilters();
+
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (searchParams.has("filters")) {
+      const selectedFilters = searchParams.get("filters")?.split(",") || [];
+
+      const _filters = filters.value.map((filter) => {
+        console.log("TESTE");
+        const checked = selectedFilters?.some((item) => item === filter.name);
+
+        return {
+          ...filter,
+          checked,
+        };
+      });
+
+      filters.value = _filters;
+    }
+
     if (window.location.search === "?showFilters") {
       setModalState({
         isOpen: true,
       });
     }
-
-    getFilters();
   }, []);
 
   useEffect(() => {
@@ -121,14 +156,12 @@ const Projects = (props: IPage) => {
       .map((item) => item.name);
 
     if (selectedFilters.length) {
-      filteredProjects.value = projects.filter((project) => {
-        return getSkills(project.description).some((item) =>
-          selectedFilters.includes(item)
-        );
-      });
+      applyFilters(selectedFilters);
     } else {
       filteredProjects.value = [...projects];
     }
+
+    addSelectedFiltersToSearchParam(selectedFilters);
 
     renderFilters();
   }, [filters.value]);
