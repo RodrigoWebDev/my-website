@@ -48,7 +48,7 @@ const Main = () => {
   return (
     <>
       <Router
-        onChange={(e) => {
+        onChange={() => {
           setLocale();
           showDrawer(false);
         }}

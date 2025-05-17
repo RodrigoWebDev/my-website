@@ -108,8 +108,7 @@ const Projects = (props: IPage) => {
 
   const addSelectedFiltersToSearchParam = (selectedFilters: string[]) => {
     const searchParams = new URLSearchParams(window.location.search);
-    searchParams.delete("filters");
-    searchParams.append("filters", selectedFilters.join(","));
+    searchParams.set("filters", selectedFilters.join(","));
 
     route(window.location.pathname + "?" + searchParams.toString());
   };
@@ -122,9 +121,7 @@ const Projects = (props: IPage) => {
     });
   };
 
-  useEffect(() => {
-    getFilters();
-
+  const applyFiltersFromSearchParams = () => {
     const searchParams = new URLSearchParams(window.location.search);
 
     if (searchParams.has("filters")) {
@@ -142,12 +139,11 @@ const Projects = (props: IPage) => {
 
       filters.value = _filters;
     }
+  };
 
-    if (window.location.search === "?showFilters") {
-      setModalState({
-        isOpen: true,
-      });
-    }
+  useEffect(() => {
+    getFilters();
+    applyFiltersFromSearchParams();
   }, []);
 
   useEffect(() => {

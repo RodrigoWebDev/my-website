@@ -71,6 +71,15 @@ const Header = () => {
     return item.name + window.location.search;
   };
 
+  const setLocale = (e: any) => {
+    const searchParams = new URLSearchParams(window.location.search);
+    //@ts-ignore
+    const value = e?.target?.value as TLocale;
+    searchParams.set("locale", value);
+
+    route(window.location.pathname + "?" + searchParams.toString());
+  };
+
   const Navigation = ({ ulClass }: { ulClass: string }) => {
     return (
       <>
@@ -95,9 +104,7 @@ const Header = () => {
             <select
               className="focus:bg-base-100! focus-visible:bg-base-100!"
               onChange={(e) => {
-                //@ts-ignore
-                const value = e?.target?.value as TLocale;
-                route(window.location.pathname + `?locale=${value}`);
+                setLocale(e);
               }}
               value={locale.value}
             >
