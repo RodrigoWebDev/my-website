@@ -6,7 +6,7 @@ import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
 import projects from "../../data/projects.json";
 import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
-import { setModalState, showDrawer } from "../../main";
+import { setModalState } from "../../main";
 import { IPage } from "../../model";
 import { i18n } from "../../utils";
 import { route } from "preact-router";
@@ -128,7 +128,6 @@ const Projects = (props: IPage) => {
       const selectedFilters = searchParams.get("filters")?.split(",") || [];
 
       const _filters = filters.value.map((filter) => {
-        console.log("TESTE");
         const checked = selectedFilters?.some((item) => item === filter.name);
 
         return {

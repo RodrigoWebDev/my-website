@@ -39,7 +39,6 @@ export const showDrawer = (show: boolean) => {
 
 const setLocale = () => {
   const localeParam = getSearchParam("locale") as TLocale;
-  console.log("🚀 ~ Main ~ localeParam:", localeParam);
 
   locale.value = localeParam || "pt";
 };
@@ -48,7 +47,7 @@ const Main = () => {
   return (
     <>
       <Router
-        onChange={(e) => {
+        onChange={() => {
           setLocale();
         }}
       >

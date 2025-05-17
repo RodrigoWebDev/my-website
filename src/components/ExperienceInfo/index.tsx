@@ -25,7 +25,6 @@ export const ExperienceInfo = () => {
       <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical mx-auto max-w-[700px] px-4">
         {i18nExperiences().map((work, index) => {
           const isOdd = isOddNumber(index);
-          console.log("🚀 ~ {works.map ~ isOdd:", isOdd);
 
           return (
             <li>
