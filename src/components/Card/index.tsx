@@ -4,7 +4,7 @@ interface Card {
   title: string;
   description: ReactElement | string;
   link: string;
-  btnText: string;
+  btnText: ReactElement | string;
 }
 
 export const Card = ({ title, description, link, btnText }: Card) => {

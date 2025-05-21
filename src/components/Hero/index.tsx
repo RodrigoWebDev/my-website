@@ -17,7 +17,7 @@ export const Hero = () => {
               class="btn btn-primary mr-2 mb-2"
               target="_blank"
             >
-              <Icon name="mdi:linkedin" size={24} />
+              <Icon name="linkedin" size={24} />
               Linkedin
             </a>
             <a
@@ -25,7 +25,7 @@ export const Hero = () => {
               class="btn btn-success mr-2 mb-2"
               target="_blank"
             >
-              <Icon name="mdi:whatsapp" size={24} />
+              <Icon name="whatsapp" size={24} />
               Whats app
             </a>
             <a
@@ -33,7 +33,7 @@ export const Hero = () => {
               class="btn btn-secondary"
               target="_blank"
             >
-              <Icon name="mdi:github" size={24} />
+              <Icon name="sourceCode" size={24} />
               Github
             </a>
           </div>

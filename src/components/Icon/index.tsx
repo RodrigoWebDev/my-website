@@ -1,21 +1,24 @@
 export type TIconName =
-  | "fluent-emoji-flat:technologist-light"
-  | "mdi:github"
-  | "mdi:linkedin"
-  | "mdi:whatsapp"
-  | "mdi:company"
-  | "mdi:house-variant"
-  | "mdi:computer"
-  | "mdi:react"
-  | "mdi:paper-text"
-  | "mdi:language"
-  | "mdi:email"
-  | "mdi:web"
-  | "mdi:phone"
-  | "mdi:about"
-  | "mdi:clipboard-list"
-  | "mdi:calendar"
-  | "mdi:format-list-bulleted";
+  | "logo"
+  | "sourceCode"
+  | "linkedin"
+  | "whatsapp"
+  | "company"
+  | "houseVariant"
+  | "computer"
+  | "react"
+  | "paperText"
+  | "language"
+  | "email"
+  | "web"
+  | "phone"
+  | "about"
+  | "clipboardList"
+  | "calendar"
+  | "formatListBulleted"
+  | "link"
+  | "filterRemove"
+  | "filter";
 
 interface IIcon {
   name: TIconName;
@@ -34,7 +37,7 @@ const Icon = (props: IIcon) => {
   };
 
   switch (props.name) {
-    case "fluent-emoji-flat:technologist-light":
+    case "logo":
       return (
         <svg {...attrs} viewBox="0 0 32 32">
           <g fill="none">
@@ -93,7 +96,7 @@ const Icon = (props: IIcon) => {
           </g>
         </svg>
       );
-    case "mdi:github":
+    case "sourceCode":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -102,7 +105,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:linkedin":
+    case "linkedin":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -111,7 +114,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:whatsapp":
+    case "whatsapp":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -120,7 +123,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:company":
+    case "company":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -129,7 +132,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:house-variant":
+    case "houseVariant":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -138,7 +141,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:computer":
+    case "computer":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -147,7 +150,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:react":
+    case "react":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -156,7 +159,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:paper-text":
+    case "paperText":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -165,7 +168,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:language":
+    case "language":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -174,7 +177,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:email":
+    case "email":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -183,7 +186,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:web":
+    case "web":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -192,7 +195,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:phone":
+    case "phone":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -201,7 +204,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:about":
+    case "about":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -210,7 +213,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:clipboard-list":
+    case "clipboardList":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -219,7 +222,7 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:calendar":
+    case "calendar":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
@@ -228,12 +231,41 @@ const Icon = (props: IIcon) => {
           ></path>
         </svg>
       );
-    case "mdi:format-list-bulleted":
+    case "formatListBulleted":
       return (
         <svg {...attrs} viewBox="0 0 24 24">
           <path
             fill="currentColor"
             d="M7 5h14v2H7zm0 8v-2h14v2zM4 4.5A1.5 1.5 0 0 1 5.5 6A1.5 1.5 0 0 1 4 7.5A1.5 1.5 0 0 1 2.5 6A1.5 1.5 0 0 1 4 4.5m0 6A1.5 1.5 0 0 1 5.5 12A1.5 1.5 0 0 1 4 13.5A1.5 1.5 0 0 1 2.5 12A1.5 1.5 0 0 1 4 10.5M7 19v-2h14v2zm-3-2.5A1.5 1.5 0 0 1 5.5 18A1.5 1.5 0 0 1 4 19.5A1.5 1.5 0 0 1 2.5 18A1.5 1.5 0 0 1 4 16.5"
+          ></path>
+        </svg>
+      );
+
+    case "link":
+      return (
+        <svg {...attrs} viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5a5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5a5 5 0 0 0-5-5"
+          ></path>
+        </svg>
+      );
+
+    case "filterRemove":
+      return (
+        <svg {...attrs} viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M14.76 20.83L17.6 18l-2.84-2.83l1.41-1.41L19 16.57l2.83-2.81l1.41 1.41L20.43 18l2.81 2.83l-1.41 1.41L19 19.4l-2.83 2.84zM12 12v7.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0L8.29 18.7a.99.99 0 0 1-.29-.83V12h-.03L2.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L12.03 12z"
+          ></path>
+        </svg>
+      );
+    case "filter":
+      return (
+        <svg {...attrs} viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M14 12v7.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-2.01-2.01a.99.99 0 0 1-.29-.83V12h-.03L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L14.03 12z"
           ></path>
         </svg>
       );

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer class="footer footer-horizontal footer-center bg-neutral text-primary-content p-10">
       <aside>
-        <Icon name="fluent-emoji-flat:technologist-light" size={40} />
+        <Icon name="logo" size={40} />
 
         <p class="font-bold">
           Rodrigo Queiroz
@@ -29,7 +29,7 @@ const Footer = () => {
           href="https://github.com/RodrigoWebDev/my-website"
           target="_blank"
         >
-          <Icon name="mdi:github" class="mr-2" /> {i18n("seeSourceCode")}
+          <Icon name="sourceCode" class="mr-2" /> {i18n("seeSourceCode")}
         </a>
       </div>
     </footer>

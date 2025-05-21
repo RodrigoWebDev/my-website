@@ -21,22 +21,22 @@ const Header = () => {
     {
       name: i18n("home"),
       route: "",
-      icon: "mdi:house-variant",
+      icon: "houseVariant",
     },
     {
       name: i18n("projects"),
       route: "projects",
-      icon: "mdi:computer",
+      icon: "computer",
     },
     {
       name: i18n("works"),
       route: "works",
-      icon: "mdi:company",
+      icon: "company",
     },
     {
       name: i18n("resume"),
       route: "resume",
-      icon: "mdi:paper-text",
+      icon: "paperText",
     },
   ];
   //const profile = _isEnglish.value ? enProfile : ptProfile;
@@ -134,7 +134,7 @@ const Header = () => {
               route("/");
             }}
           >
-            <Icon name="fluent-emoji-flat:technologist-light" size={40} />
+            <Icon name="logo" size={40} />
           </a>
         </div>
         <div class="navbar-end">

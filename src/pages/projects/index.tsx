@@ -78,6 +78,7 @@ const Projects = (props: IPage) => {
             });
           }}
         >
+          <Icon name="filterRemove" />
           {i18n("clearFilters")}
         </button>
 
@@ -173,27 +174,44 @@ const Projects = (props: IPage) => {
           <div class="hero-overlay"></div>
           <div class="hero-content text-neutral-content text-center">
             <div class="max-w-md flex flex-col items-center">
-              <Icon name="mdi:computer" size={100} />
+              <Icon name="computer" size={100} />
               <h1 class="mb-5 text-5xl font-bold">{i18n("projects")}</h1>
             </div>
           </div>
         </div>
 
         <main class="block md:flex px-4">
-          <aside class="hidden md:block w-full md:w-[30%]">
+          <aside
+            class="hidden md:block w-full md:w-[30%] sticky top-0 left-0"
+            style={{
+              height: "calc(100vh - 70px)",
+              overflow: "auto",
+              top: "70px",
+            }}
+          >
             <Filters />
           </aside>
 
           <ul class="animate__animated animate__bounceIn w-full md:w-[70%]">
-            <label
-              htmlFor="my-drawer"
-              class="drawer-button btn btn-secondary flex md:hidden mb-4"
-              onClick={() => {
-                renderFilters();
+            <div
+              class="sticky md:static mb-4"
+              style={{
+                top: "70px",
+                height: "40px",
+                zIndex: 1,
               }}
             >
-              Abrir filtros
-            </label>
+              <label
+                htmlFor="my-drawer"
+                class="drawer-button btn btn-secondary flex md:hidden"
+                onClick={() => {
+                  renderFilters();
+                }}
+              >
+                <Icon name="filter" />
+                {i18n("openFilters")}
+              </label>
+            </div>
             <div class="mb-8 text-left md:text-right">
               {i18n("showing")} <strong>{filteredProjects.value.length}</strong>{" "}
               {i18n("of")} <strong>{projects.length}</strong>{" "}
@@ -212,7 +230,12 @@ const Projects = (props: IPage) => {
                       }}
                     ></div>
                   }
-                  btnText={i18n("access")}
+                  btnText={
+                    <>
+                      <Icon name="link" />
+                      {i18n("access")}
+                    </>
+                  }
                 />
               </div>
             ))}
