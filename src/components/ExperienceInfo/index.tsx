@@ -14,7 +14,7 @@ export const ExperienceInfo = () => {
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
           <div class="flex flex-col items-center">
-            <Icon name="mdi:company" size={100} />
+            <Icon name="company" size={100} />
             <h1 class="mb-5 text-5xl font-bold">
               {i18n("professionalExperience")}
             </h1>

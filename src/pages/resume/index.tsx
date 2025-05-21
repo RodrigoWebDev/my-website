@@ -29,13 +29,13 @@ const Resume = (props: IPage) => {
         <strong>{i18n("nationality")}:</strong> {i18n("brazilian")}
       </div>
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:about" class="mr-2" size={32} /> {i18n("about")}
+        <Icon name="about" class="mr-2" size={32} /> {i18n("about")}
       </h2>
       <hr />
       <p>{i18n("profileDesc")}</p>
 
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:computer" class="mr-2" size={32} /> {i18n("mainSkills")}
+        <Icon name="computer" class="mr-2" size={32} /> {i18n("mainSkills")}
       </h2>
       <hr />
 
@@ -50,7 +50,7 @@ const Resume = (props: IPage) => {
       </ul>
 
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:clipboard-list" class="mr-2" size={32} />{" "}
+        <Icon name="clipboardList" class="mr-2" size={32} />{" "}
         {i18n("complementarySkills")}
       </h2>
       <hr />
@@ -62,7 +62,7 @@ const Resume = (props: IPage) => {
       </ul>
 
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:company" class="mr-2" size={32} />{" "}
+        <Icon name="company" class="mr-2" size={32} />{" "}
         {i18n("professionalExperience")}
       </h2>
       <hr />
@@ -78,7 +78,7 @@ const Resume = (props: IPage) => {
                 {i18n("at")}{" "}
                 <a href={item.companyLink} target="_blank">
                   <Icon
-                    name="mdi:company"
+                    name="company"
                     class="ml-2 mr-1 mt-[-5px] inline"
                     size={20}
                   />{" "}
@@ -86,7 +86,7 @@ const Resume = (props: IPage) => {
                 </a>
               </h4>
               <p>
-                <Icon name="mdi:calendar" class="inline mt-[-5px]" size={20} />{" "}
+                <Icon name="calendar" class="inline mt-[-5px]" size={20} />{" "}
                 {item.date}
               </p>
 
@@ -97,7 +97,7 @@ const Resume = (props: IPage) => {
       </ul>
 
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:format-list-bulleted" class="mr-2" size={32} />{" "}
+        <Icon name="formatListBulleted" class="mr-2" size={32} />{" "}
         {i18n("projects")}
       </h2>
       <hr />
@@ -106,14 +106,14 @@ const Resume = (props: IPage) => {
       </a>
 
       <h2 className="flex items-center flex-wrap">
-        <Icon name="mdi:phone" class="mr-2" size={32} /> {i18n("getInTouch")}
+        <Icon name="phone" class="mr-2" size={32} /> {i18n("getInTouch")}
       </h2>
       <hr />
 
       <ul class="animate__animated animate__swing">
         <li>
           <div class="flex items-center flex-wrap">
-            <Icon name="mdi:email" class="mr-2 inline" size={20} />
+            <Icon name="email" class="mr-2 inline" size={20} />
             <strong>E-mail:</strong>
             &nbsp;
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -122,7 +122,7 @@ const Resume = (props: IPage) => {
 
         <li>
           <div class="flex items-center flex-wrap">
-            <Icon name="mdi:linkedin" class="mr-2 inline" size={20} />
+            <Icon name="linkedin" class="mr-2 inline" size={20} />
             <strong>Linkedin:</strong>
             &nbsp;
             <a target="_blank" href={contact.linkedin}>
@@ -133,7 +133,7 @@ const Resume = (props: IPage) => {
 
         <li>
           <div class="flex items-center flex-wrap">
-            <Icon name="mdi:whatsapp" class="mr-2 inline" size={20} />
+            <Icon name="whatsapp" class="mr-2 inline" size={20} />
             <strong>Whatsapp:</strong>
             &nbsp;
             <a target="_blank" href={`https://wa.me/55${contact.phone}`}>
@@ -144,7 +144,7 @@ const Resume = (props: IPage) => {
 
         <li>
           <div class="flex items-center flex-wrap">
-            <Icon name="mdi:web" class="mr-2 inline" size={20} />
+            <Icon name="web" class="mr-2 inline" size={20} />
             <strong>Website:</strong>
             &nbsp;
             <a target="_blank" href={contact.website}>
