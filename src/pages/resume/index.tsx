@@ -3,10 +3,51 @@ import { i18n, i18nExperiences } from "../../utils";
 import skills from "../../data/skills.json";
 import contact from "../../data/contact.json";
 import Icon from "../../components/Icon";
+import Table from "../../components/Table";
+
+const mainSkillsLocal = [
+  {
+    Name: "React",
+    YearsOfExperience: 6,
+  },
+  {
+    Name: "React Native",
+    YearsOfExperience: 4,
+  },
+  {
+    Name: "Firebase",
+    YearsOfExperience: 3,
+  },
+];
+
+const mainSkillsLive = [
+  {
+    Name: "React",
+    YearsOfExperience: 6,
+  },
+  {
+    Name: "React Native",
+    YearsOfExperience: 4,
+  },
+  {
+    Name: "Next.js",
+    YearsOfExperience: 4,
+  },
+  {
+    Name: "Typescript",
+    YearsOfExperience: 7,
+  },
+  {
+    Name: "English",
+    YearsOfExperience: 7,
+  },
+];
 
 const Resume = (props: IPage) => {
-  const mainSkills = skills.filter((item) => item.isHighLight);
   console.log({ props });
+
+  const isLocalHost = window.location.host.includes("localhost");
+  const mainSkills = isLocalHost ? mainSkillsLocal : mainSkillsLive;
 
   const getAge = () => {
     const birthDate = new Date(1997, 2, 11);
@@ -39,15 +80,7 @@ const Resume = (props: IPage) => {
       </h2>
       <hr />
 
-      <ul class="flex flex-wrap">
-        {mainSkills.map((skill) => {
-          return (
-            <li class="mr-8">
-              <strong>{skill.name}</strong>
-            </li>
-          );
-        })}
-      </ul>
+      <Table data={mainSkills} showRowNumber />
 
       <h2 className="flex items-center flex-wrap">
         <Icon name="clipboardList" class="mr-2" size={32} />{" "}

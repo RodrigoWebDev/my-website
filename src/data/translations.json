@@ -31,7 +31,10 @@
     "at": "em",
     "getInTouch": "Entre em contato",
     "phone": "Telefone",
-    "sendMessageOnWhatsApp": "Chamar no WhatsApp"
+    "sendMessageOnWhatsApp": "Chamar no WhatsApp",
+    "years": "Anos",
+    "Name": "Nome",
+    "YearsOfExperience": "Anos de experiência"
   },
   "en": {
     "home": "Home",
@@ -65,6 +68,9 @@
     "at": "at",
     "getInTouch": "Get in touch",
     "phone": "Phone",
-    "sendMessageOnWhatsApp": "Send message on WhatsApp"
+    "sendMessageOnWhatsApp": "Send message on WhatsApp",
+    "years": "years",
+    "Name": "Name",
+    "YearsOfExperience": "Years of experience"
   }
 }
