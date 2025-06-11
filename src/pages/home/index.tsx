@@ -7,7 +7,7 @@ import Layout from "../../components/Layout";
 import avatar from "../../images/avatar.jpg";
 import Icon from "../../components/Icon"; */
 import { IPage } from "../../model";
-import { Hero } from "../../components/Hero";
+import { HomeHero } from "../../components/Hero";
 
 const Home = (props: IPage) => {
   console.log({ props });
@@ -16,7 +16,7 @@ const Home = (props: IPage) => {
 
   return (
     <Layout>
-      <Hero />
+      <HomeHero />
     </Layout>
   );
 };

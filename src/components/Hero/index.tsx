@@ -1,8 +1,10 @@
 import avatar from "../../images/avatar.jpg";
+import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
 import { i18n } from "../../utils";
 import Icon from "../Icon";
+import { ReactNode } from "preact/compat";
 
-export const Hero = () => {
+export const HomeHero = () => {
   return (
     <div class="hero bg-base-200 min-h-screen">
       <div class="hero-content flex-col lg:flex-row">
@@ -37,6 +39,30 @@ export const Hero = () => {
               Github
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface ICenteredHero {
+  title: string;
+  icon: ReactNode;
+}
+
+export const CenteredHero = ({ title, icon }: ICenteredHero) => {
+  return (
+    <div
+      class="hero min-h-[60vh] mb-8"
+      style={{
+        backgroundImage: `url(${bgPattern})`,
+      }}
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content text-neutral-content text-center">
+        <div class="max-w-md flex flex-col items-center">
+          {icon}
+          <h1 class="mb-5 text-5xl font-bold">{title}</h1>
         </div>
       </div>
     </div>

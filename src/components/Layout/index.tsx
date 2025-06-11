@@ -1,10 +1,10 @@
-import { ReactElement } from "preact/compat";
+import { ReactNode } from "preact/compat";
 import Footer from "../Footer";
 import Header from "../Header";
 //import { Hero } from "../Hero";
 
 interface ILayout {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 const Layout = (props: ILayout) => {
@@ -13,21 +13,6 @@ const Layout = (props: ILayout) => {
       <Header />
       <main>{props.children}</main>
       <Footer />
-
-      {/* <div class="area">
-        <ul class="circles">
-          <li>☕</li>
-          <li>🎎</li>
-          <li>🚕</li>
-          <li>🎠</li>
-          <li>📱</li>
-          <li>⌚️</li>
-          <li>🧚‍♀️</li>
-          <li>🪬</li>
-          <li>👽</li>
-          <li>👾</li>
-        </ul>
-      </div> */}
     </>
   );
 };

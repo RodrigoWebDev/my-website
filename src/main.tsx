@@ -5,7 +5,6 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import Skills from "./pages/skills";
 import Works from "./pages/works";
-import Redirect from "./components/Redirect";
 import Modal, { IModal } from "./components/Modal";
 import { signal } from "@preact/signals";
 import "./main.css";
@@ -56,7 +55,6 @@ const Main = () => {
         <Projects path="/projects" />
         <Skills path="/skills" />
         <Works path="/works" />
-        <Redirect path="/" to="/about" />
       </Router>
       <Modal {...modalState.value} />
       <div class="drawer z-20">
@@ -68,27 +66,7 @@ const Main = () => {
             class="drawer-overlay"
           ></label>
           <div class="menu bg-base-200 text-base-content min-h-full p-4 w-[80vw]">
-            {/* Sidebar content here */}
             {modalState.value.content}
-            {/* <ul class="menu bg-base-200 rounded-box">
-              {navLinks.map((item) => {
-                return (
-                  <li>
-                    <a
-                      onClick={() => {
-                        route(
-                          "/" +
-                            item.name.toLocaleLowerCase() +
-                            window.location.search
-                        );
-                      }}
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul> */}
           </div>
         </div>
       </div>
