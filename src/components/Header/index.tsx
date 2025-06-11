@@ -34,34 +34,16 @@ const Header = () => {
       icon: "company",
     },
     {
+      name: i18n("skills"),
+      route: "skills",
+      icon: "clipboardList",
+    },
+    {
       name: i18n("resume"),
       route: "resume",
       icon: "paperText",
     },
   ];
-  //const profile = _isEnglish.value ? enProfile : ptProfile;
-
-  /* const localeSelect = () => {
-    return (
-      <select
-        onChange={(e: any) => {
-          const check = e.target?.value === "en";
-          _isEnglish.value = check;
-
-          if (check) {
-            route(window.location.pathname + "?locale=en_US");
-          } else {
-            route(window.location.pathname);
-          }
-        }}
-      >
-        <option value="pt" selected>
-          🇧🇷
-        </option>
-        <option value="en">🇺🇸</option>
-      </select>
-    );
-  }; */
 
   const getNavLink = (item: INavLink) => {
     if (item.route !== undefined) {
@@ -126,7 +108,7 @@ const Header = () => {
 
   return (
     <>
-      <div class="navbar bg-base-100/90 shadow-sm sticky top-0 left-0 backdrop-blur z-10">
+      <div class="navbar bg-base-100/90 shadow-sm sticky top-0 left-0 backdrop-blur z-10 px-4">
         <div class="navbar-start">
           <a
             class="btn btn-ghost text-xl"

@@ -5,11 +5,11 @@ import { Card } from "../../components/Card";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
 import projects from "../../data/projects.json";
-import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
 import { setModalState } from "../../main";
 import { IPage } from "../../model";
 import { i18n } from "../../utils";
 import { route } from "preact-router";
+import { CenteredHero } from "../../components/Hero";
 
 const filters = signal<
   {
@@ -165,20 +165,10 @@ const Projects = (props: IPage) => {
   return (
     <Layout>
       <>
-        <div
-          class="hero min-h-[60vh] mb-8"
-          style={{
-            backgroundImage: `url(${bgPattern})`,
-          }}
-        >
-          <div class="hero-overlay"></div>
-          <div class="hero-content text-neutral-content text-center">
-            <div class="max-w-md flex flex-col items-center">
-              <Icon name="computer" size={100} />
-              <h1 class="mb-5 text-5xl font-bold">{i18n("projects")}</h1>
-            </div>
-          </div>
-        </div>
+        <CenteredHero
+          title={i18n("projects")}
+          icon={<Icon name="computer" size={100} />}
+        />
 
         <main class="block md:flex px-4">
           <aside

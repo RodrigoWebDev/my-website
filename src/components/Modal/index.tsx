@@ -1,13 +1,13 @@
 import { useEffect } from "preact/hooks";
 import { setModalState } from "../../main";
-import { ReactElement } from "preact/compat";
+import { ReactNode } from "preact/compat";
 
 export interface IModal {
-  title?: string | ReactElement;
+  title?: string | ReactNode;
   isOpen?: boolean;
-  content?: ReactElement;
-  middle?: ReactElement;
-  footer?: ReactElement;
+  content?: ReactNode;
+  middle?: ReactNode;
+  footer?: ReactNode;
 }
 
 const Modal = ({

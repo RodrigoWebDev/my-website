@@ -92,10 +92,6 @@
     "isHighLight": false
   },
   {
-    "name": "Svelte",
-    "isHighLight": false
-  },
-  {
     "name": "Next.js",
     "isHighLight": true
   },

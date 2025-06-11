@@ -1,15 +1,17 @@
-import { ReactElement } from "preact/compat";
+import { ReactNode } from "preact/compat";
 
-interface Card {
+interface ICard {
   title: string;
-  description: ReactElement | string;
+  description: ReactNode | string;
   link: string;
-  btnText: ReactElement | string;
+  btnText: ReactNode | string;
+  img?: ReactNode;
 }
 
-export const Card = ({ title, description, link, btnText }: Card) => {
+export const Card = ({ title, description, link, btnText, img }: ICard) => {
   return (
     <div class="card card-border bg-base-100">
+      {img}
       <div class="card-body">
         <h2 class="card-title">{title}</h2>
         <div>{description}</div>

@@ -34,7 +34,9 @@
     "sendMessageOnWhatsApp": "Chamar no WhatsApp",
     "years": "Anos",
     "Name": "Nome",
-    "YearsOfExperience": "Anos de experiência"
+    "YearsOfExperience": "Anos de experiência",
+    "SeeProjects": "Ver projetos",
+    "SearchForSkills": "Pesquisar habilidades"
   },
   "en": {
     "home": "Home",
@@ -71,6 +73,8 @@
     "sendMessageOnWhatsApp": "Send message on WhatsApp",
     "years": "years",
     "Name": "Name",
-    "YearsOfExperience": "Years of experience"
+    "YearsOfExperience": "Years of experience",
+    "SeeProjects": "See projects",
+    "SearchForSkills": "Search for skills"
   }
 }
