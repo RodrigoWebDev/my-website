@@ -1,6 +1,7 @@
 import { TLocale, locale } from "../main";
 import translations from "../data/translations.json";
 import experiencesTranslations from "../data/experiencesTranslations.json";
+import projects from "../data/projects.json";
 
 export const isOddNumber = (n: number) => n % 2;
 
@@ -59,4 +60,31 @@ export const sortBy = (arr: any[], key: string) => {
     }
     return 0;
   });
+};
+
+export const getSkill = (str: string) => {
+  const text = str
+    .replace(
+      `<strong><!---->Skills:<!----></strong><span class="white-space-pre"> </span>`,
+      ""
+    )
+    .replace("<!---->", "");
+  return text.split(" · ");
+};
+
+export const getSkillsList = () => {
+  let _filters: any[] = [];
+
+  projects.forEach((item) => {
+    _filters.push(getSkill(item.description));
+  });
+
+  _filters = [...new Set(_filters.flat())];
+
+  return _filters;
+
+  /* filters.value = _filters.map((item) => ({
+    name: item,
+    checked: false,
+  })); */
 };

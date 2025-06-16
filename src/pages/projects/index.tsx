@@ -7,7 +7,7 @@ import Layout from "../../components/Layout";
 import projects from "../../data/projects.json";
 import { setModalState } from "../../main";
 import { IPage } from "../../model";
-import { i18n } from "../../utils";
+import { getSkill, getSkillsList, i18n } from "../../utils";
 import { route } from "preact-router";
 import { CenteredHero } from "../../components/Hero";
 
@@ -37,24 +37,8 @@ const Projects = (props: IPage) => {
     filters.value = _filters;
   };
 
-  const getSkills = (str: string) => {
-    const text = str
-      .replace(
-        `<strong><!---->Skills:<!----></strong><span class="white-space-pre"> </span>`,
-        ""
-      )
-      .replace("<!---->", "");
-    return text.split(" · ");
-  };
-
   const getFilters = () => {
-    let _filters: any[] = [];
-
-    projects.forEach((item) => {
-      _filters.push(getSkills(item.description));
-    });
-
-    _filters = [...new Set(_filters.flat())];
+    const _filters = getSkillsList();
 
     filters.value = _filters.map((item) => ({
       name: item,
@@ -116,7 +100,7 @@ const Projects = (props: IPage) => {
 
   const applyFilters = (selectedFilters: string[]) => {
     filteredProjects.value = projects.filter((project) => {
-      return getSkills(project.description).some((item) =>
+      return getSkill(project.description).some((item) =>
         selectedFilters.includes(item)
       );
     });

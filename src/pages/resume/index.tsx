@@ -1,9 +1,10 @@
 import { IPage } from "../../model";
-import { i18n, i18nExperiences } from "../../utils";
-import skills from "../../data/skills.json";
+import { getSkillsList, i18n, i18nExperiences } from "../../utils";
 import contact from "../../data/contact.json";
 import Icon from "../../components/Icon";
 import Table from "../../components/Table";
+
+const skills = getSkillsList();
 
 const mainSkillsLocal = [
   {

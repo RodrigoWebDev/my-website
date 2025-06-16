@@ -2,9 +2,8 @@ import { CenteredHero } from "../../components/Hero";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
 import { IPage } from "../../model";
-import skills from "../../data/skills.json";
 import { Card } from "../../components/Card";
-import { i18n, sortBy } from "../../utils";
+import { getSkillsList, i18n } from "../../utils";
 import { Input } from "../../components/Input";
 import { signal } from "@preact/signals";
 
@@ -13,15 +12,17 @@ const search = signal("");
 const Skills = (props: IPage) => {
   console.log({ props });
 
+  const skills = getSkillsList();
+
   const getFilteredSkills = () => {
     const searchValue = search.value;
 
     if (!searchValue.length) {
-      return sortBy(skills, "name");
+      return skills.sort();
     }
 
-    return sortBy(skills, "name").filter((item) => {
-      return item.name.toLowerCase().includes(searchValue.toLowerCase());
+    return skills.sort().filter((item) => {
+      return item.toLowerCase().includes(searchValue.toLowerCase());
     });
   };
 
@@ -58,8 +59,8 @@ const Skills = (props: IPage) => {
                   </>
                 }
                 description=""
-                title={item.name}
-                link={`/projects?filters=${item.name}`}
+                title={item}
+                link={`/projects?filters=${item}`}
               />
             </div>
           ))}
