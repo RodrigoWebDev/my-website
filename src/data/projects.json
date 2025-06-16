@@ -2,55 +2,47 @@
   {
     "title": "ArtCoco Jóias",
     "link": "https://www.artcocojoias.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGsxi3IxnxYyw/articleshare-shrink_160/articleshare-shrink_160/0/1735480162542?e=1742396400&v=beta&t=KeU4DClB99k8sRP_fwUJUkEh2bJ3GGSZ9yQRgX-3aww"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Webpack · Yarn · PSD to HTML<!---->"
   },
   {
     "title": "Artesana",
     "link": "https://www.artesana.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQHBDBlqsU7CeA/articleshare-shrink_160/articleshare-shrink_160/0/1717199310300?e=1742396400&v=beta&t=_eDoY4gS7yoB7cL_qJPCfc42M8zjQJgrv-r03m6EYwk"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Bootstrap · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · Webpack · PSD to HTML<!---->"
   },
   {
     "title": "Biotwo",
     "link": "https://www.biotwo.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGQeiZ1b5U_pA/articleshare-shrink_160/articleshare-shrink_160/0/1711192166465?e=1742396400&v=beta&t=Mn7Q30G4BKG5S3OxTG4t1eM_SCzokU7GNsdtgRDsIYI"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Bootstrap · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Webpack · Yarn · PSD to HTML<!---->"
   },
   {
     "title": "Brascol",
     "link": "https://brascol.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · SASS<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQEcn42N-P3mDA/articleshare-shrink_160/articleshare-shrink_160/0/1738612681786?e=1742396400&v=beta&t=meDJxos-vpH9mNyTJHunKBzjsOqS3mPGvuy0MdmR2wQ"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Bootstrap · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · SASS · PSD to HTML<!---->"
   },
   {
     "title": "Cotação Instaviagem",
     "link": "https://instaviagem.com",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AngularJS · Angular Material · Tailwind · Tailwind CSS · RxJS · JavaScript · TypeScript · API REST · Cypress · Git<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQEFdeWVgTYdQA/articleshare-shrink_160/articleshare-shrink_160/0/1711993605393?e=1742396400&v=beta&t=nuzt6HU3_Y_cqlz9juq8r1EtlBUa6qb4IiZEjXtiSts"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AngularJS · Angular Material · Tailwind CSS · RxJS · JavaScript · TypeScript · API REST · Cypress · Git · Node.js · Express.js · Full-Stack Development · Front-End Development · Back-End Web Development<!---->"
   },
   {
     "title": "Dialogo Jeans",
     "link": "https://www.dialogojeans.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · Webpack<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQHiI21BfH0lRw/articleshare-shrink_160/articleshare-shrink_160/0/1735480712623?e=1742396400&v=beta&t=0-B5DdDCwmtnqSaZVvsdhvXcGPwO_wTwF6iB9xaCG9o"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · Webpack · PSD to HTML<!---->"
   },
   {
     "title": "Droga Raia",
     "link": "https://www.drogaraia.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Desenvolvimento orientado a testes · Test-Driven Development · Behavior-Driven Development (BDD) · Git · Gitlab<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/C4D27AQFWlaFJ9zeGoQ/articleshare-shrink_800/articleshare-shrink_800/0/1731318436489?e=1742396400&v=beta&t=jGnd9KdvkX1o1bxd_yVPllee7L3rRok4vjnF_ON0-n4"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · Git · Gitlab · React.js · React Testing Library · Cypress<!---->"
   },
   {
     "title": "Drogaria São Paulo",
     "link": "https://www.drogariasaopaulo.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Docker · Front-End Development · Git · Gitlab · GraphQL · HTML · HTML5 · JSON · JavaScript · Jest · MUI · Npm · React.js · Redux · Test-Driven Development · TypeScript · Webpack · styled-components<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Docker · Front-End Development · Git · Gitlab · GraphQL · HTML · HTML5 · JSON · JavaScript · Jest · MUI · Npm · React.js · Redux · Test-Driven Development · TypeScript · Webpack · styled-components<!---->"
   },
   {
     "title": "Drogasil",
     "link": "https://www.drogasil.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Git · Gitlab<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGAr3_4-58URg/articleshare-shrink_160/articleshare-shrink_160/0/1731318423370?e=1742396400&v=beta&t=8kVHELqI4Lk9w2rEfuplN--_ID16He-gfTb3DBm2ZJs"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · styled-components · JavaScript · TypeScript · GraphQL · Next.js · Jest · Git · Gitlab · React.js<!---->"
   },
   {
     "title": "HTML Standalone Lesspass",
@@ -60,19 +52,17 @@
   {
     "title": "Herrlog",
     "link": "https://app.herrlog.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · HTML · HTML5 · JavaScript · TypeScript · Redux · CSS · Tailwind · Tailwind CSS<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · TypeScript · Redux · CSS · Tailwind CSS · React.js<!---->"
   },
   {
     "title": "Herrlog Android App",
     "link": "https://play.google.com/store/apps/details?id=com.herrlog.Motorista&hl=pt_BR",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · API REST · Front-End Development · CSS · JavaScript · TypeScript · Android · Android Development · Android Studio · Gradle<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQEbRIXoBpTBEw/articleshare-shrink_160/articleshare-shrink_160/0/1741788244040?e=1742396400&v=beta&t=GJx1ak10sxNpEIm5ctf-6xd3bhUfh01xdqrO3DNvunA"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · API REST · Front-End Development · CSS · JavaScript · TypeScript · Android · Android Development · Android Studio · Gradle<!---->"
   },
   {
     "title": "IZZAT",
     "link": "https://www.izzat.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Webpack · Yarn<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQG9YPJRS0kijA/articleshare-shrink_160/articleshare-shrink_160/0/1735480827867?e=1742396400&v=beta&t=1PeYZ-1vy1b9T9HuVZcFDvap08nbANLffjTwbyHLU28"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Webpack · Yarn · PSD to HTML<!---->"
   },
   {
     "title": "Instaviagem - Roteiro",
@@ -82,110 +72,96 @@
   {
     "title": "K2b Fashion",
     "link": "https://www.k2bloja.com.br",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · Webpack<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGINd9p5dIafw/articleshare-shrink_160/articleshare-shrink_160/0/1735480956004?e=1742396400&v=beta&t=YylL0Lx-iU98mIKoKz8KJoc9EyRW2Hjfag029sCxD2E"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · Webpack · PSD to HTML<!---->"
   },
   {
     "title": "Keita",
     "link": "https://www.keita.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · PSD para html · SASS · Yarn<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGkbJXs_BSFvA/articleshare-shrink_160/articleshare-shrink_160/0/1735481214918?e=1742396400&v=beta&t=UHIgO3vSZLpbp0PoZdWMbKJJDK8AhPdoGCcMM4JA_Ps"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · SASS · Yarn · PSD to HTML<!---->"
   },
   {
     "title": "La moda",
     "link": "https://lamoda.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Node.js · Strapi · Strapi.js · HTML · HTML5 · CSS · JavaScript · TypeScript · React.js · ReactJs · MUI · API REST · Git · Gitlab<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQEZO9qvNjRiUQ/articleshare-shrink_160/articleshare-shrink_160/0/1732741509348?e=1742396400&v=beta&t=Oygl1qy0SX1aroyOCD6PyvvaDTIa6uzfZuxFE3RwcEs"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Node.js · HTML · HTML5 · CSS · JavaScript · TypeScript · MUI · API REST · Git · Gitlab · Strapi · React.js<!---->"
   },
   {
     "title": "Loja La Femme",
     "link": "https://www.lafemmecalcados.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · GitHub · Git · HTML · HTML5 · JQuery · JSON · JavaScript · Less · PSD para html · Yarn<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · Front-End Development · GitHub · Git · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Yarn · PSD to HTML<!---->"
   },
   {
     "title": "Mais Vaidosa",
     "link": "https://www.maisvaidosa.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQFgthY1zqmCvA/articleshare-shrink_160/articleshare-shrink_160/0/1735489826337?e=1742396400&v=beta&t=m1g2ZoSeBR57UAYBsOXtmfTnHuwUDmwSpC6afulM5xc"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · Webpack · PSD to HTML<!---->"
   },
   {
     "title": "Mercado Eletrônico",
     "link": "https://www.me.com.br/supplier/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Vue · Vue.js · Vuex · CSS · HTML · HTML5 · JavaScript · API REST · Git · Bitbucket · Cypress<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Vue.js · Vuex · CSS · HTML · HTML5 · JavaScript · API REST · Git · Bitbucket · Cypress<!---->"
   },
   {
     "title": "Meu website",
     "link": "https://rqueiroz.netlify.app/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Desenvolvimento de sites · React.js · Preact · ReactJs · Sistemas operacionais · Git · GitHub · JSON · Desenvolvimento de front-end · Desenvolvimento de interfaces · Npm · CSS · JavaScript · TypeScript<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>Git · GitHub · JSON · Npm · CSS · JavaScript · TypeScript · Preact · React.js · Open-Source Software<!---->"
   },
   {
     "title": "Passagens promo",
     "link": "https://www.passagenspromo.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · Bitbucket · CSS · Cypress · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Desenvolvimento orientado a testes · Front-End Development · Git · HTML · HTML5 · JSON · JavaScript · Jest · Npm · React.js · ReactJs · Tailwind · Tailwind CSS · Test-Driven Development · TypeScript · Webpack<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · Bitbucket · CSS · Cypress · Front-End Development · Git · HTML · HTML5 · JSON · JavaScript · Jest · Npm · Tailwind CSS · Test-Driven Development · TypeScript · Webpack · React.js<!---->"
   },
   {
     "title": "Raia Android & IOS App",
     "link": "https://play.google.com/store/apps/details?id=br.com.drogaraia&hl=pt_BR",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · React.js · ReactJs · Tailwind · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Desenvolvimento orientado a testes · Behavior-Driven Development (BDD) · Gitlab · Git<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQF6oe3TQdWCCg/articleshare-shrink_160/articleshare-shrink_160/0/1730464917775?e=1742396400&v=beta&t=Wir58poQMIZtAXqrJLd470nT50kEUQtsC6Roo8SEqOY"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React Native · Tailwind CSS · HTML · HTML5 · JavaScript · TypeScript · Test-Driven Development · Behavior-Driven Development (BDD) · Gitlab · Git · React.js · CSS<!---->"
   },
   {
     "title": "Recriando raízes",
     "link": "https://recriandoraizes.org.br/site/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · PSD para html · PSD para Wordpress · Wordpress · CSS · JavaScript · Git · GitHub · Npm<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGT6VBrCUf3FA/articleshare-shrink_160/articleshare-shrink_160/0/1735477982554?e=1742396400&v=beta&t=WdSjsZiWj9cz6nKFD4pNIDXH2gxw2Q1ruy9erwJb78Q"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · Wordpress · CSS · JavaScript · Git · GitHub · Npm · PSD to HTML · PSD to Wordpress<!---->"
   },
   {
     "title": "Shopping Mega Polo Moda",
     "link": "https://www.megapolomoda.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · PSD para html · CSS · JavaScript · Bootstrap · Git · Npm<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D5627AQHpZerwL3Q8kg/articleshare-shrink_160/articleshare-shrink_160/0/1711594939227?e=1742396400&v=beta&t=7DBFU55QG57kRY78WHruv03plH5qACH_uP_XD-Ft72g"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · CSS · JavaScript · Bootstrap · Git · Npm · PSD to HTML<!---->"
   },
   {
     "title": "Sicredi na Comunidade",
     "link": "https://www.sicredi.com.br/nacomunidade/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · React.js · ReactJs · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQHGvnkLJtR27w/articleshare-shrink_160/articleshare-shrink_160/0/1735313414965?e=1742396400&v=beta&t=3qtj2cNp0FnY0-o31q0iRAj7Jt8Kua7nLcvv8wwRPbY"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · React.js · JavaScript · MUI · TypeScript · API REST · Jest · Test-Driven Development · Behavior-Driven Development (BDD) · CSS · Git · Gitlab<!---->"
   },
   {
     "title": "Sicredi portal da ouvidoria",
     "link": "https://www.sicredi.com.br/home/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · TypeScript · React.js · ReactJs · API REST · Jest · Test-Driven Development · Git · Gitlab<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D5627AQF_kZlJF1jODQ/articleshare-shrink_160/articleshare-shrink_160/0/1711287582696?e=1742396400&v=beta&t=uWvxN-2puykXazxAOUc5osict7dXa4ZWujRWFNuHYcY"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · TypeScript · React.js · API REST · Jest · Test-Driven Development · Git · Gitlab<!---->"
   },
   {
     "title": "Site Kikosori",
     "link": "https://lnk.bio/u65i",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · PSD para html · Webpack<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQFzGvpOd6X_aw/articleshare-shrink_160/articleshare-shrink_160/0/1735481465395?e=1742396400&v=beta&t=gjDUhaxMvBkCJmFuIW2XEhJWub-P22SG-elOZGPT21w"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Bootstrap · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Less · Npm · Webpack · PSD to HTML<!---->"
   },
   {
     "title": "Tarjab",
     "link": "https://www.tarjab.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · PSD para html · SASS<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D5627AQFRMYgK851K1w/articleshare-shrink_160/articleshare-shrink_160/0/1734918168006?e=1742396400&v=beta&t=Sb01zvgc4P3KGEo6y0o_fVqiKlXiwI4CWbVZJbIR3tw"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · CSS · Front-End Development · Git · GitHub · HTML · HTML5 · JQuery · JSON · JavaScript · Npm · SASS · PSD to HTML<!---->"
   },
   {
     "title": "Tunne",
     "link": "https://tunne.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Desenvolvimento de front-end · Desenvolvimento de sites · Desenvolvimento de interfaces · Docker · Front-End Development · GitHub · Git · HTML · HTML5 · JSON · JavaScript · Jest · Next.js · Npm · React.js · ReactJs · Test-Driven Development · TypeScript · MUI · styled-components · Webpack<!---->"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>AJAX · API REST · Axios · Behavior-Driven Development (BDD) · CSS · Docker · Front-End Development · GitHub · Git · HTML · HTML5 · JSON · JavaScript · Jest · Next.js · Npm · React.js · Test-Driven Development · TypeScript · MUI · styled-components · Webpack<!---->"
   },
   {
     "title": "Voltz",
     "link": "https://voltzmotors.com/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/C4D27AQFFBzaEM_00Pg/articleshare-shrink_160/articleshare-shrink_160/0/1735312035063?e=1742396400&v=beta&t=UldyYB1y_uBJp5YjRHyLAdEjJEZTEAm6RPfx8GQH6wU"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>React.js · GatsbyJS · HTML5 · HTML · CSS · JavaScript · TypeScript<!---->"
   },
   {
     "title": "Wine",
     "link": "https://www.wine.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/D4D27AQFKSTEGOwvJgw/articleshare-shrink_160/articleshare-shrink_160/0/1741374638103?e=1742396400&v=beta&t=uY8StjQ7FmnAtP9Vt-LD1GhghXKsMqf-Y94FAkygPF8"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · JavaScript · JQuery · KnockoutJS · CSS · Oracle Cloud · API REST · Bootstrap · English · SASS<!---->"
   },
   {
     "title": "You Go Girls",
     "link": "https://yougogirls.com.br/",
-    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · PSD para html · PSD para Wordpress · Wordpress · CSS · Git · GitHub · JavaScript · Npm · Bootstrap · Desenvolvimento de front-end · Desenvolvimento de interfaces · Desenvolvimento de sites · Front-End Development · JSON · Less<!---->",
-    "img": "https://media.licdn.com/dms/image/sync/v2/C4D27AQHFBLJnPMlnKg/articleshare-shrink_160/articleshare-shrink_160/0/1735477977116?e=1742396400&v=beta&t=HNR7np5mYzMZg83VWaTGLCQIq_NxNXckNhcfI6Z7Lzc"
+    "description": "<strong><!---->Skills:<!----></strong><span class=\"white-space-pre\"> </span>HTML · HTML5 · Wordpress · CSS · Git · GitHub · JavaScript · Npm · Bootstrap · Front-End Development · JSON · Less · PSD to HTML · PSD to Wordpress<!---->"
   }
 ]
