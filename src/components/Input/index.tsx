@@ -1,13 +1,9 @@
-import { InputHTMLAttributes, ReactNode } from "preact/compat";
+import { IInput } from "../../model/components";
 
-interface IInput extends InputHTMLAttributes<HTMLInputElement> {
-  icon?: ReactNode;
-}
-
-export const Input = ({ icon, ...rest }: IInput) => {
+export const Input = ({ label, ...rest }: IInput) => {
   return (
     <label className="input w-full">
-      {icon}
+      {label}
       <input {...rest} />
     </label>
   );

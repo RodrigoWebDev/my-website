@@ -26,8 +26,6 @@
     "brazilian": "Brasileiro",
     "about": "Sobre",
     "viewAllMyProjectsIn": "Ver todos os meus projetos em",
-    "mainSkills": "Principais habilidades",
-    "complementarySkills": "Habilidades complementares",
     "at": "em",
     "getInTouch": "Entre em contato",
     "phone": "Telefone",
@@ -36,7 +34,8 @@
     "Name": "Nome",
     "YearsOfExperience": "Anos de experiência",
     "SeeProjects": "Ver projetos",
-    "SearchForSkills": "Pesquisar habilidades"
+    "SearchForSkills": "Pesquisar habilidades",
+    "CheckOutAllMySkillsAt": "Confira todas as minhas habilidades em"
   },
   "en": {
     "home": "Home",
@@ -65,8 +64,6 @@
     "brazilian": "Brazilian",
     "about": "About",
     "viewAllMyProjectsIn": "View all my projects in",
-    "mainSkills": "Main skills",
-    "complementarySkills": "Complementary skills",
     "at": "at",
     "getInTouch": "Get in touch",
     "phone": "Phone",
@@ -75,6 +72,7 @@
     "Name": "Name",
     "YearsOfExperience": "Years of experience",
     "SeeProjects": "See projects",
-    "SearchForSkills": "Search for skills"
+    "SearchForSkills": "Search for skills",
+    "CheckOutAllMySkillsAt": "Check out all my skills at"
   }
 }

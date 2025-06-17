@@ -1,128 +1,30 @@
-import { signal } from "@preact/signals";
 import "animate.css";
 import { useEffect } from "preact/hooks";
 import { Card } from "../../components/Card";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
 import projects from "../../data/projects.json";
-import { setModalState } from "../../main";
-import { IPage } from "../../model";
-import { getSkill, getSkillsList, i18n } from "../../utils";
-import { route } from "preact-router";
+import { IPage } from "../../model/other";
 import { CenteredHero } from "../../components/Hero";
-
-const filters = signal<
-  {
-    name: string;
-    checked: boolean;
-  }[]
->([]);
-
-const filteredProjects = signal<
-  {
-    title: string;
-    link: string;
-    description: string;
-    img?: string;
-  }[]
->([]);
+import { i18n } from "../../business/locale";
+import {
+  addSelectedFiltersToSearchParam,
+  applyFilters,
+  applyFiltersFromSearchParams,
+  filteredProjects,
+  filters,
+  getFilters,
+} from "../../business/projectFilters";
+import { Filters } from "../../components/Filters";
+import { setModalState } from "../../utils/modal";
 
 const Projects = (props: IPage) => {
   console.log({ props });
-
-  const onChange = (index: number) => {
-    const _filters = [...filters.value];
-    _filters[index].checked = !_filters[index].checked;
-
-    filters.value = _filters;
-  };
-
-  const getFilters = () => {
-    const _filters = getSkillsList();
-
-    filters.value = _filters.map((item) => ({
-      name: item,
-      checked: false,
-    }));
-  };
-
-  const Filters = () => {
-    return (
-      <fieldset class="fieldset bg-base-100 border-base-300 rounded-box border p-4 mr-4">
-        <legend class="fieldset-legend">{i18n("filters")}</legend>
-
-        <button
-          class="btn btn-secondary mb-8"
-          onClick={() => {
-            filters.value = filters.value.map((item) => {
-              return {
-                ...item,
-                checked: false,
-              };
-            });
-          }}
-        >
-          <Icon name="filterRemove" />
-          {i18n("clearFilters")}
-        </button>
-
-        {filters.value.map((item, index) => {
-          return (
-            <label class="label mb-2">
-              <input
-                type="checkbox"
-                class="checkbox"
-                checked={item.checked}
-                onChange={() => {
-                  onChange(index);
-                }}
-              />
-              {item.name}
-            </label>
-          );
-        })}
-      </fieldset>
-    );
-  };
 
   const renderFilters = () => {
     setModalState({
       content: <Filters />,
     });
-  };
-
-  const addSelectedFiltersToSearchParam = (selectedFilters: string[]) => {
-    const searchParams = new URLSearchParams(window.location.search);
-    searchParams.set("filters", selectedFilters.join(","));
-
-    route(window.location.pathname + "?" + searchParams.toString());
-  };
-
-  const applyFilters = (selectedFilters: string[]) => {
-    filteredProjects.value = projects.filter((project) => {
-      return getSkill(project.description).some((item) =>
-        selectedFilters.includes(item)
-      );
-    });
-  };
-
-  const applyFiltersFromSearchParams = () => {
-    const searchParams = new URLSearchParams(window.location.search);
-
-    if (searchParams.has("filters")) {
-      const selectedFilters = searchParams.get("filters")?.split(",") || [];
-
-      const _filters = filters.value.map((filter) => {
-        const checked = selectedFilters?.some((item) => item === filter.name);
-
-        return {
-          ...filter,
-          checked,
-        };
-      });
-
-      filters.value = _filters;
-    }
   };
 
   useEffect(() => {

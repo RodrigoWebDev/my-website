@@ -1,12 +1,4 @@
-import { ReactNode } from "preact/compat";
-
-interface ICard {
-  title: string;
-  description: ReactNode | string;
-  link: string;
-  btnText: ReactNode | string;
-  img?: ReactNode;
-}
+import { ICard } from "../../model/components";
 
 export const Card = ({ title, description, link, btnText, img }: ICard) => {
   return (

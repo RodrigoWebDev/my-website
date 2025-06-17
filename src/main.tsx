@@ -5,58 +5,28 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import Skills from "./pages/skills";
 import Works from "./pages/works";
-import Modal, { IModal } from "./components/Modal";
-import { signal } from "@preact/signals";
 import "./main.css";
-import { getSearchParam } from "./utils";
-
-export type TLocale = "pt" | "en";
-
-export const modalState = signal<IModal>({
-  isOpen: false,
-  title: "",
-  content: <></>,
-  middle: <></>,
-  footer: <></>,
-});
-
-export const locale = signal<TLocale>("pt");
-
-export const setModalState = (params: IModal) => {
-  modalState.value = {
-    ...modalState.value,
-    ...params,
-  };
-};
-
-export const showDrawer = (show: boolean) => {
-  if (document.querySelector("#my-drawer")) {
-    //@ts-ignore
-    document.querySelector("#my-drawer").checked = show;
-  }
-};
-
-const setLocale = () => {
-  const localeParam = getSearchParam("locale") as TLocale;
-
-  locale.value = localeParam || "pt";
-};
+import { updateLocaleState } from "./business/locale";
+import { modalState } from "./utils/modal";
+import { ResumeEdit } from "./pages/resume-edit";
+import { toastState } from "./utils/toast";
 
 const Main = () => {
   return (
     <>
       <Router
         onChange={() => {
-          setLocale();
+          updateLocaleState();
         }}
       >
-        <Resume path="/resume" />
         <Home path="/" />
         <Projects path="/projects" />
         <Skills path="/skills" />
         <Works path="/works" />
+        <Resume path="/resume" />
+        <ResumeEdit path="/resume-edit" />
       </Router>
-      <Modal {...modalState.value} />
+
       <div class="drawer z-20">
         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-side">
@@ -70,6 +40,14 @@ const Main = () => {
           </div>
         </div>
       </div>
+
+      {toastState.value.isOpen && (
+        <div className="toast">
+          <div className={`alert ${toastState.value.type}`}>
+            <span>{toastState.value.text}</span>
+          </div>
+        </div>
+      )}
     </>
   );
 };

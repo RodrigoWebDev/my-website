@@ -1,72 +1,16 @@
 import { route } from "preact-router";
-//import { signal } from "@preact/signals";
-//import ptProfile from "../../data/pt/profile.json";
-//import enProfile from "../../data/en/profile.json";
-//import { isEnglish } from "../../utils/locale";
 import Icon, { TIconName } from "../Icon";
-import { TLocale, locale, setModalState, showDrawer } from "../../main";
-import { i18n } from "../../utils";
-
-interface INavLink {
-  name: string;
-  icon: string;
-  route?: string;
-}
-
-//const isNavigationMenuOpen = signal(false);
-//const _isEnglish = signal(false);
+import { locale, updateLocaleSearchParam } from "../../business/locale";
+import { setModalState, showDrawer } from "../../utils/modal";
+import { NAV_LINKS } from "../../constants/others";
+import { getNavLink } from "../../utils/others";
 
 const Header = () => {
-  const navLinks = [
-    {
-      name: i18n("home"),
-      route: "",
-      icon: "houseVariant",
-    },
-    {
-      name: i18n("projects"),
-      route: "projects",
-      icon: "computer",
-    },
-    {
-      name: i18n("works"),
-      route: "works",
-      icon: "company",
-    },
-    {
-      name: i18n("skills"),
-      route: "skills",
-      icon: "clipboardList",
-    },
-    {
-      name: i18n("resume"),
-      route: "resume",
-      icon: "paperText",
-    },
-  ];
-
-  const getNavLink = (item: INavLink) => {
-    if (item.route !== undefined) {
-      return item.route + window.location.search;
-    }
-
-    return item.name + window.location.search;
-  };
-
-  const setLocale = (e: any) => {
-    const searchParams = new URLSearchParams(window.location.search);
-    //@ts-ignore
-    const value = e?.target?.value as TLocale;
-    searchParams.set("locale", value);
-
-    route(window.location.pathname + "?" + searchParams.toString());
-  };
-
   const Navigation = ({ ulClass }: { ulClass: string }) => {
     return (
       <>
         <ul class={ulClass}>
-          {navLinks.map((item) => {
+          {NAV_LINKS.map((item) => {
             const iconName = item.icon as TIconName;
 
             return (
@@ -87,7 +31,7 @@ const Header = () => {
             <select
               className="focus:bg-base-100! focus-visible:bg-base-100!"
               onChange={(e) => {
-                setLocale(e);
+                updateLocaleSearchParam(e);
               }}
               value={locale.value}
             >

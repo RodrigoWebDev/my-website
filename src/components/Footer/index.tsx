@@ -1,5 +1,4 @@
-//import { isEnglish } from "../../utils/locale";
-import { i18n } from "../../utils";
+import { i18n } from "../../business/locale";
 import Icon from "../Icon";
 
 const Footer = () => {

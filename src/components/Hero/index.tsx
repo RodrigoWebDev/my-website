@@ -1,8 +1,8 @@
 import avatar from "../../images/avatar.jpg";
 import bgPattern from "../../images/abstract-pattern-design_1053-524.jpg";
-import { i18n } from "../../utils";
 import Icon from "../Icon";
-import { ReactNode } from "preact/compat";
+import { i18n } from "../../business/locale";
+import { ICenteredHero } from "../../model/components";
 
 export const HomeHero = () => {
   return (
@@ -44,11 +44,6 @@ export const HomeHero = () => {
     </div>
   );
 };
-
-interface ICenteredHero {
-  title: string;
-  icon: ReactNode;
-}
 
 export const CenteredHero = ({ title, icon }: ICenteredHero) => {
   return (

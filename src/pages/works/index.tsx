@@ -1,8 +1,9 @@
 import Layout from "../../components/Layout";
-import { IPage } from "../../model";
-import { i18n, i18nExperiences, isOddNumber } from "../../utils";
+import { IPage } from "../../model/other";
 import Icon from "../../components/Icon";
 import { CenteredHero } from "../../components/Hero";
+import { isOddNumber } from "../../utils/number";
+import { i18n, i18nExperiences } from "../../business/locale";
 
 const Works = (props: IPage) => {
   console.log({ props });

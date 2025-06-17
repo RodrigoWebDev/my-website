@@ -1,62 +1,18 @@
-import { IPage } from "../../model";
-import { getSkillsList, i18n, i18nExperiences } from "../../utils";
+import { IPage, IResume } from "../../model/other";
 import contact from "../../data/contact.json";
 import Icon from "../../components/Icon";
 import Table from "../../components/Table";
-
-const skills = getSkillsList();
-
-const mainSkillsLocal = [
-  {
-    Name: "React",
-    YearsOfExperience: 6,
-  },
-  {
-    Name: "React Native",
-    YearsOfExperience: 4,
-  },
-  {
-    Name: "Firebase",
-    YearsOfExperience: 3,
-  },
-];
-
-const mainSkillsLive = [
-  {
-    Name: "React",
-    YearsOfExperience: 6,
-  },
-  {
-    Name: "React Native",
-    YearsOfExperience: 4,
-  },
-  {
-    Name: "Next.js",
-    YearsOfExperience: 4,
-  },
-  {
-    Name: "Typescript",
-    YearsOfExperience: 7,
-  },
-  {
-    Name: "English",
-    YearsOfExperience: 7,
-  },
-];
+import { MAIN_SKILLS_LIVE } from "../../constants/skills";
+import { getAge } from "../../utils/date";
+import { i18n, i18nExperiences } from "../../business/locale";
 
 const Resume = (props: IPage) => {
   console.log({ props });
 
-  const isLocalHost = window.location.host.includes("localhost");
-  const mainSkills = isLocalHost ? mainSkillsLocal : mainSkillsLive;
-
-  const getAge = () => {
-    const birthDate = new Date(1997, 2, 11);
-    const diff = Date.now() - birthDate.getTime();
-    const year = new Date(diff).getUTCFullYear();
-
-    return Math.abs(year - 1970);
-  };
+  const storageResume = localStorage["RESUME"]
+    ? (JSON.parse(localStorage["RESUME"]) as IResume)
+    : undefined;
+  const mainSkills = storageResume?.skills || MAIN_SKILLS_LIVE;
 
   return (
     <main class="prose mx-auto max-w-5xl p-8">
@@ -75,32 +31,22 @@ const Resume = (props: IPage) => {
       </h2>
       <hr />
       <p>{i18n("profileDesc")}</p>
-
       <h2 className="flex items-center flex-wrap">
-        <Icon name="computer" class="mr-2" size={32} /> {i18n("mainSkills")}
+        <Icon name="computer" class="mr-2" size={32} /> {i18n("skills")}
       </h2>
       <hr />
-
       <Table data={mainSkills} showRowNumber />
-
-      <h2 className="flex items-center flex-wrap">
-        <Icon name="clipboardList" class="mr-2" size={32} />{" "}
-        {i18n("complementarySkills")}
-      </h2>
-      <hr />
-
-      <ul class="flex flex-wrap">
-        {skills.map((item) => {
-          return <li class="mr-8">{item.name}</li>;
-        })}
-      </ul>
-
+      <p>
+        {i18n("CheckOutAllMySkillsAt")}{" "}
+        <a href="https://rqueiroz.netlify.app/skills" target="_blank">
+          https://rqueiroz.netlify.app/skills
+        </a>
+      </p>
       <h2 className="flex items-center flex-wrap">
         <Icon name="company" class="mr-2" size={32} />{" "}
         {i18n("professionalExperience")}
       </h2>
       <hr />
-
       <ul>
         {i18nExperiences().map((item) => {
           return (
@@ -129,21 +75,19 @@ const Resume = (props: IPage) => {
           );
         })}
       </ul>
-
       <h2 className="flex items-center flex-wrap">
         <Icon name="formatListBulleted" class="mr-2" size={32} />{" "}
         {i18n("projects")}
       </h2>
       <hr />
+      {i18n("viewAllMyProjectsIn")}{" "}
       <a href="https://rqueiroz.netlify.app/projects" target="_blank">
-        {i18n("viewAllMyProjectsIn")} https://rqueiroz.netlify.app/projects
+        https://rqueiroz.netlify.app/projects
       </a>
-
       <h2 className="flex items-center flex-wrap">
         <Icon name="phone" class="mr-2" size={32} /> {i18n("getInTouch")}
       </h2>
       <hr />
-
       <ul class="animate__animated animate__swing">
         <li>
           <div class="flex items-center flex-wrap">

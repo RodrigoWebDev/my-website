@@ -1,34 +1,14 @@
 import { CenteredHero } from "../../components/Hero";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
-import { IPage } from "../../model";
+import { IPage } from "../../model/other";
 import { Card } from "../../components/Card";
-import { getSkillsList, i18n } from "../../utils";
 import { Input } from "../../components/Input";
-import { signal } from "@preact/signals";
-
-const search = signal("");
+import { i18n } from "../../business/locale";
+import { getFilteredSkills, updateSearch } from "../../business/skills";
 
 const Skills = (props: IPage) => {
   console.log({ props });
-
-  const skills = getSkillsList();
-
-  const getFilteredSkills = () => {
-    const searchValue = search.value;
-
-    if (!searchValue.length) {
-      return skills.sort();
-    }
-
-    return skills.sort().filter((item) => {
-      return item.toLowerCase().includes(searchValue.toLowerCase());
-    });
-  };
-
-  const onInput = (e: any) => {
-    search.value = e.target?.value;
-  };
 
   return (
     <Layout>
@@ -42,8 +22,8 @@ const Skills = (props: IPage) => {
           <div class="w-full md:w-xs">
             <Input
               type="search"
-              onInput={onInput}
-              icon={<Icon name="search" />}
+              onInput={updateSearch}
+              label={<Icon name="search" />}
               placeholder={i18n("SearchForSkills")}
             />
           </div>

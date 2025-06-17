@@ -1,34 +1,6 @@
 //https://icon-sets.iconify.design/mdi/
 
-export type TIconName =
-  | "logo"
-  | "sourceCode"
-  | "linkedin"
-  | "whatsapp"
-  | "company"
-  | "houseVariant"
-  | "computer"
-  | "react"
-  | "paperText"
-  | "language"
-  | "email"
-  | "web"
-  | "phone"
-  | "about"
-  | "clipboardList"
-  | "calendar"
-  | "formatListBulleted"
-  | "link"
-  | "filterRemove"
-  | "filter"
-  | "search";
-
-interface IIcon {
-  name: TIconName;
-  color?: string;
-  size?: number;
-  class?: string;
-}
+import { IIcon } from "../../model/components";
 
 const Icon = (props: IIcon) => {
   const attrs = {

@@ -1,8 +1,6 @@
-import { i18n } from "../../utils";
-
-interface ITableData {
-  [k: string]: boolean | number | string;
-}
+import { i18n } from "../../business/locale";
+import { ITableData } from "../../model/components";
+import { getTableHeads, getTableRows } from "../../utils/table";
 
 export const Table = ({
   data,
@@ -11,25 +9,6 @@ export const Table = ({
   data: ITableData[];
   showRowNumber?: boolean;
 }) => {
-  const getTableHeads = () => {
-    let heads = [];
-
-    for (const d in data[0]) {
-      heads.push(d);
-    }
-
-    return heads;
-  };
-
-  const rows = data.map((row) => {
-    let rowData = [];
-    for (const [, value] of Object.entries(row)) {
-      rowData.push(value);
-    }
-
-    return rowData;
-  });
-
   return (
     <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
       <table className="table m-0! table-zebra">
@@ -37,17 +16,17 @@ export const Table = ({
         <thead>
           <tr>
             <th></th>
-            {getTableHeads().map((item) => (
+            {getTableHeads(data).map((item) => (
               <th>{i18n(item)}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {/* rows */}
-          {rows.map((row, index) => (
+          {getTableRows(data).map((row: any, index: number) => (
             <tr>
               <th>{showRowNumber ? index + 1 : ""}</th>
-              {row.map((rowData) => (
+              {row.map((rowData: any) => (
                 <td>{rowData}</td>
               ))}
             </tr>
