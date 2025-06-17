@@ -1,15 +1,12 @@
 import { CenteredHero } from "../../components/Hero";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
-import { IPage } from "../../model/other";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { i18n } from "../../business/locale";
 import { getFilteredSkills, updateSearch } from "../../business/skills";
 
-const Skills = (props: IPage) => {
-  console.log({ props });
-
+const Skills = () => {
   return (
     <Layout>
       <CenteredHero

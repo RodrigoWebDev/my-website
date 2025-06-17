@@ -9,9 +9,7 @@ import { Input } from "../../components/Input";
 import Layout from "../../components/Layout";
 import { showSuccessToast } from "../../utils/toast";
 
-export const ResumeEdit = (props: any) => {
-  console.log(props);
-
+export const ResumeEdit = () => {
   return (
     <Layout>
       <div class="p-2 max-w-3xl mx-auto my-8">
@@ -78,16 +76,29 @@ export const ResumeEdit = (props: any) => {
 
           <hr class="mb-4" />
 
-          <div class="flex justify-between">
-            <button
-              onClick={() => {
-                save();
-                showSuccessToast();
-              }}
-              class="btn btn-success"
-            >
-              <span>&#10003;</span> Save form
-            </button>
+          <div class="flex justify-between mb-4">
+            <div>
+              <button
+                onClick={() => {
+                  save();
+                  showSuccessToast();
+                }}
+                class="btn btn-success mr-2"
+              >
+                <span>&#10003;</span> Save form
+              </button>
+
+              <a
+                href="/resume?locale=en"
+                target="_blank"
+                class="btn btn-link mr-2"
+              >
+                En resume
+              </a>
+              <a href="/resume" target="_blank" class="btn btn-link">
+                Pt resume
+              </a>
+            </div>
 
             <button
               onClick={() => {

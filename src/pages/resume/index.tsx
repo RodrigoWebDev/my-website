@@ -1,4 +1,4 @@
-import { IPage, IResume } from "../../model/other";
+import { IResume } from "../../model/other";
 import contact from "../../data/contact.json";
 import Icon from "../../components/Icon";
 import Table from "../../components/Table";
@@ -6,9 +6,7 @@ import { MAIN_SKILLS_LIVE } from "../../constants/skills";
 import { getAge } from "../../utils/date";
 import { i18n, i18nExperiences } from "../../business/locale";
 
-const Resume = (props: IPage) => {
-  console.log({ props });
-
+const Resume = () => {
   const storageResume = localStorage["RESUME"]
     ? (JSON.parse(localStorage["RESUME"]) as IResume)
     : undefined;

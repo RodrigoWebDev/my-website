@@ -4,7 +4,6 @@ import { Card } from "../../components/Card";
 import Icon from "../../components/Icon";
 import Layout from "../../components/Layout";
 import projects from "../../data/projects.json";
-import { IPage } from "../../model/other";
 import { CenteredHero } from "../../components/Hero";
 import { i18n } from "../../business/locale";
 import {
@@ -18,9 +17,7 @@ import {
 import { Filters } from "../../components/Filters";
 import { setModalState } from "../../utils/modal";
 
-const Projects = (props: IPage) => {
-  console.log({ props });
-
+const Projects = () => {
   const renderFilters = () => {
     setModalState({
       content: <Filters />,

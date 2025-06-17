@@ -32,7 +32,6 @@ export const updateItem = (
   modState[from][position] = data;
 
   resumeEditFormState.value = { ...modState };
-  console.log("DEBUG");
 };
 
 export const save = () => {

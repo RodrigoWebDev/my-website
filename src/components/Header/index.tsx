@@ -1,12 +1,39 @@
 import { route } from "preact-router";
 import Icon from "../Icon";
-import { locale, updateLocaleSearchParam } from "../../business/locale";
+import { i18n, locale, updateLocaleSearchParam } from "../../business/locale";
 import { setModalState, showDrawer } from "../../utils/modal";
-import { NAV_LINKS } from "../../constants/others";
 import { getNavLink } from "../../utils/others";
 import { TIconName } from "../../model/components";
 
 const Header = () => {
+  const NAV_LINKS = [
+    {
+      name: i18n("home"),
+      route: "",
+      icon: "houseVariant",
+    },
+    {
+      name: i18n("projects"),
+      route: "projects",
+      icon: "computer",
+    },
+    {
+      name: i18n("works"),
+      route: "works",
+      icon: "company",
+    },
+    {
+      name: i18n("skills"),
+      route: "skills",
+      icon: "clipboardList",
+    },
+    {
+      name: i18n("resume"),
+      route: "resume",
+      icon: "paperText",
+    },
+  ];
+
   const Navigation = ({ ulClass }: { ulClass: string }) => {
     return (
       <>
