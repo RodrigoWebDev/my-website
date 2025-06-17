@@ -1,9 +1,10 @@
 import { route } from "preact-router";
-import Icon, { TIconName } from "../Icon";
+import Icon from "../Icon";
 import { locale, updateLocaleSearchParam } from "../../business/locale";
 import { setModalState, showDrawer } from "../../utils/modal";
 import { NAV_LINKS } from "../../constants/others";
 import { getNavLink } from "../../utils/others";
+import { TIconName } from "../../model/components";
 
 const Header = () => {
   const Navigation = ({ ulClass }: { ulClass: string }) => {
