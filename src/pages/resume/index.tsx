@@ -15,7 +15,7 @@ const Resume = (props: IPage) => {
   const mainSkills = storageResume?.skills || MAIN_SKILLS_LIVE;
 
   return (
-    <main class="prose mx-auto max-w-5xl p-8">
+    <main class="prose mx-auto max-w-5xl p-8" data-theme="light">
       <h1>Rodrigo Queiroz</h1>
       <div>
         <strong>{i18n("profession")} :</strong> {i18n("profileHeadline")}

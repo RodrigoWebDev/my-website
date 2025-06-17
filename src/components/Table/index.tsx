@@ -27,7 +27,9 @@ export const Table = ({
             <tr>
               <th>{showRowNumber ? index + 1 : ""}</th>
               {row.map((rowData: any) => (
-                <td>{rowData}</td>
+                <td>
+                  <strong>{rowData}</strong>
+                </td>
               ))}
             </tr>
           ))}
