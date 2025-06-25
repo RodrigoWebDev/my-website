@@ -1,4 +1,5 @@
 //import ReactSelect from "react-select";
+import { useCallback } from "preact/hooks";
 import {
   addItem,
   removeItem,
@@ -15,8 +16,20 @@ import { showSuccessToast } from "../../utils/toast";
 
 const skills = getSkillsList();
 //const valueLabelSkills = convertStringArrayToValueLabelArray(skills);
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DnDItem } from "../../components/Dnd";
+import { dndMove } from "../../utils/others";
+import Icon from "../../components/Icon";
 
 export const ResumeEdit = () => {
+  const move = useCallback((dragIndex: number, hoverIndex: number) => {
+    resumeEditFormState.value = {
+      ...resumeEditFormState.value,
+      skills: dndMove(resumeEditFormState.value.skills, dragIndex, hoverIndex),
+    };
+  }, []);
+
   return (
     <Layout>
       <div class="p-2 max-w-3xl mx-auto my-8">
@@ -25,48 +38,53 @@ export const ResumeEdit = () => {
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4">
           <legend class="fieldset-legend">Skills</legend>
 
-          {resumeEditFormState.value.skills.map((item, index) => (
-            <div class="mb-4 flex items-center">
-              <Input
-                name={`skillName${index}`}
-                value={item.Name}
-                onInput={(e) => {
-                  updateItem("skills", index, {
-                    //@ts-ignore
-                    Name: e.target.value,
-                    YearsOfExperience:
-                      resumeEditFormState.value["skills"][index]
-                        .YearsOfExperience,
-                  });
-                }}
-                autoCompleteOptions={skills}
-              />
+          <DndProvider backend={HTML5Backend}>
+            {resumeEditFormState.value.skills.map((item, index) => (
+              <DnDItem index={index} id={item.Name} move={move}>
+                <div class="mb-4 flex items-center">
+                  <Input
+                    name={`skillName${index}`}
+                    value={item.Name}
+                    onInput={(e) => {
+                      updateItem("skills", index, {
+                        //@ts-ignore
+                        Name: e.target.value,
+                        YearsOfExperience:
+                          resumeEditFormState.value["skills"][index]
+                            .YearsOfExperience,
+                      });
+                    }}
+                    autoCompleteOptions={skills}
+                    label={<Icon name="drag" class="cursor-move" />}
+                  />
 
-              {/* <MySelect options={valueLabelSkills} /> */}
-              <div class="w-[100px] ml-2">
-                <Input
-                  type="number"
-                  name={`skillYears${index}`}
-                  value={item.YearsOfExperience}
-                  onInput={(e) => {
-                    updateItem("skills", index, {
-                      Name: resumeEditFormState.value["skills"][index].Name,
-                      //@ts-ignore
-                      YearsOfExperience: parseInt(e.target.value),
-                    });
-                  }}
-                />
-              </div>
-              <button
-                class="btn btn-error ml-2"
-                onClick={() => {
-                  removeItem("skills", index);
-                }}
-              >
-                &#x2715;
-              </button>
-            </div>
-          ))}
+                  <div class="w-[100px] ml-2">
+                    <Input
+                      type="number"
+                      name={`skillYears${index}`}
+                      value={item.YearsOfExperience}
+                      onInput={(e) => {
+                        updateItem("skills", index, {
+                          Name: resumeEditFormState.value["skills"][index].Name,
+                          //@ts-ignore
+                          YearsOfExperience: parseInt(e.target.value),
+                        });
+                      }}
+                    />
+                  </div>
+                  <button
+                    class="btn btn-error ml-2"
+                    onClick={() => {
+                      removeItem("skills", index);
+                    }}
+                  >
+                    &#x2715;
+                  </button>
+                </div>
+              </DnDItem>
+            ))}
+          </DndProvider>
+
           <button
             class="btn btn-primary mb-4"
             onClick={() => {

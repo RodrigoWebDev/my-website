@@ -1,10 +1,7 @@
 //https://react-select.com/home
-import { signal } from "@preact/signals";
 import Select, { Props } from "react-select";
 
 export const MySelect = (props: Props) => {
-  const input = signal("");
-
   const classNames = {
     container: () => "w-full text-base-content!",
     control: (props: any) => {
@@ -23,15 +20,5 @@ export const MySelect = (props: Props) => {
     ...props.classNames,
   };
 
-  return (
-    <Select
-      inputValue={input.value}
-      onBlur={(value) => {
-        console.log("🚀 ~ MySelect ~ value:", value);
-      }}
-      {...props}
-      classNames={classNames}
-      isClearable={false}
-    />
-  );
+  return <Select {...props} classNames={classNames} />;
 };

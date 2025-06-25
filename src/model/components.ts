@@ -42,7 +42,8 @@ export type TIconName =
   | "link"
   | "filterRemove"
   | "filter"
-  | "search";
+  | "search"
+  | "drag";
 
 export interface IIcon {
   name: TIconName;

@@ -22,3 +22,7 @@ export interface ISkill {
 export interface IResume {
   skills: ISkill[];
 }
+
+export const ItemTypes = {
+  ITEM: "item",
+};
