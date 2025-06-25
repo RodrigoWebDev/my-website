@@ -21,4 +21,20 @@ export const MAIN_SKILLS_LIVE: ISkill[] = [
     Name: "English",
     YearsOfExperience: 7,
   },
+  {
+    Name: "Javascript",
+    YearsOfExperience: 7,
+  },
+  {
+    Name: "HTML",
+    YearsOfExperience: 7,
+  },
+  {
+    Name: "CSS",
+    YearsOfExperience: 7,
+  },
+  {
+    Name: "Rest API",
+    YearsOfExperience: 7,
+  },
 ];
