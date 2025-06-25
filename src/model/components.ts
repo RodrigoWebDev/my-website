@@ -53,6 +53,7 @@ export interface IIcon {
 
 export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   label?: ReactNode;
+  autoCompleteOptions?: string[];
 }
 
 export interface ILayout {

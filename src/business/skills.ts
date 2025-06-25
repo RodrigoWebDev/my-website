@@ -10,19 +10,22 @@ export const getSkill = (str: string) => {
       ""
     )
     .replace("<!---->", "");
-  return text.split(" · ");
+
+  const splitedText = text.split(" · ");
+
+  return splitedText;
 };
 
 export const getSkillsList = () => {
-  let _filters: any[] = [];
+  let skills: any[] = [];
 
   projects.forEach((item) => {
-    _filters.push(getSkill(item.description));
+    skills.push(getSkill(item.description));
   });
 
-  _filters = [...new Set(_filters.flat())];
+  skills = [...new Set(skills.flat())];
 
-  return _filters;
+  return skills;
 };
 
 const skills = getSkillsList().sort();
@@ -34,7 +37,7 @@ export const getFilteredSkills = () => {
     return skills;
   }
 
-  return skills.filter((item) => {
+  return skills.filter((item: any) => {
     return item.toLowerCase().includes(searchValue.toLowerCase());
   });
 };

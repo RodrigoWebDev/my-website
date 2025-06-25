@@ -9,3 +9,11 @@ export const sortBy = (arr: any[], key: string) => {
     return 0;
   });
 };
+
+export const convertStringArrayToValueLabelArray = (arr: string[]) => {
+  return arr.map((item) => ({
+    //@ts-ignore
+    value: item.trim().replaceAll(" ", "_").toLowerCase(),
+    label: item,
+  }));
+};
