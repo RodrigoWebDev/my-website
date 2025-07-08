@@ -1,16 +1,17 @@
 import { render } from "preact";
 import Router, { Route } from "preact-router";
-import Resume from "./pages/resume";
+import { updateLocaleState } from "./business/locale";
+import "./main.css";
+import { CopyPastePage } from "./pages/copy-paste";
+import { Debug } from "./pages/debug";
 import Home from "./pages/home";
 import Projects from "./pages/projects";
+import Resume from "./pages/resume";
+import { ResumeEdit } from "./pages/resume-edit";
 import Skills from "./pages/skills";
 import Works from "./pages/works";
-import "./main.css";
-import { updateLocaleState } from "./business/locale";
 import { modalState } from "./utils/modal";
-import { ResumeEdit } from "./pages/resume-edit";
 import { toastState } from "./utils/toast";
-import { Debug } from "./pages/debug";
 
 const Main = () => {
   /* useEffect(() => {
@@ -48,6 +49,7 @@ const Main = () => {
         <Route path="/resume" component={Resume} />
         <Route path="/resume-edit" component={ResumeEdit} />
         <Route path="/debug" component={Debug} />
+        <Route path="/copy-paste" component={CopyPastePage} />
       </Router>
 
       <div class="drawer z-20">
